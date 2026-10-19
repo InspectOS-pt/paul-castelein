@@ -277,30 +277,92 @@
   },
   "privacy": {
     "title": "Privacy",
-    "noteTitle": "Notice being finalized",
-    "note": "This preview describes the website’s current technical behavior. The full privacy notice is awaiting confirmation of the legal operator, registered address, email processing arrangements and retention periods.",
+    "intro": "How personal information is handled on this website and when you contact Pieter Paul Castelein about an opportunity.",
+    "noteTitle": "Last updated: 19 October 2026",
+    "note": "This notice covers castelein.eu.com and its review preview, including the introduction form and enquiries sent to paul@skaler.pt.",
     "sections": [
+      {
+        "title": "Who is responsible",
+        "text": [
+          "Pieter Paul Castelein, based in Oeiras, Portugal, is responsible for personal information handled in connection with this personal website. For privacy questions or requests, contact paul@skaler.pt.",
+          "The companies and external websites linked here have their own privacy information. This notice does not replace those notices."
+        ]
+      },
       {
         "title": "The introduction form",
         "text": [
-          "The introduction form prepares a draft in your own email app. The website does not submit your message to us. If you choose to send it, your email provider and ours process the email through their services.",
-          "You can contact us directly without using the form. Please begin with a summary and use an agreed process for sensitive documents."
+          "The form prepares a draft in your own email application. Its fields are processed in your browser and are not submitted to a website server, saved in website storage or sent by the website to a CRM or AI service. You can review, change or discard the draft before sending it.",
+          "If you send the email, your email provider and the receiving email service process the message. You can also email paul@skaler.pt directly. Providing information is voluntary, but I need enough detail to respond. Please start with a summary and agree a suitable process before sharing sensitive documents or other people’s personal information."
         ]
       },
       {
-        "title": "Website technical information",
+        "title": "Enquiries and why information is used",
         "text": [
-          "This preview is hosted on Vercel. The website does not add analytics, advertising cookies or third-party embeds. Fonts and images are served with the website; no third-party font service is contacted.",
-          "Vercel may process technical request information to provide and secure its hosting."
+          "A message may include your name, email address, organisation or background, the opportunity you describe, your intended contribution and any information you choose to include.",
+          "I use this information to read and respond to your enquiry, assess a possible fit and manage any resulting business discussion. The legal basis is my legitimate interest in communicating with people about relevant business opportunities. Where you ask for steps towards a contract with you, the legal basis is taking those steps at your request. Information may also be kept or disclosed where needed to meet a legal obligation or establish, exercise or defend legal claims."
         ]
       },
       {
-        "title": "Contact and external links",
+        "title": "Access and service providers",
         "text": [
-          "For privacy questions, email paul@skaler.pt. Other websites linked from this site have their own privacy information."
+          "Enquiries are handled by me and, where needed, people helping me assess or respond to the opportunity. Email and IT service providers process information to deliver, store and protect that correspondence. Access and sharing are limited to what is needed for those purposes, legal obligations or the protection of legal rights.",
+          "The website itself has no email inbox, CRM integration or AI processing of form entries. If a discussion leads to a project or service involving additional processing, the relevant privacy information will be provided for that activity. You can ask paul@skaler.pt about the providers or recipients relevant to your enquiry."
+        ]
+      },
+      {
+        "title": "Hosting, technical information and cookies",
+        "text": [
+          "Vercel hosts the website. Delivering and protecting it may involve technical request information such as an IP address, requested URL, browser information and request time. The purpose is reliable delivery, troubleshooting and protection against misuse, based on legitimate interests in operating a secure website.",
+          "The website code does not set cookies or add analytics, advertising trackers or third-party embeds. Fonts and images are served with the website. Vercel may process technical information as described in its privacy notice and data processing addendum; its service providers and infrastructure may be involved in delivery and security."
+        ]
+      },
+      {
+        "title": "Processing outside the European Economic Area",
+        "text": [
+          "Vercel Inc. is based in the United States and its infrastructure and service providers may process technical information outside the European Economic Area. Vercel describes its transfer safeguards in its privacy notice and data processing addendum, including the EU-U.S. Data Privacy Framework and Standard Contractual Clauses where applicable.",
+          "Email routing and storage also depend on the providers used by you and the receiving mailbox. For information about the providers, processing locations or applicable safeguards for correspondence with me, contact paul@skaler.pt."
+        ]
+      },
+      {
+        "title": "How long information is kept",
+        "text": [
+          "The website does not store introduction-form entries. I retain enquiry correspondence only while it is needed to respond, assess the opportunity and manage an active business discussion. Information is deleted when it is no longer needed, unless a legal obligation or the establishment, exercise or defence of legal claims requires continued retention.",
+          "If a discussion becomes a business relationship, relevant records are retained for that relationship and any applicable legal requirements. Technical information is retained for the hosting and security purposes described above under the provider’s applicable retention arrangements. You can request deletion or ask about the retention of a particular record at paul@skaler.pt."
+        ]
+      },
+      {
+        "title": "Your rights",
+        "text": [
+          "Subject to the applicable conditions, you can request access, correction, erasure or restriction of your information, and portability where it applies. You can object to processing based on legitimate interests. If processing relies on consent, you can withdraw it without affecting the lawfulness of earlier processing.",
+          "Send requests to paul@skaler.pt. I may need information to verify your identity. You can also complain to a competent data protection authority, including Portugal’s Comissão Nacional de Proteção de Dados (CNPD)."
+        ]
+      },
+      {
+        "title": "Automated decisions and changes",
+        "text": [
+          "This website does not profile visitors or make solely automated decisions with legal or similarly significant effects. Preparing an email draft does not assess or accept an opportunity.",
+          "External links open services with their own privacy practices. This notice will be updated if the website or the processing it describes changes; the date above identifies the latest revision."
         ]
       }
     ],
-    "providerLink": "Vercel’s privacy policy"
+    "linksTitle": "Further information",
+    "links": [
+      {
+        "label": "Email Pieter about privacy",
+        "href": "mailto:paul@skaler.pt"
+      },
+      {
+        "label": "Vercel’s privacy notice",
+        "href": "https://vercel.com/legal/privacy-policy"
+      },
+      {
+        "label": "Vercel’s data processing addendum",
+        "href": "https://vercel.com/legal/dpa"
+      },
+      {
+        "label": "Portugal’s data protection authority (CNPD)",
+        "href": "https://www.cnpd.pt/"
+      }
+    ]
   }
 }

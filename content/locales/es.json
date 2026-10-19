@@ -277,30 +277,92 @@
   },
   "privacy": {
     "title": "Privacidad",
-    "noteTitle": "Aviso en preparación",
-    "note": "Esta vista previa describe el funcionamiento técnico actual de la web. El aviso de privacidad completo está pendiente de confirmar el responsable legal, el domicilio social, las condiciones de tratamiento del correo y los plazos de conservación.",
+    "intro": "Cómo se tratan los datos personales en este sitio web y cuando contacta con Pieter Paul Castelein sobre una oportunidad.",
+    "noteTitle": "Última actualización: 19 de octubre de 2026",
+    "note": "Este aviso abarca castelein.eu.com y su vista previa de revisión, incluidos el formulario de presentación y las consultas enviadas a paul@skaler.pt.",
     "sections": [
+      {
+        "title": "Quién es el responsable",
+        "text": [
+          "Pieter Paul Castelein, con sede en Oeiras, Portugal, es el responsable de los datos personales tratados en relación con este sitio web personal. Para consultas o solicitudes sobre privacidad, contacte con paul@skaler.pt.",
+          "Las empresas y los sitios web externos enlazados aquí tienen su propia información de privacidad. Este aviso no sustituye a esos avisos."
+        ]
+      },
       {
         "title": "El formulario de presentación",
         "text": [
-          "El formulario prepara un borrador en tu propia aplicación de correo. La web no nos envía tu mensaje. Si decides enviarlo, tu proveedor de correo y el nuestro tratarán el mensaje a través de sus servicios.",
-          "Puedes contactar con nosotros directamente sin utilizar el formulario. Empieza con un resumen y utiliza un proceso acordado para compartir documentación sensible."
+          "El formulario prepara un borrador en su propia aplicación de correo electrónico. Los campos se procesan en su navegador y no se envían a un servidor del sitio web, no se guardan en el almacenamiento del sitio ni se envían desde este a un servicio de CRM o IA. Puede revisar, modificar o descartar el borrador antes de enviarlo.",
+          "Si envía el correo, su proveedor de correo electrónico y el servicio receptor procesan el mensaje. También puede escribir directamente a paul@skaler.pt. Facilitar información es voluntario, pero necesito detalles suficientes para responder. Empiece con un resumen y acuerde un proceso adecuado antes de compartir documentos sensibles o datos personales de otras personas."
         ]
       },
       {
-        "title": "Información técnica de la web",
+        "title": "Consultas y motivos para utilizar los datos",
         "text": [
-          "Esta vista previa está alojada en Vercel. La web no incorpora herramientas de analítica, cookies publicitarias ni contenido incrustado de terceros. Las fuentes y las imágenes se sirven desde la propia web, sin conexión a servicios externos de fuentes.",
-          "Vercel puede tratar información técnica de las solicitudes para prestar y proteger su servicio de alojamiento."
+          "Un mensaje puede incluir su nombre, dirección de correo electrónico, organización o trayectoria profesional, la oportunidad que describe, la contribución que pretende realizar y cualquier información que decida incluir.",
+          "Utilizo esta información para leer y responder a su consulta, evaluar una posible colaboración y gestionar cualquier conversación empresarial que se derive de ella. La base jurídica es mi interés legítimo en comunicarme con personas sobre oportunidades empresariales relevantes. Cuando solicita medidas previas a la celebración de un contrato con usted, la base jurídica es la adopción de esas medidas a petición suya. La información también puede conservarse o comunicarse cuando sea necesario para cumplir una obligación legal o para formular, ejercer o defender reclamaciones."
         ]
       },
       {
-        "title": "Contacto y enlaces externos",
+        "title": "Acceso y proveedores de servicios",
         "text": [
-          "Para cualquier consulta sobre privacidad, escribe a paul@skaler.pt. Los sitios web enlazados desde esta página tienen sus propios avisos de privacidad."
+          "Las consultas las gestiono yo y, cuando es necesario, personas que me ayudan a evaluar la oportunidad o a responder a ella. Los proveedores de servicios de correo electrónico y TI procesan información para entregar, almacenar y proteger esa correspondencia. El acceso y la comunicación de datos se limitan a lo necesario para esos fines, para el cumplimiento de obligaciones legales o para la protección de derechos.",
+          "El propio sitio web no tiene un buzón de correo, integración con CRM ni procesamiento mediante IA de los datos introducidos en el formulario. Si una conversación da lugar a un proyecto o servicio que implique un tratamiento adicional, se facilitará la información de privacidad correspondiente a esa actividad. Puede escribir a paul@skaler.pt para consultar qué proveedores o destinatarios intervienen en su consulta."
+        ]
+      },
+      {
+        "title": "Alojamiento, información técnica y cookies",
+        "text": [
+          "Vercel aloja el sitio web. Su funcionamiento y protección pueden implicar el tratamiento de información técnica de las solicitudes, como la dirección IP, la URL solicitada, información del navegador y la hora de la solicitud. La finalidad es ofrecer un servicio fiable, resolver problemas y proteger frente a usos indebidos, sobre la base del interés legítimo en mantener un sitio web seguro.",
+          "El código del sitio web no instala cookies ni incorpora herramientas de analítica, rastreadores publicitarios o contenido incrustado de terceros. Las fuentes y las imágenes se sirven desde el propio sitio. Vercel puede tratar información técnica conforme a su aviso de privacidad y su anexo de tratamiento de datos; sus proveedores de servicios e infraestructura pueden intervenir en el funcionamiento y la seguridad del sitio."
+        ]
+      },
+      {
+        "title": "Tratamiento fuera del Espacio Económico Europeo",
+        "text": [
+          "Vercel Inc. tiene su sede en Estados Unidos, y su infraestructura y sus proveedores de servicios pueden tratar información técnica fuera del Espacio Económico Europeo. Vercel describe sus garantías para las transferencias en su aviso de privacidad y su anexo de tratamiento de datos, incluidos el EU-U.S. Data Privacy Framework y las cláusulas contractuales tipo, cuando corresponda.",
+          "El envío y el almacenamiento del correo electrónico también dependen de los proveedores utilizados por usted y por el buzón receptor. Para obtener información sobre los proveedores, los lugares de tratamiento o las garantías aplicables a la correspondencia conmigo, contacte con paul@skaler.pt."
+        ]
+      },
+      {
+        "title": "Durante cuánto tiempo se conservan los datos",
+        "text": [
+          "El sitio web no almacena los datos introducidos en el formulario de presentación. Conservo la correspondencia de las consultas solo mientras sea necesaria para responder, evaluar la oportunidad y gestionar una conversación empresarial en curso. La información se elimina cuando deja de ser necesaria, salvo que una obligación legal o la formulación, el ejercicio o la defensa de reclamaciones requiera que se siga conservando.",
+          "Si una conversación se convierte en una relación comercial, los registros pertinentes se conservan durante esa relación y conforme a los requisitos legales aplicables. La información técnica se conserva para los fines de alojamiento y seguridad descritos anteriormente, según las condiciones de conservación aplicables del proveedor. Puede solicitar la eliminación de datos o preguntar por la conservación de un registro concreto en paul@skaler.pt."
+        ]
+      },
+      {
+        "title": "Sus derechos",
+        "text": [
+          "Con sujeción a las condiciones aplicables, puede solicitar el acceso, la rectificación, la supresión o la limitación del tratamiento de sus datos, así como su portabilidad cuando corresponda. Puede oponerse al tratamiento basado en intereses legítimos. Si el tratamiento se basa en el consentimiento, puede retirarlo sin que ello afecte a la licitud del tratamiento anterior.",
+          "Envíe sus solicitudes a paul@skaler.pt. Es posible que necesite información para verificar su identidad. También puede presentar una reclamación ante una autoridad de protección de datos competente, incluida la Comissão Nacional de Proteção de Dados (CNPD) de Portugal."
+        ]
+      },
+      {
+        "title": "Decisiones automatizadas y cambios",
+        "text": [
+          "Este sitio web no elabora perfiles de los visitantes ni toma decisiones exclusivamente automatizadas con efectos jurídicos o de importancia similar. La preparación de un borrador de correo electrónico no supone evaluar ni aceptar una oportunidad.",
+          "Los enlaces externos abren servicios con sus propias prácticas de privacidad. Este aviso se actualizará si cambian el sitio web o el tratamiento que describe; la fecha indicada arriba identifica la revisión más reciente."
         ]
       }
     ],
-    "providerLink": "Política de privacidad de Vercel"
+    "linksTitle": "Más información",
+    "links": [
+      {
+        "label": "Enviar un correo a Pieter sobre privacidad",
+        "href": "mailto:paul@skaler.pt"
+      },
+      {
+        "label": "Aviso de privacidad de Vercel",
+        "href": "https://vercel.com/legal/privacy-policy"
+      },
+      {
+        "label": "Anexo de tratamiento de datos de Vercel",
+        "href": "https://vercel.com/legal/dpa"
+      },
+      {
+        "label": "Autoridad de protección de datos de Portugal (CNPD)",
+        "href": "https://www.cnpd.pt/"
+      }
+    ]
   }
 }

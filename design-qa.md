@@ -38,7 +38,7 @@ The 1240px container, 24/32px gutters, 42/64/74px hero scale, 1.2/.8 hero split,
 - Original English diagrams have localized captions, alt text and full descriptions. Caption text is concise; image pixels remain the supplied originals.
 - Source copy's lost compound hyphens stay corrected. The unwanted credentials comparison remains removed as Paul requested.
 - Homepage contact action leads to the existing introduction form with an accurate action label. The form prepares a local email draft; it does not submit an enquiry.
-- Venture titles preserve working project destinations. Existing deep URLs, review privacy notice and preview indexing restrictions remain available.
+- Venture titles preserve working project destinations. Existing deep URLs and preview indexing restrictions remain available. The completed privacy notice is available in all three languages.
 - Fonts and figures are self-hosted rather than importing a third-party runtime or font service.
 
 ## Functional checks and resolved findings
@@ -51,4 +51,10 @@ The 1240px container, 24/32px gutters, 42/64/74px hero scale, 1.2/.8 hero split,
 - No app-origin JavaScript console errors observed.
 - Fixed during review: malformed removal of the external font import, inaccurate homepage draft label, inherited tablet menu breakpoint, Spanish description punctuation and formal contact-note register.
 
-No unresolved P0, P1 or P2 design or functional findings in this scope. Formal company-account deployment, DNS and missing privacy-controller facts remain separately deferred as previously agreed.
+No unresolved P0, P1 or P2 design or functional findings in this scope. Formal company-account deployment and DNS remain with the company deployment owner.
+
+## Privacy notice completion
+
+The October 19 update replaces the provisional review notice in English, European Portuguese and Spanish with a dated notice. It names Pieter Paul Castelein and his public contact email, describes the verified local-only form behavior, and sets purpose-based enquiry retention without claiming a made-up automatic deletion period. Recipient categories cover relevant helpers and email/IT providers; the website-level absence of CRM/AI processing is not presented as a claim about mailbox settings. Vercel's provider notices and the CNPD are linked. No unverified company or postal street address has been added.
+
+Verification: all 63 public files built successfully; only the three privacy pages differ from the previously checked preview bundle. All non-privacy locale copy is unchanged. The three language versions have matching structure and links. The updated notice was inspected in the browser at desktop and 390px mobile width, including language switching and the contact/provider links. No horizontal overflow or browser errors were found.

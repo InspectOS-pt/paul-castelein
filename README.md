@@ -25,7 +25,11 @@ Set Production environment variable `CASTELEIN_SITE_ORIGIN=https://castelein.eu.
 
 After the company deployment is verified, add **castelein.eu.com** to that company project and use the DNS/ownership values shown for that exact project. Joan registered the domain; coordinate the access details privately. Preserve existing mail and verification records, then verify DNS propagation and HTTPS. Registration transfer is not needed merely to connect the site. Do not detach or repoint Yi's temporary preview project during this handoff.
 
-The full privacy notice still awaits the legal operator/public address, enquiry-access and email-provider arrangements, retention criteria and actual AI/CRM use. Confirm those facts with Paul before formal publication. Review indexing remains disabled in both metadata and `robots.txt`; any later decision to enable indexing must update the generator and its build validator together.
+The English, Portuguese and Spanish privacy notices name Pieter Paul Castelein as the responsible person for his personal site, with Oeiras, Portugal and `paul@skaler.pt` as the public contact details. They explain the local email-draft form, enquiry purposes and legal bases, recipient categories, Vercel hosting and transfers, purpose-based retention and privacy rights. No unverified company, street address, exclusive mailbox access, email-provider name or fixed deletion deadline is asserted. The statement about no CRM/AI processing applies to the website form, not to an uninspected mailbox. Keep the notice aligned with actual enquiry handling and update it when that process changes.
+
+The notice uses the identity/contact, purpose, recipient and retention-criteria structure in [GDPR Article 13](https://eur-lex.europa.eu/eli/reg/2016/679/oj), with hosting information linked to [Vercel's privacy notice](https://vercel.com/legal/privacy-policy) and [data processing addendum](https://vercel.com/legal/dpa), and the [CNPD](https://www.cnpd.pt/) as the Portuguese authority. These references do not verify private mailbox configuration.
+
+Review indexing remains disabled in both metadata and `robots.txt`; any later decision to enable indexing must update the generator and its build validator together.
 
 ## Build and local preview
 
@@ -45,7 +49,7 @@ The contact form prepares a local email draft addressed to `paul@skaler.pt`. It 
 ## Before formal publication
 
 - Replace the portrait if Paul supplies a higher-quality approved original.
-- Complete the privacy controller's legal name/public address and actual email processing, provider and retention details. Missing facts remain identified as awaiting confirmation.
+- The privacy notice has been completed for the current personal site. If company ownership, email handling, tracking or form submission changes during deployment, update the notice to match before enabling those changes.
 - Deploy `dist/` in the intended company project, then configure only the records supplied for that project. No formal domain or DNS changes are part of this preview update.
 - Enable indexing only when the owner is ready. Review pages currently remain `noindex,nofollow`, with crawling disabled.
 
