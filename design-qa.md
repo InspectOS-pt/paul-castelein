@@ -150,3 +150,8 @@ Browser geometry checks: `qa/minimal-flywheel-responsive-matrix.json` records 36
 Independent review: no active code, external asset references, unsafe substitutions, duplicate marker IDs or unscoped CSS changes. All 15 flywheel text tokens resolve in every language. Build validation passed all 71 public files and 24 content/error pages.
 
 Final result: passed
+
+
+Final integration check found and fixed [P2] square paper corners around rounded cards in the dark Thesis section. The native wrapper now has the same 16px radius as the inner card; layout dimensions and label positions are unaffected. Final live evidence is `qa/minimal-flywheel-live-proof.jpg`. The fresh formal-site browser reported no warnings or errors. The official domain and stable preview both served all seven changed public files with exact SHA1 matches (`qa/minimal-live-verification.json`).
+
+Final result: passed

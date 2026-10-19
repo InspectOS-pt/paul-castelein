@@ -4,7 +4,7 @@
  */
 .native-diagram {
   container: native-diagram / inline-size;
-  width:100%; min-width:0; color:#111; background:#FAFAF8;
+  width:100%; min-width:0; color:#111; background:#FAFAF8; border-radius:16px;
   font-family:Inter,Arial,sans-serif; font-size:14px; line-height:1.5;
   font-weight:400; font-synthesis:none; text-align:left;
   overflow-wrap:anywhere; isolation:isolate;
