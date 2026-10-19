@@ -1,6 +1,7 @@
 """Native HTML and SVG figures from Paul's captured Meta reference.
 
-The five templates retain the supplied static DOM, utility classes and SVG paths.
+Four templates retain the supplied static DOM, utility classes and SVG paths.
+The flywheel follows Paul's later minimal diagram with native, localized labels.
 Technical design notes and source font styles are removed. All visible copy is
 localized in EN, PT and ES; SVG and glyph icons are decorative. Source card order
 is Trust, Asymmetry, Model, Flywheel, Moats. The public API retains its existing

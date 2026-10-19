@@ -198,19 +198,19 @@
 .native-diagram .native-moat-row:nth-child(even) {background:#F2EEE6}
 .native-diagram .native-moat-markers {flex-direction:column; align-items:center; gap:10px}
 
-/* A linear reading order keeps all four pills legible in a narrow column. */
-.native-diagram .native-flywheel {display:flex; flex-direction:column; gap:8px; aspect-ratio:auto; max-width:440px}
-.native-diagram .native-flywheel-connectors {display:none}
-.native-diagram .native-flywheel-node,
-.native-diagram .native-flywheel-center {position:static; inset:auto; transform:none; width:100%; max-width:none}
-.native-diagram .native-flywheel-node > div {width:100%; box-shadow:none; padding:12px 20px}
-.native-diagram .native-flywheel-node .serif {font-size:20px; line-height:1.15}
-.native-diagram .native-flywheel-node .mono {font-size:11px; line-height:1.5}
-.native-diagram .native-flywheel-node .font-mono {font-size:9px}
-.native-diagram .native-flywheel-step {display:block; width:30px; height:30px; margin:4px auto 0}
-.native-diagram .native-flywheel-center {margin-top:8px}
-.native-diagram .native-flywheel-center > div {padding:20px; border-radius:12px}
-.native-diagram .native-flywheel-center .mono {font-size:10px; line-height:1.5}
+/* The later minimal reference uses open labels around a thin circular loop. */
+.native-diagram .native-card--flywheel {background:#FAFAF8}
+.native-diagram .native-flywheel-header {display:flex; align-items:baseline; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:36px}
+.native-diagram .native-flywheel-header > .mono {font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:#666}
+.native-diagram .native-flywheel-header h4 {font-size:24px; line-height:1.2; font-style:italic}
+.native-diagram .native-flywheel {display:grid; gap:0; max-width:440px; margin:0 auto; padding:8px 0}
+.native-diagram .native-flywheel-connectors {display:none; color:#111}
+.native-diagram .native-flywheel-node {position:relative; min-width:0; padding:0 0 28px 28px; text-align:left}
+.native-diagram .native-flywheel-node::before {content:""; position:absolute; top:7px; left:0; width:5px; height:5px; border-radius:50%; background:#111}
+.native-diagram .native-flywheel-node:not(.native-flywheel-node--estateos)::after {content:""; position:absolute; top:17px; bottom:7px; left:2px; width:1px; background:#E8E2D9}
+.native-diagram .native-flywheel-label {font-size:12px; line-height:1.6; letter-spacing:.1em; text-transform:uppercase; color:#111}
+.native-diagram .native-flywheel-role {margin-top:4px; font-size:13px; line-height:1.5; color:#555}
+.native-diagram .native-flywheel-center {max-width:28ch; margin:8px auto 0; padding-top:24px; border-top:1px solid #E8E2D9; font-size:11px; line-height:1.6; text-align:center; color:#555}
 
 @container native-diagram (min-width:720px) {
   .native-diagram .md\:block {display:block}
@@ -235,24 +235,23 @@
   .native-diagram .native-moat-markers {flex-direction:row; gap:16px}
 }
 
-/* Source circular composition needs enough room for readable side pills. */
-@container native-diagram (min-width:740px) {
-  .native-diagram .native-flywheel {display:block; aspect-ratio:1.2 / 1; max-width:680px}
-  .native-diagram .native-flywheel-connectors {display:block}
-  .native-diagram .native-flywheel-node {position:absolute; width:max-content; max-width:45%}
-  .native-diagram .native-flywheel-node[class~="top-[8%]"] {top:8%; left:50%; bottom:auto; right:auto; transform:translateX(-50%)}
-  .native-diagram .native-flywheel-node[class~="bottom-[8%]"] {bottom:8%; left:50%; top:auto; right:auto; transform:translateX(-50%)}
-  .native-diagram .native-flywheel-node[class~="top-1/2"] {top:50%; bottom:auto; max-width:28%; transform:translateY(-50%)}
-  .native-diagram .native-flywheel-node[class~="right-[4%]"] {right:4%; left:auto}
-  .native-diagram .native-flywheel-node[class~="left-[4%]"] {left:4%; right:auto}
-  .native-diagram .native-flywheel-node > div {padding:12px 20px}
-  .native-diagram .native-flywheel-node .serif {font-size:14px; line-height:1.15}
-  .native-diagram .native-flywheel-node .mono {font-size:9px; line-height:1.4}
-  .native-diagram .native-flywheel-step {display:none}
-  .native-diagram .native-flywheel-center {position:absolute; top:50%; left:50%; right:auto; bottom:auto; width:180px; max-width:30%; margin:0; transform:translate(-50%,-50%)}
-  .native-diagram .native-flywheel-center > div {padding:16px}
-  .native-diagram .native-flywheel-center .mono {font-size:9px; line-height:1.4}
-  .native-diagram .native-flywheel-center .text-\[8px\] {font-size:8px}
+/* Grid cells keep translated labels outside the ring without absolute overlap. */
+@container native-diagram (min-width:720px) {
+  .native-diagram .native-flywheel-header {display:grid; grid-template-columns:1fr auto 1fr; margin-bottom:44px}
+  .native-diagram .native-flywheel-header h4 {grid-column:2; text-align:center}
+  .native-diagram .native-flywheel {grid-template-columns:minmax(0,1fr) minmax(0,1.35fr) minmax(0,1fr); grid-template-rows:auto auto auto; column-gap:16px; row-gap:18px; max-width:820px; padding:8px 0 20px; align-items:center}
+  .native-diagram .native-flywheel-connectors {display:block; grid-column:2; grid-row:2; width:100%; height:auto; overflow:visible}
+  .native-diagram .native-flywheel-node {position:static; padding:0; max-width:none}
+  .native-diagram .native-flywheel-node::before, .native-diagram .native-flywheel-node::after {display:none}
+  .native-diagram .native-flywheel-node--inspectos {grid-column:2; grid-row:1; text-align:center}
+  .native-diagram .native-flywheel-node--realos {grid-column:3; grid-row:2; text-align:left}
+  .native-diagram .native-flywheel-node--speaking-bricks {grid-column:2; grid-row:3; text-align:center}
+  .native-diagram .native-flywheel-node--estateos {grid-column:1; grid-row:2; text-align:right}
+  .native-diagram .native-flywheel-role {max-width:24ch; font-size:12px}
+  .native-diagram .native-flywheel-node--inspectos .native-flywheel-role,
+  .native-diagram .native-flywheel-node--speaking-bricks .native-flywheel-role {margin-left:auto; margin-right:auto}
+  .native-diagram .native-flywheel-node--estateos .native-flywheel-role {margin-left:auto}
+  .native-diagram .native-flywheel-center {grid-column:2; grid-row:2; width:70%; max-width:22ch; justify-self:center; margin:0; padding:0; border:0; z-index:1}
 }
 
 @container native-diagram (max-width:359px) {
@@ -262,5 +261,4 @@
   .native-diagram .native-moat-row {padding:20px 16px; gap:12px}
   .native-diagram .native-moat-markers .w-10 {width:32px; height:32px}
   .native-diagram .native-moat-markers .w-8 {width:28px; height:28px}
-  .native-diagram .native-flywheel-node > div {padding:12px 16px}
 }

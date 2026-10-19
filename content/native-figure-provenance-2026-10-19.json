@@ -3,12 +3,12 @@
   "source": "https://www.meta.ai/share/a/19d0d284-7e7b-49a4-8740-c8db183b536e",
   "supportingReference": "https://meta.ai/share/c/hhkUckNd5X",
   "scope": "Personal site only; existing page layout, business manuscripts, privacy notice and form preserved.",
-  "format": "Static HTML/CSS and original SVG shapes; no source runtime, iframe, tracking or remote fonts.",
+  "format": "Static HTML/CSS/SVG with localized text; no source runtime, iframe, tracking or remote fonts.",
   "mapping": {
     "1": "Source 1: Trust to Proof",
     "2": "Source 3: Business Model 2030",
     "3": "Source 2: Information Asymmetry Collapse",
-    "4": "Source 4: Vertical Data Flywheel",
+    "4": "Later minimal reference 2apkDwXuH5: four dots, outside labels and thin circular arrows, adapted to the personal ink palette",
     "5": "Source 5: Five Moats"
   },
   "adaptations": [
@@ -17,10 +17,12 @@
     "Native source headlines retained as h4 within site sections",
     "Figure numbers follow existing site order",
     "Scoped styles and container queries prevent host style leakage",
-    "Narrow flywheel uses the same pills in sequence with copied arrowheads",
     "Alternating Five Moats stone fills retained explicitly in CSS",
     "Decorative SVGs and source glyph icons hidden from assistive technology",
-    "Fonts locally hosted with SIL Open Font License files"
+    "Fonts locally hosted with SIL Open Font License files",
+    "Later minimal flywheel replaces the earlier pills and framed center with four dots, outside labels and open center text",
+    "Personal-site no-blue palette retained; the latest Skaler blue-arrow reference informs composition",
+    "Flywheel uses grid-based circular placement from 720px and a readable linear sequence below that width"
   ],
   "files": [
     {
@@ -37,7 +39,7 @@
     },
     {
       "file": "scripts/templates/native-figures/flywheel.html",
-      "sha256": "0ba8ef03b61764e217b688dc925bdce1560b69e9ea3f828f0c54e963b4cddf33"
+      "sha256": "451b7f8a1906f41bfc2c778bfa29704279710983c474c2ef7329daa1493ccedc"
     },
     {
       "file": "scripts/templates/native-figures/moats.html",
@@ -45,15 +47,20 @@
     },
     {
       "file": "content/native-figure-copy.json",
-      "sha256": "453634eb7696c3b48f18863be524e05e5f489d48cc96569cadbbdf44536c77a2"
+      "sha256": "feb237ae2c2902e531181e80f12ec74fdb0caccfb915c2c228b157a57fe76843"
     },
     {
       "file": "assets/native-figures.css",
-      "sha256": "1dd946e0418b3b29c92e77d6e8cd3133c6ade937fbf6573b5e20f489b03b2c4d"
+      "sha256": "f32cd1614e4891641ce497e11d0c3ab377d669e5c8cce09a14e1b63d86e6b5f6"
     },
     {
       "file": "assets/fonts/native-fonts.css",
       "sha256": "d1a2bfef006c652ec300464c733eae607ae42287c130afcbbc3579477d6224f2"
     }
-  ]
+  ],
+  "latestFlywheelReference": {
+    "url": "https://meta.ai/share/c/2apkDwXuH5?utm_source=ios_cl",
+    "sourceScreenshotSHA256": "dd5862a4c58d5caa5617a3bf61598c0cbbb93c6e3b467696e8a5d2ae3f5b9bc0",
+    "authorization": "User requested incorporating all later references into the personal-site improvements on 2026-10-19."
+  }
 }

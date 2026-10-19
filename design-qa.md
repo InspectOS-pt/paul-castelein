@@ -125,3 +125,28 @@ The build validates 24 content/error pages, 16 legacy destinations and 71 public
 No actionable P0/P1/P2 findings remain.
 
 Final result: passed
+
+
+## Later minimal flywheel refinement — 19 October 2026
+
+Source visual truth: Paul's later `https://meta.ai/share/c/2apkDwXuH5?utm_source=ios_cl`, supplied screenshot saved as `qa/minimal-flywheel-source.png` (3456 × 2234). The selected card is normalized through a browser crop to 1000 × 667 CSS px. This is a composition adaptation to the existing personal site, preserving its paper/ink/stone palette and fonts. The blue arrow color belongs to the Skaler reference and intentionally becomes ink here.
+
+Implementation: native `scripts/templates/native-figures/flywheel.html`, scoped `assets/native-figures.css`, localized `content/native-figure-copy.json`. Source and implementation are rendered together in `qa/minimal-flywheel-comparison-final.jpg`, each in a fixed 1000px iframe at 1× density. Final mobile/tablet evidence: `qa/minimal-flywheel-mobile-tablet.jpg`, with 360px PT, 390px ES and 720px ES fixed-width frames. No mobile source was supplied; the narrow linear reading order is an intentional responsive adaptation.
+
+Comparison history:
+- Initial comparison: [P2] heading sat against the right edge instead of centered over the loop. Evidence: `qa/minimal-flywheel-comparison.jpg`.
+- Fix: centered the desktop heading in a three-column grid, bounded role text to 24ch and preserved the labels outside the loop.
+- Post-fix comparison: `qa/minimal-flywheel-comparison-final.jpg`; heading centered, four dots and arrows visible, labels clear. No actionable P0/P1/P2 differences remain.
+
+Required fidelity surfaces:
+- Fonts/typography: self-hosted Instrument Serif italic heading, JetBrains Mono 12px labels and 11px center, Inter 12–13px roles. Native text is crisp; the source's baked-in raster text is intentionally not reused.
+- Spacing/layout rhythm: one paper card, generous whitespace, open center, no nested pills or icon badges. Grid cells bound translated side labels; mobile follows 01–04 in source order.
+- Colors/tokens: #FAFAF8 paper, #111111 ink, #E8E2D9 stone lines, 16px corner radius. No blue or heavy shadows introduced.
+- Image quality/assets: native circle, dots and arrows remain sharp at all tested widths; decorative SVG is hidden from assistive technology. Other four original native illustrations retain their approved structures.
+- Copy/content: four role descriptions follow the final manuscript and latest reference in EN/PT/ES. No business locale, privacy or form behavior changes.
+
+Browser geometry checks: `qa/minimal-flywheel-responsive-matrix.json` records 36 cases, EN/PT/ES at 320, 360, 390, 454, 640, 719, 720, 739, 740, 768, 1000 and 1280px. All passed horizontal overflow, card containment, header overlap, pairwise label/center overlap and decorative SVG checks. Full 1000px source/implementation regions make every label, dot and center text readable, so no additional focused crop is needed.
+
+Independent review: no active code, external asset references, unsafe substitutions, duplicate marker IDs or unscoped CSS changes. All 15 flywheel text tokens resolve in every language. Build validation passed all 71 public files and 24 content/error pages.
+
+Final result: passed
