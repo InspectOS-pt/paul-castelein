@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-19",
+  "sources": [
+    "https://meta.ai/share/c/JS2R2WLPPa",
+    "https://meta.ai/share/c/LhSSMKcb18"
+  ],
+  "selection": "Matched by visible image content, not by the generated response option labels. Conceptual illustrations; original English pixels and source labels retained.",
+  "figures": [
+    {
+      "file": "assets/infographics/replacing-trust-with-proof.webp",
+      "referenceAssetId": "5713d2bac06a4c4e",
+      "width": 1920,
+      "height": 1280,
+      "sha256": "32676dee1644846a03e47ec4162f1161af57dcb232dbffc3b1163fa683474cf2",
+      "concept": "Trust and proof in two editorial columns",
+      "sourcePixelsUnchanged": true
+    },
+    {
+      "file": "assets/infographics/business-model-2030.webp",
+      "referenceAssetId": "0316b709e8bec62a",
+      "width": 1920,
+      "height": 1280,
+      "sha256": "081d10ef28c21cbb67d83ffc23ba4cc9c658f9724b07e4d8c2edee42764a7cdf",
+      "concept": "Verified reality and permissioned distribution as overlapping circles",
+      "sourcePixelsUnchanged": true
+    },
+    {
+      "file": "assets/infographics/information-asymmetry-collapse.webp",
+      "referenceAssetId": "4164f5ac67310ecc",
+      "width": 1920,
+      "height": 1280,
+      "sha256": "7cefacc08dc4e8240ca680ddb774ee5b729127043edb5e88e540498a839876ce",
+      "concept": "Raw information passing through a verification funnel",
+      "sourcePixelsUnchanged": true
+    },
+    {
+      "file": "assets/infographics/vertical-data-flywheel.webp",
+      "referenceAssetId": "47ffa4fef2c191f8",
+      "width": 1920,
+      "height": 1280,
+      "sha256": "4d247a9b93cafc7b01c0c54faf022893c03adb11235aaf43a7091403e2d28a55",
+      "concept": "The four ventures in a permission-bounded circular loop",
+      "sourcePixelsUnchanged": true
+    },
+    {
+      "file": "assets/infographics/five-moats.webp",
+      "referenceAssetId": "fa3025fbbf9af180",
+      "width": 1920,
+      "height": 1280,
+      "sha256": "cc92397d3b6327c2be22ddf8947db02a7942b941ee50d9cad0eb581b5165a090",
+      "concept": "Five conceptual layers shown as nested rectangular frames",
+      "sourcePixelsUnchanged": true
+    }
+  ]
+}

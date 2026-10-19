@@ -1,8 +1,11 @@
-"""Paul's five original Meta reference posters, with accessible translations.
+"""Paul's latest editorial Meta illustrations, with accessible translations.
 
-The WebP assets are byte-for-byte copies of the supplied reference. Their pixels
-remain English; captions and full visual descriptions follow the page language.
-The figures illustrate the thesis rather than report measured business results.
+The WebP assets are byte-for-byte copies of the selected warm-paper originals
+supplied on 19 October 2026. Their pixels remain English; captions and full visual
+descriptions follow the page language. Source variation labels and the small
+2024 footer are part of the original illustrations, not website publication dates.
+These conceptual figures illustrate the thesis, not measured results or confirmed
+operational capabilities.
 
 API: reference_figure(number, lang, dark=False) -> HTML
 """
@@ -21,83 +24,83 @@ ASSETS = {
 COPY = {
     "en": {
         1: {
-            "alt": "Replacing Trust with Proof: a comparison of unverified claims and verifiable evidence.",
-            "caption": "Replacing trust with proof: from assumption to physical verification, ground-truth data and documented evidence.",
-            "description": "The old model, shown in grey, lists information asymmetry, unverified claims, synthetic noise and paper documents marked with a cross. A blue arrow points to the new model: physical verification, ground-truth data and documented evidence, illustrated with a camera, measuring tool and checked shield. The footer describes the move from assumption to verification as measurable and auditable.",
+            "alt": "Replacing Trust with Proof: two columns compare assumptions and unverified claims with physical verification and documented evidence.",
+            "caption": "A conceptual comparison: from assumptions and unverified claims to physical verification, ground-truth data and documented evidence.",
+            "description": "A warm-paper illustration titled Replacing Trust with Proof, subtitled A founder's thesis: from assumption to verifiable evidence. A thin vertical line separates two columns, with a small arrow pointing right. The grey Trust column, labelled old workaround, shows a handshake for information asymmetry, a speech bubble for unverified claims and stacked sheets for synthetic noise. The black Proof column, labelled verified, shows a camera for physical verification, a measuring tool for ground-truth data, a checked shield for documented evidence and a grid for structured data. The small source footer reads From belief to evidence, 2024, Verify greater than believe.",
         },
         2: {
-            "alt": "The Business Model of 2030: verified reality and permissioned distribution.",
-            "caption": "The Business Model of 2030: verified reality through InspectOS and RealOS, and permissioned distribution through Speaking Bricks and EstateOS.",
-            "description": "A two-column conceptual model. Verified Reality, labelled InspectOS plus RealOS, shows building inspection, a thermal camera, a moisture meter, a paper-versus-reality check, a calculator and a checklist. Its foundations are physical verification, non-scrapable ground truth and regulatory compliance. Permissioned Distribution, labelled Speaking Bricks plus EstateOS, shows a network with permission gates, open/selected/closed disclosure tiers, CRM integration and anonymous buyer briefs. Its foundations are trust-gated protocols, authorized supply meeting represented demand, and filtering open-market noise.",
+            "alt": "Business Model of 2030: two overlapping circles connect verified reality with permissioned distribution.",
+            "caption": "A conceptual model for 2030: verified reality meets permissioned distribution.",
+            "description": "Two thin black circles overlap on a warm-paper background. The left circle, Verified Reality, lists physical evidence, data described as non-scrapable and compliance. The right circle, Permissioned Distribution, lists trust-gated access, authorized supply plus represented demand and filtering automated noise. Their intersection is labelled Durable advantage over generalist software: the operating companies of 2030. The title and subtitle identify this as variation 3 of the Business Model of 2030 editorial diagram.",
         },
         3: {
-            "alt": "Information Asymmetry Collapse: from exclusive data access through abundant AI output to verified reality.",
-            "caption": "Information asymmetry collapses as AI produces information at scale. The challenge shifts from finding information to verifying it.",
-            "description": "Three stages run from left to right. Before: a locked case represents limited, secure, paywalled or monetized data. AI Explosion: a processor surrounded by documents and symbols represents synthetic creation, automated output and rapid replication. After: a funnel filters duplicate, fake and synthetic documents into a blue diamond labelled Verified Reality: curated, validated and trustworthy. The closing statement says the challenge is no longer finding information, but verifying it.",
+            "alt": "Information Asymmetry Collapse: a vertical funnel moves from documents, claims and sources through verification to checked facts.",
+            "caption": "A conceptual verification process: the challenge shifts from finding information to checking it.",
+            "description": "The headline states that the primary challenge is no longer finding information, but verifying it. Below the Information Asymmetry Collapse, variation 3 label, a large outlined funnel contains layered sheets and the words Raw inputs: thousands of documents, claims, sources. An arrow leads down to a smaller funnel labelled Filter to verification and verification process. A second arrow leads to a black diamond with a check mark, labelled What can be physically and structurally verified. The closing line describes moving from volume to verified fact.",
         },
         4: {
-            "alt": "The Vertical Data Flywheel: a circular connection between InspectOS, RealOS, Speaking Bricks and EstateOS.",
-            "caption": "The Vertical Data Flywheel: InspectOS → RealOS → Speaking Bricks → EstateOS → back to InspectOS.",
-            "description": "Four boxes sit around a circle connected by clockwise blue-purple arrows. InspectOS at the top is labelled Physical Verification. RealOS on the right is Buyer Intelligence. Speaking Bricks at the bottom is Permissioned Distribution. EstateOS on the left is Private Workspace. The circular arrangement illustrates the proposed relationship between physical evidence, buyer decisions, authorized professional distribution and private workspaces.",
+            "alt": "The Vertical Data Flywheel: four ventures surround a circular loop for proprietary data within permitted boundaries.",
+            "caption": "The data flywheel: InspectOS → RealOS → Speaking Bricks → EstateOS → back to InspectOS, within permitted boundaries.",
+            "description": "Four outlined icon capsules sit around a large warm-stone circle, connected by thin black clockwise arrows. InspectOS at the top is labelled Physical verification. RealOS on the right is Buyer intelligence. Speaking Bricks at the bottom is Permissioned distribution. EstateOS on the left is Private workspace. The centre reads Compounding proprietary data within permitted boundaries.",
         },
         5: {
-            "alt": "The Five Moats of the Post-Software Era: five concentric layers surrounding a castle.",
-            "caption": "Five layers for lasting value: ground-truth data, regulatory compliance, workflow depth, owned and permissioned distribution, and differentiation beyond commodity software.",
-            "description": "Five concentric blue-grey rings surround a castle. The listed layers are: one, reliable and verified ground-truth data as the core foundation; two, regulatory compliance as a structural shield; three, process power and workflow depth; four, owned and permissioned distribution through direct channels and authorized access to customers; and five, avoiding the commodity software trap through differentiation beyond generic off-the-shelf software. The footer places layer one at the centre and describes additional outer layers as increasing defensibility. This is a conceptual strategy diagram.",
+            "alt": "Five Moats: five nested rectangular frames place owned and permissioned distribution at the centre.",
+            "caption": "A conceptual framework for lasting value: five nested frames, from avoiding commodity software to owned and permissioned distribution.",
+            "description": "The title is Five Moats. A subtitle links durable advantage to the friction of the real world and owned channels. Five nested rectangular frames are numbered from the outside inward: I, Avoiding Commodity Software Trap; II, Ground Truth Data; III, Regulatory Compliance as Structural Shield; IV, Process Power and Workflow Depth; V, Owned and Permissioned Distribution. The innermost rectangle is black with white lettering; the outer frames use thin black lines, with small outline icons at the outer corners. It is a conceptual strategy diagram.",
         },
     },
     "pt": {
         1: {
-            "alt": "Substituir a confiança por provas: comparação entre afirmações não verificadas e evidências verificáveis.",
-            "caption": "Substituir a confiança por provas: dos pressupostos à verificação física, aos dados reais verificados e à evidência documentada.",
-            "description": "O modelo antigo, a cinzento, enumera assimetria de informação, afirmações não verificadas, ruído sintético e documentos em papel assinalados com uma cruz. Uma seta azul aponta para o novo modelo: verificação física, dados reais verificados e evidência documentada, ilustrados por uma câmara, um instrumento de medição e um escudo com um visto. O rodapé descreve a passagem dos pressupostos à verificação como mensurável e auditável.",
+            "alt": "Substituir a confiança por provas: duas colunas comparam pressupostos e afirmações não verificadas com a verificação física e a evidência documentada.",
+            "caption": "Uma comparação conceptual: dos pressupostos e das afirmações não verificadas à verificação física, aos dados reais verificados e à evidência documentada.",
+            "description": "Ilustração sobre papel de tom quente intitulada Substituir a Confiança por Provas, com o subtítulo A tese de um fundador: dos pressupostos à evidência verificável. Uma linha vertical fina separa duas colunas e uma pequena seta aponta para a direita. A coluna Confiança, a cinzento e identificada como solução anterior, mostra um aperto de mão para a assimetria de informação, um balão de fala para as afirmações não verificadas e folhas sobrepostas para o ruído sintético. A coluna Provas, a preto e identificada como verificada, mostra uma câmara para a verificação física, um instrumento de medição para os dados reais verificados, um escudo com um visto para a evidência documentada e uma grelha para os dados estruturados. O pequeno rodapé original diz Da crença à evidência, 2024, Verificar é preferível a acreditar.",
         },
         2: {
-            "alt": "O Modelo de Negócio de 2030: realidade verificada e distribuição permissionada.",
-            "caption": "O Modelo de Negócio de 2030: realidade verificada através da InspectOS e da RealOS, e distribuição permissionada através da Speaking Bricks e da EstateOS.",
-            "description": "Modelo conceptual em duas colunas. Realidade Verificada, identificada como InspectOS mais RealOS, mostra uma inspeção de edifício, uma câmara térmica, um medidor de humidade, a comparação de documentos com a realidade, uma calculadora e uma lista de verificação. As suas bases são verificação física, dados reais não extraíveis por scraping e conformidade regulamentar. Distribuição Permissionada, identificada como Speaking Bricks mais EstateOS, mostra uma rede com controlo de permissões, três níveis de divulgação (aberto, selecionado e fechado), integração com CRM e resumos anónimos de compradores. As suas bases são protocolos de acesso controlado, oferta autorizada que encontra procura representada e filtragem do ruído do mercado aberto.",
+            "alt": "Modelo de Negócio de 2030: dois círculos sobrepostos ligam a realidade verificada à distribuição permissionada.",
+            "caption": "Um modelo conceptual para 2030: a realidade verificada encontra a distribuição permissionada.",
+            "description": "Dois círculos de traço preto fino sobrepõem-se sobre um fundo de papel de tom quente. O círculo da esquerda, Realidade Verificada, enumera evidência física, dados descritos como não extraíveis por scraping e conformidade regulamentar. O círculo da direita, Distribuição Permissionada, enumera acesso controlado pela confiança, oferta autorizada e procura representada, e filtragem do ruído automatizado. A interseção identifica uma Vantagem duradoura face ao software generalista: as empresas operacionais de 2030. O título e o subtítulo identificam a variação 3 do diagrama editorial Modelo de Negócio de 2030.",
         },
         3: {
-            "alt": "Colapso da assimetria de informação: do acesso exclusivo aos dados à produção abundante por IA e à realidade verificada.",
-            "caption": "A assimetria de informação diminui quando a IA produz informação em grande escala. O desafio passa de encontrar informação a verificá-la.",
-            "description": "Três etapas, da esquerda para a direita. Antes: uma mala fechada à chave representa dados limitados, seguros e de acesso pago ou monetizado. Explosão da IA: um processador rodeado por documentos e símbolos representa criação sintética, produção automatizada e replicação rápida. Depois: um funil filtra documentos duplicados, falsos e sintéticos até obter um diamante azul, identificado como Realidade Verificada: selecionada, validada e fiável. A frase final diz que o desafio já não é encontrar informação, mas verificá-la.",
+            "alt": "Colapso da assimetria de informação: um funil vertical conduz documentos, afirmações e fontes através da verificação até aos factos verificados.",
+            "caption": "Um processo conceptual de verificação: o desafio passa de encontrar informação a verificá-la.",
+            "description": "O título afirma que o principal desafio já não é encontrar informação, mas verificá-la. Sob a indicação Colapso da Assimetria de Informação, variação 3, um grande funil desenhado a traço contém folhas sobrepostas e as palavras Dados de entrada: milhares de documentos, afirmações e fontes. Uma seta desce até um funil mais pequeno, identificado como Filtrar para verificar e processo de verificação. Uma segunda seta conduz a um losango preto com um visto, identificado como O que pode ser verificado física e estruturalmente. A frase final descreve a passagem do volume de informação ao facto verificado.",
         },
         4: {
-            "alt": "O ciclo de dados vertical: ligação circular entre InspectOS, RealOS, Speaking Bricks e EstateOS.",
-            "caption": "O ciclo de dados vertical: InspectOS → RealOS → Speaking Bricks → EstateOS → de volta à InspectOS.",
-            "description": "Quatro caixas estão dispostas num círculo e ligadas por setas azul-violeta no sentido dos ponteiros do relógio. A InspectOS, em cima, corresponde à Verificação Física. A RealOS, à direita, corresponde à Informação para Compradores. A Speaking Bricks, em baixo, corresponde à Distribuição Permissionada. A EstateOS, à esquerda, corresponde ao Espaço de Trabalho Privado. A disposição circular ilustra a relação proposta entre evidência física, decisões dos compradores, distribuição profissional autorizada e espaços privados de trabalho.",
+            "alt": "O ciclo de dados vertical: quatro empresas rodeiam um ciclo de dados próprios dentro dos limites autorizados.",
+            "caption": "O ciclo de dados: InspectOS → RealOS → Speaking Bricks → EstateOS → de volta à InspectOS, dentro dos limites autorizados.",
+            "description": "Quatro cápsulas com ícones desenhados a traço rodeiam um grande círculo em tom de pedra quente e estão ligadas por setas pretas finas no sentido dos ponteiros do relógio. A InspectOS, em cima, corresponde à Verificação Física. A RealOS, à direita, corresponde à Informação para Compradores. A Speaking Bricks, em baixo, corresponde à Distribuição Permissionada. A EstateOS, à esquerda, corresponde ao Espaço de Trabalho Privado. No centro lê-se Acumulação de dados próprios dentro dos limites autorizados.",
         },
         5: {
-            "alt": "As cinco defesas da era pós-software: cinco camadas concêntricas em torno de um castelo.",
-            "caption": "Cinco camadas para criar valor duradouro: dados reais verificados, conformidade regulamentar, profundidade dos processos, distribuição própria e permissionada, e diferenciação para além do software comum.",
-            "description": "Cinco anéis concêntricos azul-acinzentados rodeiam um castelo. As camadas enumeradas são: primeira, dados reais fiáveis e verificados como base central; segunda, conformidade regulamentar como proteção estrutural; terceira, capacidade dos processos e profundidade dos fluxos de trabalho; quarta, distribuição própria e permissionada através de canais diretos e de acesso autorizado aos clientes; quinta, evitar a dependência de software indiferenciado, criando diferenciação para além de soluções genéricas prontas a usar. O rodapé coloca a primeira camada no centro e descreve as camadas exteriores como reforços da capacidade de defesa. É um diagrama conceptual de estratégia.",
+            "alt": "Cinco defesas: cinco molduras retangulares encaixadas colocam a distribuição própria e permissionada no centro.",
+            "caption": "Um enquadramento conceptual para criar valor duradouro: cinco molduras encaixadas, desde evitar o software indiferenciado até à distribuição própria e permissionada.",
+            "description": "O título é Cinco Defesas. O subtítulo relaciona a vantagem duradoura com os obstáculos do mundo real e os canais próprios. Cinco molduras retangulares encaixadas são numeradas do exterior para o interior: I, Evitar a dependência de software indiferenciado; II, Dados reais verificados; III, Conformidade regulamentar como proteção estrutural; IV, Capacidade dos processos e profundidade dos fluxos de trabalho; V, Distribuição própria e permissionada. O retângulo central é preto, com letras brancas; as molduras exteriores usam linhas pretas finas e pequenos ícones de contorno nos cantos exteriores. É um diagrama conceptual de estratégia.",
         },
     },
     "es": {
         1: {
-            "alt": "Sustituir la confianza por pruebas: comparación entre afirmaciones sin verificar y evidencias verificables.",
-            "caption": "Sustituir la confianza por pruebas: de las suposiciones a la verificación física, los datos verificados sobre el terreno y la evidencia documentada.",
-            "description": "El modelo antiguo, en gris, enumera asimetría de información, afirmaciones sin verificar, ruido sintético y documentos en papel marcados con una cruz. Una flecha azul apunta al nuevo modelo: verificación física, datos verificados sobre el terreno y evidencia documentada, ilustrados con una cámara, una herramienta de medición y un escudo con una marca de verificación. El pie describe el paso de las suposiciones a la verificación como medible y auditable.",
+            "alt": "Sustituir la confianza por pruebas: dos columnas comparan suposiciones y afirmaciones sin verificar con la verificación física y la evidencia documentada.",
+            "caption": "Una comparación conceptual: de las suposiciones y las afirmaciones sin verificar a la verificación física, los datos verificados sobre el terreno y la evidencia documentada.",
+            "description": "Ilustración sobre papel de tono cálido titulada Sustituir la Confianza por Pruebas, con el subtítulo La tesis de un fundador: de las suposiciones a la evidencia verificable. Una fina línea vertical separa dos columnas y una pequeña flecha apunta hacia la derecha. La columna Confianza, en gris e identificada como solución anterior, muestra un apretón de manos para la asimetría de información, un bocadillo de diálogo para las afirmaciones sin verificar y hojas superpuestas para el ruido sintético. La columna Pruebas, en negro e identificada como verificada, muestra una cámara para la verificación física, una herramienta de medición para los datos verificados sobre el terreno, un escudo con una marca de verificación para la evidencia documentada y una cuadrícula para los datos estructurados. El pequeño pie original dice De la creencia a la evidencia, 2024, Verificar es preferible a creer.",
         },
         2: {
-            "alt": "El Modelo de Negocio de 2030: realidad verificada y distribución por permisos.",
-            "caption": "El Modelo de Negocio de 2030: realidad verificada a través de InspectOS y RealOS, y distribución por permisos a través de Speaking Bricks y EstateOS.",
-            "description": "Un modelo conceptual en dos columnas. Realidad Verificada, identificada como InspectOS más RealOS, muestra la inspección de un edificio, una cámara térmica, un medidor de humedad, la comparación entre documentos y realidad, una calculadora y una lista de comprobación. Sus bases son la verificación física, los datos reales no extraíbles mediante scraping y el cumplimiento normativo. Distribución por Permisos, identificada como Speaking Bricks más EstateOS, muestra una red con control de permisos, tres niveles de divulgación (abierto, seleccionado y cerrado), integración con CRM y resúmenes anónimos de compradores. Sus bases son los protocolos de acceso controlado, la oferta autorizada que encuentra demanda representada y el filtrado del ruido del mercado abierto.",
+            "alt": "Modelo de Negocio de 2030: dos círculos superpuestos conectan la realidad verificada con la distribución por permisos.",
+            "caption": "Un modelo conceptual para 2030: la realidad verificada se une a la distribución por permisos.",
+            "description": "Dos círculos de trazo negro fino se superponen sobre un fondo de papel de tono cálido. El círculo izquierdo, Realidad Verificada, enumera evidencia física, datos descritos como no extraíbles mediante scraping y cumplimiento normativo. El círculo derecho, Distribución por Permisos, enumera acceso controlado por la confianza, oferta autorizada y demanda representada, y filtrado del ruido automatizado. La intersección se identifica como Ventaja duradera frente al software generalista: las empresas operativas de 2030. El título y el subtítulo identifican la variación 3 del diagrama editorial Modelo de Negocio de 2030.",
         },
         3: {
-            "alt": "Colapso de la asimetría de información: del acceso exclusivo a los datos a la producción abundante de IA y a la realidad verificada.",
-            "caption": "La asimetría de información disminuye cuando la IA produce información a gran escala. El desafío pasa de encontrar información a verificarla.",
-            "description": "Tres etapas avanzan de izquierda a derecha. Antes: un maletín cerrado con llave representa datos limitados, seguros, de pago o monetizados. Explosión de IA: un procesador rodeado de documentos y símbolos representa creación sintética, producción automatizada y replicación rápida. Después: un embudo filtra documentos duplicados, falsos y sintéticos hasta obtener un diamante azul identificado como Realidad Verificada: seleccionada, validada y fiable. La frase final dice que el desafío ya no es encontrar información, sino verificarla.",
+            "alt": "Colapso de la asimetría de información: un embudo vertical conduce documentos, afirmaciones y fuentes a través de la verificación hasta obtener hechos comprobados.",
+            "caption": "Un proceso conceptual de verificación: el desafío pasa de encontrar información a comprobarla.",
+            "description": "El titular afirma que el principal desafío ya no es encontrar información, sino verificarla. Bajo la indicación Colapso de la Asimetría de Información, variación 3, un gran embudo de contorno contiene hojas superpuestas y las palabras Datos de entrada: miles de documentos, afirmaciones y fuentes. Una flecha desciende hasta un embudo más pequeño, identificado como Filtrar para verificar y proceso de verificación. Una segunda flecha conduce a un rombo negro con una marca de verificación, identificado como Lo que puede verificarse física y estructuralmente. La frase final describe el paso del volumen de información al hecho verificado.",
         },
         4: {
-            "alt": "El ciclo de datos vertical: conexión circular entre InspectOS, RealOS, Speaking Bricks y EstateOS.",
-            "caption": "El ciclo de datos vertical: InspectOS → RealOS → Speaking Bricks → EstateOS → de vuelta a InspectOS.",
-            "description": "Cuatro recuadros se sitúan alrededor de un círculo y están unidos por flechas azul-violeta en el sentido de las agujas del reloj. InspectOS, arriba, corresponde a la Verificación Física. RealOS, a la derecha, corresponde a la Información para Compradores. Speaking Bricks, abajo, corresponde a la Distribución por Permisos. EstateOS, a la izquierda, corresponde al Espacio de Trabajo Privado. La disposición circular ilustra la relación propuesta entre evidencia física, decisiones de los compradores, distribución profesional autorizada y espacios privados de trabajo.",
+            "alt": "El ciclo de datos vertical: cuatro empresas rodean un ciclo de datos propios dentro de los límites autorizados.",
+            "caption": "El ciclo de datos: InspectOS → RealOS → Speaking Bricks → EstateOS → de vuelta a InspectOS, dentro de los límites autorizados.",
+            "description": "Cuatro cápsulas con iconos de contorno rodean un gran círculo en tono piedra cálido y están conectadas mediante finas flechas negras en el sentido de las agujas del reloj. InspectOS, arriba, corresponde a la Verificación Física. RealOS, a la derecha, corresponde a la Información para Compradores. Speaking Bricks, abajo, corresponde a la Distribución por Permisos. EstateOS, a la izquierda, corresponde al Espacio de Trabajo Privado. El centro dice Acumulación de datos propios dentro de los límites autorizados.",
         },
         5: {
-            "alt": "Las cinco defensas de la era post-software: cinco capas concéntricas alrededor de un castillo.",
-            "caption": "Cinco capas para crear valor duradero: datos verificados sobre el terreno, cumplimiento normativo, profundidad de los procesos, distribución propia y por permisos, y diferenciación más allá del software genérico.",
-            "description": "Cinco anillos concéntricos azul-gris rodean un castillo. Las capas enumeradas son: primera, datos reales fiables y verificados como base central; segunda, cumplimiento normativo como protección estructural; tercera, capacidad de los procesos y profundidad de los flujos de trabajo; cuarta, distribución propia y por permisos mediante canales directos y acceso autorizado a los clientes; quinta, evitar la dependencia del software indiferenciado mediante una diferenciación que vaya más allá de las soluciones genéricas listas para usar. El pie sitúa la primera capa en el centro y describe las capas exteriores como refuerzos de la capacidad defensiva. Es un diagrama conceptual de estrategia.",
+            "alt": "Cinco defensas: cinco marcos rectangulares anidados sitúan la distribución propia y por permisos en el centro.",
+            "caption": "Un marco conceptual para crear valor duradero: cinco marcos anidados, desde evitar el software indiferenciado hasta la distribución propia y por permisos.",
+            "description": "El título es Cinco Defensas. El subtítulo relaciona la ventaja duradera con las dificultades del mundo real y los canales propios. Cinco marcos rectangulares anidados se numeran de fuera hacia dentro: I, Evitar la dependencia del software indiferenciado; II, Datos verificados sobre el terreno; III, Cumplimiento normativo como protección estructural; IV, Capacidad de los procesos y profundidad de los flujos de trabajo; V, Distribución propia y por permisos. El rectángulo central es negro, con letras blancas; los marcos exteriores usan finas líneas negras y pequeños iconos de contorno en las esquinas exteriores. Es un diagrama conceptual de estrategia.",
         },
     },
 }

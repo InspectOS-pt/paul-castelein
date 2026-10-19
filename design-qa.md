@@ -28,7 +28,7 @@ Local evidence, excluded from release:
 - `qa/responsive-faithful.json`
 - `qa/faithful-final-home-desktop.jpg`
 
-The 1240px container, 24/32px gutters, 42/64/74px hero scale, 1.2/.8 hero split, two-by-two portfolio, three cooperation columns, dark Thesis, nested third figure, framed flywheel, economics cards, Memos rows and About/contact placement match the source structure. The five original 1920×1280 posters are byte-identical to the supplied reference assets. Stone palette, borders, radii and source figure shadows are retained.
+The 1240px container, 24/32px gutters, 42/64/74px hero scale, 1.2/.8 hero split, two-by-two portfolio, three cooperation columns, dark Thesis, nested third figure, framed flywheel, economics cards, Memos rows and About/contact placement match the source structure. The initial five posters were byte-identical to that reference; their later editorial replacements are documented below. Stone palette, borders, radii and source figure shadows are retained.
 
 ## Intentional practical differences
 
@@ -55,6 +55,20 @@ No unresolved P0, P1 or P2 design or functional findings in this scope. Formal c
 
 ## Privacy notice completion
 
-The October 19 update replaces the provisional review notice in English, European Portuguese and Spanish with a dated notice. It names Pieter Paul Castelein and his public contact email, describes the verified local-only form behavior, and sets purpose-based enquiry retention without claiming a made-up automatic deletion period. Recipient categories cover relevant helpers and email/IT providers; the website-level absence of CRM/AI processing is not presented as a claim about mailbox settings. Vercel's provider notices and the CNPD are linked. No unverified company or postal street address has been added.
+The October 19 update replaces the provisional review notice in English, European Portuguese and Spanish with a dated notice. It names Pieter Paul Castelein and his public contact email, describes the verified local-only form behavior, and sets purpose-based enquiry retention without claiming a made-up automatic deletion period. Recipient categories cover relevant helpers and email/IT providers; the website-level absence of CRM/AI processing is not presented as a claim about mailbox settings. Vercel's provider notices and the CNPD are linked. Following Pieter's instruction to use the company address, postal contact now lists Pieter c/o Skaler at Rua Salvador Martins 3A, 2740-315 Porto Salvo, Portugal, verified against RealOS's official contact page. No unconfirmed change of legal controller has been made.
 
 Verification: all 63 public files built successfully; only the three privacy pages differ from the previously checked preview bundle. All non-privacy locale copy is unchanged. The three language versions have matching structure and links. The updated notice was inspected in the browser at desktop and 390px mobile width, including language switching and the contact/provider links. No horizontal overflow or browser errors were found.
+
+## Later editorial figures and company postal address
+
+Sources: Paul's [five editorial concepts](https://meta.ai/share/c/JS2R2WLPPa) and [three variants per concept](https://meta.ai/share/c/LhSSMKcb18). Fifteen source images were inspected. Selection follows visible content, not the generated option labels, which sometimes point to another concept. The exact five selected files and unchanged-pixel hashes are recorded in `content/editorial-figure-provenance-2026-10-19.json`.
+
+The chosen source originals are 1920×1280: Trust/Proof columns, the 2030 Venn model, the information-verification funnel, the circular four-venture flywheel, and five nested rectangular layers. The existing site layout and Paul's final business copy are retained. English, Portuguese and Spanish alt text, captions and long descriptions now describe these actual pictures.
+
+Source and implementation are shown together at matching scale in `qa/editorial-comparison-1.png`, `qa/editorial-comparison-3.png` and `qa/editorial-comparison-5.png`. Each capture is 1024×900 CSS and image pixels at 1× density. The source images fit the left column; the same original pixels appear in the implemented figure in the right column, within the site's existing border, radius and shadow. All five full figures were compared; the full-size originals were also opened to inspect small lettering. Actual-page evidence includes `qa/editorial-home-desktop.png`, `qa/editorial-memos-desktop.png` and `qa/company-address-mobile.png`.
+
+Required surfaces: raster typography and fine line weights remain unchanged; source proportions and uncropped content match; off-white paper, warm stone and black ink replace the earlier blue graphics; original image quality is preserved with no re-encoding; app captions match the displayed content in three languages. The added company postal-address paragraph is the only locale-copy change. The page structure, navigation and contact form remain as previously verified.
+
+No actionable P0/P1/P2 findings. P3 source-art labels remain as supplied: the small Trust illustration footer says 2024 and the model/funnel include variation labels. These are illustration labels, not website publication dates or research claims. No source-image text has been edited or hidden.
+
+Final result: passed
