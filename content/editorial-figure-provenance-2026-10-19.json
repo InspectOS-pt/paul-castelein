@@ -1,54 +1,58 @@
 {
   "date": "2026-10-19",
   "sources": [
+    "https://meta.ai/share/c/NJl6fhF6MQ"
+  ],
+  "selection": "Swiss Grid / Bold Editorial group: off-white paper, black serif typography and terracotta accents. Matched by visible image content, because generated response labels swap the business-model and five-moats assets. Original English pixels retained.",
+  "previousReferenceSources": [
     "https://meta.ai/share/c/JS2R2WLPPa",
     "https://meta.ai/share/c/LhSSMKcb18"
   ],
-  "selection": "Matched by visible image content, not by the generated response option labels. Conceptual illustrations; original English pixels and source labels retained.",
+  "relatedOutOfScopeSource": "https://meta.ai/share/c/lRh7eHhn25",
   "figures": [
     {
       "file": "assets/infographics/replacing-trust-with-proof.webp",
-      "referenceAssetId": "5713d2bac06a4c4e",
+      "referenceAssetId": "263d5a05a4f072e1",
       "width": 1920,
       "height": 1280,
-      "sha256": "32676dee1644846a03e47ec4162f1161af57dcb232dbffc3b1163fa683474cf2",
-      "concept": "Trust and proof in two editorial columns",
+      "sha256": "d9fdb85c84845bc971f22ec35e250d83316c24e3dbad3230422e49ca01de275a",
+      "concept": "Trust and proof in two bold editorial columns",
       "sourcePixelsUnchanged": true
     },
     {
       "file": "assets/infographics/business-model-2030.webp",
-      "referenceAssetId": "0316b709e8bec62a",
+      "referenceAssetId": "00347ff80f1ffe91",
       "width": 1920,
       "height": 1280,
-      "sha256": "081d10ef28c21cbb67d83ffc23ba4cc9c658f9724b07e4d8c2edee42764a7cdf",
-      "concept": "Verified reality and permissioned distribution as overlapping circles",
+      "sha256": "ec7b7ac86ed5cea07bf522e96b3d95b2cf5a13a8bbf66d851fa1ad24da63ba3f",
+      "concept": "Verified reality and permissioned distribution in two panels",
       "sourcePixelsUnchanged": true
     },
     {
       "file": "assets/infographics/information-asymmetry-collapse.webp",
-      "referenceAssetId": "4164f5ac67310ecc",
+      "referenceAssetId": "53d19a9c046f2423",
       "width": 1920,
       "height": 1280,
-      "sha256": "7cefacc08dc4e8240ca680ddb774ee5b729127043edb5e88e540498a839876ce",
-      "concept": "Raw information passing through a verification funnel",
+      "sha256": "a5d723cb2def8d64cbb57a00a9a899ca9e992ac504aff6d53f68de4664fdfe25",
+      "concept": "Before, AI era and verification in three panels",
       "sourcePixelsUnchanged": true
     },
     {
       "file": "assets/infographics/vertical-data-flywheel.webp",
-      "referenceAssetId": "47ffa4fef2c191f8",
+      "referenceAssetId": "ec41abbb28e5df3a",
       "width": 1920,
       "height": 1280,
-      "sha256": "4d247a9b93cafc7b01c0c54faf022893c03adb11235aaf43a7091403e2d28a55",
-      "concept": "The four ventures in a permission-bounded circular loop",
+      "sha256": "0c7e14bf7fc2666ce64c8eed5e2d673a1434e6a43554f4029a3c88b33985ec0c",
+      "concept": "Four ventures around a terracotta circular data loop",
       "sourcePixelsUnchanged": true
     },
     {
       "file": "assets/infographics/five-moats.webp",
-      "referenceAssetId": "fa3025fbbf9af180",
-      "width": 1920,
-      "height": 1280,
-      "sha256": "cc92397d3b6327c2be22ddf8947db02a7942b941ee50d9cad0eb581b5165a090",
-      "concept": "Five conceptual layers shown as nested rectangular frames",
+      "referenceAssetId": "e88ed71d9590a517",
+      "width": 1344,
+      "height": 1792,
+      "sha256": "ebe6837fff7189be9295a1b6dbf34843005ac880ecec1b67438c8b3982f7360f",
+      "concept": "Five numbered strategy rows in a portrait poster",
       "sourcePixelsUnchanged": true
     }
   ]

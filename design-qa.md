@@ -72,3 +72,18 @@ Required surfaces: raster typography and fine line weights remain unchanged; sou
 No actionable P0/P1/P2 findings. P3 source-art labels remain as supplied: the small Trust illustration footer says 2024 and the model/funnel include variation labels. These are illustration labels, not website publication dates or research claims. No source-image text has been edited or hidden.
 
 Final result: passed
+
+
+## Latest Swiss Bold / terracotta figures
+
+Source: https://meta.ai/share/c/NJl6fhF6MQ. The Swiss Grid / Bold Editorial group replaces the preceding thin-ink illustrations; the approved editorial page layout and all business/privacy locale copy remain unchanged. The related links https://meta.ai/share/c/lRh7eHhn25, https://meta.ai/share/c/VcZe4iF1Gp and https://meta.ai/share/c/TYcEcdu5LC concern Skaler illustration variants and are outside the personal-site implementation.
+
+All five source files are served byte-for-byte, with content-based mapping: Trust/Proof columns, two-panel 2030 model, three-panel information asymmetry, the four-venture data flywheel and the portrait Five Moats poster. Meta's business-model/five-moats response labels are reversed; filenames follow the actual image titles. Provenance records source IDs, dimensions and SHA256 hashes. The four landscape images retain 1920×1280; Five Moats retains 1344×1792 and uses a 680px maximum display width. English pixels are preserved, with updated EN/PT/ES captions, alt text and long descriptions.
+
+Source versus implementation at matching scale was inspected in `qa/swiss-comparison-1.png`, `qa/swiss-comparison-3.png` and `qa/swiss-comparison-5.png`. Actual-page checks include `qa/swiss-home-desktop.png`, `qa/swiss-memos-pt-mobile.png` and `qa/swiss-memos-pt-mobile-full.png`. At 1024px desktop and 390px mobile, images retain their proportions without clipping or horizontal overflow. The portrait figure and translated caption fit on the mobile display. Spanish Thesis retains three figures and the correct locale, with no horizontal overflow. No browser errors were observed.
+
+The build validates all 24 content/error pages, 16 legacy destinations and 63 public files. Only nine figure-bearing pages and five figure assets change in the preview bundle. An independent review checked all 27 rendered figure occurrences, dimensions, provenance and the release allowlist. No form, privacy, tracking, backend or unrelated business-copy changes were made.
+
+No actionable P0/P1/P2 findings remain in this scope.
+
+Final result: passed
