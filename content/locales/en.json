@@ -1,0 +1,306 @@
+{
+  "ui": {
+    "identity": "Founder and Venture Architect · Portugal",
+    "nav": {
+      "thesis": "Thesis",
+      "partnerships": "Partnerships",
+      "memos": "Memos",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "contactAction": "Discuss an opportunity",
+    "primary": "Explore partnerships",
+    "secondary": "Read the thesis",
+    "skip": "Skip to content",
+    "menu": "Menu",
+    "language": "Language",
+    "footer": "Castelein.eu.com is the personal thesis and partnership portal of Pieter Paul Castelein, Founder of Skaler.pt (The Engine).",
+    "privacy": "Privacy",
+    "backHome": "Return to the homepage",
+    "allVentures": "Current ventures",
+    "status": "Current status",
+    "author": "Pieter Paul Castelein",
+    "related": "Continue reading",
+    "assets": "Asset owners and family offices",
+    "capital": "Capital partners",
+    "experts": "Industry experts and operators",
+    "portraitAlt": "Pieter Paul Castelein",
+    "notFound": "This page could not be found.",
+    "notFoundText": "The address may have changed. Return to the homepage or contact Pieter.",
+    "copyright": "© 2026 Pieter Paul Castelein",
+    "copyLink": "Copy link",
+    "copiedLink": "Link copied."
+  },
+  "home": {
+    "title": "I build future-proof companies in traditional industries for the superintelligence era.",
+    "intro": "When intelligence and software become abundant, code alone ceases to be a lasting advantage. Value shifts to physical verification and permissioned distribution. I analyze how traditional markets will behave and where the next structural opportunities will appear. I partner with asset owners, industry experts, and capital providers to build the operating companies that develop the physical and distribution advantages generic software cannot easily replicate.",
+    "principleTitle": "Replacing trust with proof.",
+    "principleText": "For decades, traditional industries ran on trust as a workaround for information asymmetry. Today, synthetic intelligence can simulate credibility and generate noise in seconds. The market increasingly values what can be physically and structurally verified over what is simply claimed. Through my venture studio, Skaler, I architect operating companies designed to provide documented, ground-truth proof.",
+    "venturesTitle": "Living Proof: Active Portfolio Ventures",
+    "venturesIntro": "Through Skaler, my current company-building work is concentrated in European property and asset operations, where each venture reinforces the others:",
+    "ventures": [
+      {
+        "name": "InspectOS",
+        "category": "Independent Technical Due Diligence",
+        "text": "Generating proprietary, ground-truth evidence on the built environment that software alone cannot verify.",
+        "status": "Live inspections in Portugal; open standard published; Pro workflow in pilot; Go Property Passport in development.",
+        "url": "https://www.inspectos.pt/en",
+        "action": "Visit InspectOS"
+      },
+      {
+        "name": "RealOS",
+        "category": "End-to-End Buyer Representation and Intelligence",
+        "text": "Guiding buyers across their entire journey with comprehensive data tools, calculators, and checklists, paired with calibrated escalation to human professionals.",
+        "status": "Live public buyer intelligence and decision tools.",
+        "url": "https://www.realos.pt/en",
+        "action": "Visit RealOS"
+      },
+      {
+        "name": "Speaking Bricks",
+        "category": "Permissioned Distribution",
+        "text": "A trust-gated B2B network where authorized supply meets represented demand across agency boundaries.",
+        "status": "Protocol in development; public demonstration live with fictional records; Cascais and Oeiras pilot cohort inquiry open.",
+        "url": "https://speakingbricks.eu/?lang=en",
+        "action": "Visit Speaking Bricks"
+      },
+      {
+        "name": "EstateOS",
+        "category": "Private Professional Workspace",
+        "text": "An invitation-only interface for private opportunities and practitioners operating without an integrated CRM.",
+        "status": "Private invitation-only onboarding; private inventory excluded from public and AI discovery.",
+        "url": "/contact/?starting-point=other&subject=estateos",
+        "action": "Ask about EstateOS"
+      }
+    ],
+    "togetherTitle": "How We Can Work Together",
+    "togetherIntro": "Whether you bring an underutilized asset, capital, or deep industry expertise, I connect the missing pieces through Skaler to build the company your industry needs next.",
+    "partners": [
+      {
+        "title": "Asset Owners and Family Offices",
+        "text": "Turn dormant property, equipment, or rights into an operating business.",
+        "action": "Explore Asset Partnerships",
+        "href": "/partnerships/#assets"
+      },
+      {
+        "title": "Capital Partners",
+        "text": "Align capital with a verified market opportunity and structured governance.",
+        "action": "Explore Capital Partnerships",
+        "href": "/partnerships/#capital"
+      },
+      {
+        "title": "Domain Experts and Operators",
+        "text": "Connect your operational knowledge with my company-building engine.",
+        "action": "Discuss an Opportunity",
+        "href": "/contact/?starting-point=expertise"
+      }
+    ]
+  },
+  "thesis": {
+    "title": "What still matters when superintelligence arrives.",
+    "intro": "When intelligence and software become abundant, code alone ceases to be a lasting advantage. As AI, robotics, and superintelligence mature, traditional software boundaries fade. Every property transaction will become a technology transaction, but lasting value will not sit in a public listing feed. Value concentrates in verified physical evidence and permissioned professional networks.",
+    "sections": [
+      {
+        "title": "The Business Model of 2030: Verified Reality and Permissioned Distribution",
+        "text": [],
+        "items": [
+          {
+            "title": "Verified Reality (InspectOS and RealOS)",
+            "text": "Developing physical verification, non-scrapable ground-truth data streams, and regulatory compliance standards."
+          },
+          {
+            "title": "Permissioned Distribution (Speaking Bricks and EstateOS)",
+            "text": "Building trust-gated protocols where authorized supply meets represented demand, helping professionals filter out open-market automated noise."
+          }
+        ]
+      },
+      {
+        "title": "The Market Shift: Information Asymmetry Collapse",
+        "text": [
+          "Legacy institutions often monetized exclusive access to data. As AI reduces the cost of processing information, that asymmetry dissolves, flooding the open market with synthetic noise. The primary challenge is no longer finding information; the challenge is verifying it."
+        ]
+      },
+      {
+        "title": "The Opportunity: Replacing Trust with Proof",
+        "text": [
+          "When everyone has access to synthetic data, unverified claims lose their value. Advanced AI can process digital files instantly, but it cannot physically inspect a building or legally insure physical reality on its own. In Portuguese property, I am deploying this verification layer through Skaler. With InspectOS, transactions are supported by documented, physical evidence, generating structured data backed by accountable human professionals."
+        ]
+      },
+      {
+        "title": "The Moat: The Vertical Data Flywheel",
+        "text": [
+          "Rather than building generic horizontal tools, I focus deeply on specific industry verticals to create a compounding flywheel."
+        ],
+        "steps": [
+          {
+            "title": "InspectOS",
+            "text": "conducts on-site technical inspections, capturing structured physical evidence and defect data."
+          },
+          {
+            "title": "RealOS",
+            "text": "uses structured market and cost intelligence to help buyers model true transaction and renovation scenarios before committing."
+          },
+          {
+            "title": "Speaking Bricks",
+            "text": "connects represented buyers with authorized, exclusive supply, transporting attributed transaction and technical readiness across agencies."
+          },
+          {
+            "title": "EstateOS",
+            "text": "equips independent professionals and private portfolios to participate in the same permissioned workflow, driving new transactions back to InspectOS for verification."
+          }
+        ],
+        "closing": "As professionals use these tools to verify assets and coordinate transactions, they generate structured, vertical-specific proprietary data within permitted boundaries. This feedback loop continually improves operations and creates a durable advantage over generalist software competitors."
+      },
+      {
+        "title": "The Execution: Rapid Execution Capability",
+        "text": [
+          "Understanding where the market is heading is only the first step. By using modern AI workflows and shared studio infrastructure inside Skaler, my teams reduce the time required to build and iterate on software. This allows the studio to dedicate its time and capital to solving real-world market friction: regulatory compliance, physical operations, and embedding services into the industry's daily workflows."
+        ]
+      }
+    ]
+  },
+  "partnerships": {
+    "title": "Turn dormant assets and sector insight into future-proof operating companies.",
+    "intro": [
+      "I partner with asset owners, industry experts, and aligned capital sources to build defensible operating companies around real-world or institutional advantages.",
+      "Property, specialized equipment, intellectual property, or commercial rights can provide a strong foundation for a new company. You bring the asset, sector expertise, or capital to pursue an opportunity; through Skaler, I bring the company-building team, technical infrastructure, and operational leadership to develop the business."
+    ],
+    "sectionTitle": "Separation of Economics",
+    "sectionIntro": "To maintain operational clarity and protect partner interests, every venture separates asset ownership from operating company risk:",
+    "ownerTitle": "Owner Economics",
+    "ownerText": "Asset owners retain title to their underlying assets and establish clear access arrangements, such as a license, lease, or service agreement, alongside agreed equity participation. Liability, insurance, and closure obligations are defined upfront before the company uses the asset.",
+    "operatingTitle": "Operating Economics",
+    "operatingText": "The new operating venture manages the technology stack, customer acquisition, daily delivery, and operating costs. Contributions, ownership, vesting, milestones, and decision rights are agreed upon before committing substantial resources.",
+    "action": "Discuss a Partnership"
+  },
+  "memos": {
+    "title": "Structural analyses on the post-software landscape.",
+    "articleTitle": "The Five Moats of the Post-Software Era",
+    "lead": "When software development becomes faster and cheaper, what makes a new company in a traditional industry durable? The answer lies in the friction of the real world and owned channels.",
+    "sections": [
+      {
+        "title": "I. Avoiding the Commodity Software Trap",
+        "text": [
+          "The traditional software model is facing rapid deflation. When code generation and standard product features are easily automated, purely digital advantages can erode quickly. If a business lives entirely on a screen without real-world integration, customer access, or proprietary inputs, its margins will face constant pressure."
+        ]
+      },
+      {
+        "title": "II. Ground-Truth Data",
+        "text": [
+          "A durable information advantage requires permitted access to data that cannot be easily scraped or synthesized. Ground-truth data originates at the physical edge: calibrated measurements from field instruments, verified operational logs, reconciled legal documents, and localized physical assessments. Anchoring software workflows to these real-world inputs allows service quality to improve with repeated delivery."
+        ]
+      },
+      {
+        "title": "III. Regulatory Compliance as a Structural Shield",
+        "text": [
+          "An automated agent can draft a property summary in seconds, but it cannot hold a professional license or accept legal responsibility. In European markets, professional liability frameworks, technical accreditations, the EU AI Act, and data protection rules represent significant operational responsibilities. Rather than avoiding regulated complexity, I design companies to meet these standards directly. By anchoring technology to qualified human professionals and strict independence standards, regulatory compliance becomes a durable barrier to entry."
+        ]
+      },
+      {
+        "title": "IV. Process Power and Workflow Depth",
+        "text": [
+          "Professional buyers and enterprises do not purchase raw AI output; they purchase reliable outcomes, risk reduction, and clear accountability. Embedding verified data and clear status protocols directly into the daily workflows of lawyers, representatives, and asset managers creates lasting process power and natural switching costs."
+        ]
+      },
+      {
+        "title": "V. Owned and Permissioned Distribution",
+        "text": [
+          "When software is abundant, trusted access to decision-makers becomes the primary commercial bottleneck. Public search and open portals are increasingly crowded with automated noise. Distribution must be designed alongside the product from day one. Building permissioned professional networks and direct industry relationships gives operating companies a clear, testable route to market without relying exclusively on rented advertising channels."
+        ]
+      }
+    ]
+  },
+  "about": {
+    "title": "Connecting foresight to practical execution.",
+    "intro": "I am Pieter Paul Castelein, a Dutch founder and company builder based in Portugal. Through Skaler, I bring ideas, industry expertise, assets, customer access, capital, and exceptional people together to build new companies for the market ahead.",
+    "sections": [
+      {
+        "title": "How I Work",
+        "text": [
+          "I break complex, connected industry problems down to first principles: what is known, what is assumed, and which question matters next? I look globally at how traditional sectors operate and where technology and customer behavior will take them next, then test practical solutions with real customers."
+        ]
+      },
+      {
+        "title": "Owned Distribution and Industry Relationships",
+        "text": [
+          "When software is abundant, trusted access to decision-makers becomes essential. I design distribution and partnerships alongside the product from day one. By building structured professional networks and direct industry relationships, I give our operating companies a clear, testable route to market."
+        ]
+      },
+      {
+        "title": "The Skaler Talent Flywheel",
+        "text": [
+          "Through the Skaler studio in Oeiras, I connect experienced specialists and industry mentors with emerging talent who demonstrate strong proof of work. Together, my team and I build the product, commercial operations, and delivery standards required for a sustainable business."
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Discuss the Opportunity",
+    "intro": [
+      "Tell me what could be built, who it would serve, and what you bring to the table. I welcome conversations with industry experts, established companies, investors, asset owners, and prospective founders.",
+      "Your introduction comes directly to me. Start with a clear summary of the customer problem, the opportunity, and your intended contribution. Sensitive documents can follow through an agreed process once we establish a mutual fit."
+    ],
+    "summaryTitle": "Opportunity Summary",
+    "summaryHelp": "Briefly describe the customer, the industry bottleneck, and the expertise, asset, or capital you bring."
+  },
+  "form": {
+    "name": "Your name",
+    "email": "Your email",
+    "organisation": "Organization or background",
+    "startingPoint": "What brings you here",
+    "options": {
+      "expertise": "Industry expertise",
+      "company": "An established company",
+      "capital": "Capital",
+      "assets": "Assets or intellectual property",
+      "founder": "A founder idea",
+      "other": "Other"
+    },
+    "opportunity": "What could be built",
+    "contribution": "What you bring",
+    "optional": "Optional",
+    "action": "Open Email Draft",
+    "explanation": "Opens your email app with the introduction ready to review. The website does not send the message. You can edit it before sending.",
+    "fallback": "You can also email paul@skaler.pt directly.",
+    "copyEmail": "Copy email address",
+    "copiedEmail": "Email address copied.",
+    "copyIntroduction": "Copy introduction",
+    "copiedIntroduction": "Introduction copied. Send it to paul@skaler.pt.",
+    "draftReady": "Your email draft is ready. Review and send it in your email app.",
+    "emailDidNotOpen": "If your email app did not open, copy your introduction and send it to paul@skaler.pt.",
+    "subject": "New business opportunity",
+    "estateSubject": "EstateOS inquiry",
+    "errors": {
+      "name": "Please enter your name.",
+      "email": "Please enter a valid email address.",
+      "opportunity": "Please add a short description of the opportunity."
+    }
+  },
+  "privacy": {
+    "title": "Privacy",
+    "noteTitle": "Notice being finalized",
+    "note": "This preview describes the website’s current technical behavior. The full privacy notice is awaiting confirmation of the legal operator, registered address, email processing arrangements and retention periods.",
+    "sections": [
+      {
+        "title": "The introduction form",
+        "text": [
+          "The introduction form prepares a draft in your own email app. The website does not submit your message to us. If you choose to send it, your email provider and ours process the email through their services.",
+          "You can contact us directly without using the form. Please begin with a summary and use an agreed process for sensitive documents."
+        ]
+      },
+      {
+        "title": "Website technical information",
+        "text": [
+          "This preview is hosted on Vercel. The website does not add analytics, advertising cookies or third-party embeds. Fonts and images are served with the website; no third-party font service is contacted.",
+          "Vercel may process technical request information to provide and secure its hosting."
+        ]
+      },
+      {
+        "title": "Contact and external links",
+        "text": [
+          "For privacy questions, email paul@skaler.pt. Other websites linked from this site have their own privacy information."
+        ]
+      }
+    ],
+    "providerLink": "Vercel’s privacy policy"
+  }
+}

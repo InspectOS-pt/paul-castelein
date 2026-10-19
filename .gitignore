@@ -1,0 +1,22 @@
+research/
+qa/
+dist/
+CONTENT-TODO.md
+RELEASE-NOTES.md
+.sites-runtime/
+assets/*.png
+assets/*-source.jpg
+assets/fonts/instrument-serif.woff2
+assets/fonts/inter-var.woff2
+assets/fonts/plex-mono-500.woff2
+__pycache__/
+*.pyc
+
+# Local tooling and credentials
+.vercel/
+.openai/
+.env
+.env.*
+!.env.example
+node_modules/
+.DS_Store

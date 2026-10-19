@@ -1,0 +1,23 @@
+[
+  {
+    "language": "en",
+    "attachmentSha256": "353b4129deae7bdccb9ad082bee9e3934a100fafdb7ccdfbd644df9f91b65eee",
+    "personalSource": "paul-final-en-2026-10-19.md",
+    "credentialsComparisonOmitted": true,
+    "orthographyOnlyCorrections": true
+  },
+  {
+    "language": "pt",
+    "attachmentSha256": "2f771206bde8a61bd45cdd5eeb066f39e20199338403906b8579028c770ae365",
+    "personalSource": "paul-final-pt-2026-10-19.md",
+    "credentialsComparisonOmitted": true,
+    "orthographyOnlyCorrections": true
+  },
+  {
+    "language": "es",
+    "attachmentSha256": "617a6b359b3f1ad330a700dd290fdde716afad1dd567540e9306f84ba48fe477",
+    "personalSource": "paul-final-es-2026-10-19.md",
+    "credentialsComparisonOmitted": true,
+    "orthographyOnlyCorrections": true
+  }
+]

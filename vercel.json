@@ -1,0 +1,89 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "python3 scripts/build-site.py",
+  "installCommand": "",
+  "outputDirectory": "dist",
+  "redirects": [
+    {
+      "source": "/how-we-build",
+      "destination": "/thesis/",
+      "permanent": true
+    },
+    {
+      "source": "/vision",
+      "destination": "/thesis/",
+      "permanent": true
+    },
+    {
+      "source": "/for-investors",
+      "destination": "/partnerships/#capital",
+      "permanent": true
+    },
+    {
+      "source": "/for-asset-owners",
+      "destination": "/partnerships/#assets",
+      "permanent": true
+    },
+    {
+      "source": "/build-with-me",
+      "destination": "/partnerships/",
+      "permanent": true
+    },
+    {
+      "source": "/ventures",
+      "destination": "/#ventures",
+      "permanent": true
+    },
+    {
+      "source": "/insights",
+      "destination": "/memos/",
+      "permanent": true
+    },
+    {
+      "source": "/insights/building-a-company",
+      "destination": "/memos/",
+      "permanent": true
+    },
+    {
+      "source": "/insights/distribution-business-model",
+      "destination": "/memos/#section-5",
+      "permanent": true
+    },
+    {
+      "source": "/insights/finding-exceptional-people",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/insights/first-venture-brief",
+      "destination": "/contact/?starting-point=expertise",
+      "permanent": true
+    },
+    {
+      "source": "/insights/assets-to-operating-business",
+      "destination": "/partnerships/#assets",
+      "permanent": true
+    },
+    {
+      "source": "/insights/when-to-build-a-new-company",
+      "destination": "/memos/",
+      "permanent": true
+    },
+    {
+      "source": "/insights/industry-expertise-to-business",
+      "destination": "/contact/?starting-point=expertise",
+      "permanent": true
+    },
+    {
+      "source": "/insights/market-entry-business-model",
+      "destination": "/memos/#section-5",
+      "permanent": true
+    },
+    {
+      "source": "/insights/beyond-investment",
+      "destination": "/partnerships/",
+      "permanent": true
+    }
+  ]
+}

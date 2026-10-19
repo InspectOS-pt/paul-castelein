@@ -1,0 +1,306 @@
+{
+  "ui": {
+    "identity": "Fundador e Venture Architect · Portugal",
+    "nav": {
+      "thesis": "Tese",
+      "partnerships": "Parcerias",
+      "memos": "Memos",
+      "about": "Sobre",
+      "contact": "Contacto"
+    },
+    "contactAction": "Conversar sobre uma oportunidade",
+    "primary": "Explorar parcerias",
+    "secondary": "Ler a tese",
+    "skip": "Saltar para o conteúdo",
+    "menu": "Menu",
+    "language": "Idioma",
+    "footer": "Castelein.eu.com é o portal de tese pessoal e parcerias de Pieter Paul Castelein, Fundador da Skaler.pt (O Motor).",
+    "privacy": "Privacidade",
+    "backHome": "Voltar à página inicial",
+    "allVentures": "Empresas atuais",
+    "status": "Estado atual",
+    "author": "Pieter Paul Castelein",
+    "related": "Continuar a ler",
+    "assets": "Proprietários de ativos e family offices",
+    "capital": "Parceiros de capital",
+    "experts": "Especialistas do setor e responsáveis operacionais",
+    "portraitAlt": "Pieter Paul Castelein",
+    "notFound": "Não foi possível encontrar esta página.",
+    "notFoundText": "O endereço pode ter mudado. Volte à página inicial ou contacte Pieter.",
+    "copyright": "© 2026 Pieter Paul Castelein",
+    "copyLink": "Copiar ligação",
+    "copiedLink": "Ligação copiada."
+  },
+  "home": {
+    "title": "Construo empresas preparadas para o futuro em indústrias tradicionais para a era da superinteligência.",
+    "intro": "Quando a inteligência e o software se tornam abundantes, o código por si só deixa de ser uma vantagem duradoura. O valor transfere-se para a verificação física e para a distribuição permissionada. Analiso como os mercados tradicionais se irão comportar e onde surgirão as próximas oportunidades estruturais. Faço parcerias com proprietários de ativos, especialistas do setor e investidores para construir as empresas operacionais que desenvolvem as vantagens físicas e de distribuição que o software genérico não consegue replicar facilmente.",
+    "principleTitle": "Substituir a confiança pela prova.",
+    "principleText": "Durante décadas, as indústrias tradicionais funcionaram com base na confiança como uma solução alternativa para a assimetria de informação. Hoje, a inteligência sintética pode simular credibilidade e gerar ruído em segundos. O mercado valoriza cada vez mais aquilo que pode ser verificado física e estruturalmente, acima daquilo que simplesmente se afirma. Através do meu venture studio, a Skaler, desenho e construo empresas operacionais criadas para fornecer provas documentadas e fundamentadas na realidade.",
+    "venturesTitle": "Prova Viva: Empresas Ativas em Portfólio",
+    "venturesIntro": "Através da Skaler, o meu trabalho atual de criação de empresas concentra-se nas operações imobiliárias e de ativos na Europa, onde cada empresa reforça as restantes:",
+    "ventures": [
+      {
+        "name": "InspectOS",
+        "category": "Due Diligence Técnica Independente",
+        "text": "Geração de evidências proprietárias e reais sobre o ambiente construído que o software por si só não consegue verificar.",
+        "status": "Inspeções ativas em Portugal; norma aberta publicada; fluxo de trabalho Pro em piloto; Passaporte do Imóvel Go em desenvolvimento.",
+        "url": "https://www.inspectos.pt/en",
+        "action": "Visitar a InspectOS"
+      },
+      {
+        "name": "RealOS",
+        "category": "Representação do Comprador de Ponta a Ponta e Inteligência",
+        "text": "Orientação aos compradores ao longo de toda a sua jornada com ferramentas de dados abrangentes, calculadoras e listas de verificação, combinadas com o encaminhamento calibrado para profissionais humanos.",
+        "status": "Inteligência pública para compradores e ferramentas de decisão ativas.",
+        "url": "https://www.realos.pt/en",
+        "action": "Visitar a RealOS"
+      },
+      {
+        "name": "Speaking Bricks",
+        "category": "Distribuição Permissionada",
+        "text": "Uma rede B2B baseada em permissões onde a oferta autorizada encontra a procura representada entre diferentes agências.",
+        "status": "Protocolo em desenvolvimento; demonstração pública ativa com registos fictícios; candidaturas abertas para o grupo piloto de Cascais e Oeiras.",
+        "url": "https://speakingbricks.eu/?lang=en",
+        "action": "Visitar a Speaking Bricks"
+      },
+      {
+        "name": "EstateOS",
+        "category": "Espaço de Trabalho Profissional Privado",
+        "text": "Uma interface acessível apenas por convite para oportunidades privadas e profissionais que operam sem um CRM integrado.",
+        "status": "Integração privada apenas por convite; inventário privado excluído da descoberta pública e de ferramentas de IA.",
+        "url": "/contact/?starting-point=other&subject=estateos",
+        "action": "Saber mais sobre a EstateOS"
+      }
+    ],
+    "togetherTitle": "Como Podemos Trabalhar em Conjunto",
+    "togetherIntro": "Quer traga um ativo subutilizado, capital ou profundo conhecimento do setor, ligo as peças que faltam através da Skaler para construir a empresa de que a sua indústria precisa a seguir.",
+    "partners": [
+      {
+        "title": "Proprietários de Ativos e Family Offices",
+        "text": "Transforme imóveis, equipamentos ou direitos inativos numa empresa operacional.",
+        "action": "Explorar Parcerias de Ativos",
+        "href": "/partnerships/#assets"
+      },
+      {
+        "title": "Parceiros de Capital",
+        "text": "Alinhe capital com uma oportunidade de mercado verificada e governação estruturada.",
+        "action": "Explorar Parcerias de Capital",
+        "href": "/partnerships/#capital"
+      },
+      {
+        "title": "Especialistas de Domínio e Operadores",
+        "text": "Ligue o seu conhecimento operacional ao meu motor de criação de empresas.",
+        "action": "Discutir uma Oportunidade",
+        "href": "/contact/?starting-point=expertise"
+      }
+    ]
+  },
+  "thesis": {
+    "title": "O que continua a importar quando a superinteligência chegar.",
+    "intro": "Quando a inteligência e o software se tornam abundantes, o código por si só deixa de ser uma vantagem duradoura. À medida que a IA, a robótica e a superinteligência amadurecem, as fronteiras tradicionais do software desaparecem. Cada transação imobiliária tornar-se-á uma transação tecnológica, mas o valor duradouro não estará num feed de anúncios público. O valor concentra-se na evidência física verificada e nas redes profissionais permissionadas.",
+    "sections": [
+      {
+        "title": "O Modelo de Negócio de 2030: Realidade Verificada e Distribuição Permissionada",
+        "text": [],
+        "items": [
+          {
+            "title": "Realidade Verificada (InspectOS e RealOS)",
+            "text": "Desenvolvimento de verificação física, fluxos de dados reais não extraíveis por scraping e padrões de conformidade regulamentar."
+          },
+          {
+            "title": "Distribuição Permissionada (Speaking Bricks e EstateOS)",
+            "text": "Construção de protocolos controlados onde a oferta autorizada encontra a procura representada, ajudando os profissionais a filtrar o ruído automatizado do mercado aberto."
+          }
+        ]
+      },
+      {
+        "title": "A Mudança de Mercado: O Colapso da Assimetria de Informação",
+        "text": [
+          "As instituições tradicionais frequentemente monetizavam o acesso exclusivo a dados. À medida que a IA reduz o custo de processamento de informação, essa assimetria dissolve-se, inundando o mercado aberto com ruído sintético. O principal desafio já não é encontrar informação; o desafio é verificá-la."
+        ]
+      },
+      {
+        "title": "A Oportunidade: Substituir a Confiança pela Prova",
+        "text": [
+          "Quando todos têm acesso a dados sintéticos, as afirmações não verificadas perdem o seu valor. A IA avançada consegue processar ficheiros digitais instantaneamente, mas não consegue inspecionar fisicamente um edifício nem segurar legalmente a realidade física por conta própria. No setor imobiliário português, estou a implementar esta camada de verificação através da Skaler. Com a InspectOS, as transações são apoiadas por evidências físicas documentadas, gerando dados estruturados apoiados por profissionais humanos responsáveis."
+        ]
+      },
+      {
+        "title": "O Fosso Competitivo: O Flywheel Vertical de Dados",
+        "text": [
+          "Em vez de construir ferramentas horizontais genéricas, foco-me profundamente em verticais específicas da indústria para criar um efeito acumulativo."
+        ],
+        "steps": [
+          {
+            "title": "InspectOS",
+            "text": "realiza inspeções técnicas no local, recolhendo evidências físicas estruturadas e dados de patologias."
+          },
+          {
+            "title": "RealOS",
+            "text": "utiliza inteligência estruturada de mercado e de custos para ajudar os compradores a modelar cenários reais de transação e renovação antes de assumirem um compromisso."
+          },
+          {
+            "title": "Speaking Bricks",
+            "text": "liga compradores representados a oferta exclusiva e autorizada, transportando o estado de prontidão transacional e técnica entre agências com a devida atribuição."
+          },
+          {
+            "title": "EstateOS",
+            "text": "equipa profissionais independentes e portfólios privados para participarem no mesmo fluxo de trabalho permissionado, conduzindo novas transações de volta à InspectOS para verificação."
+          }
+        ],
+        "closing": "À medida que os profissionais utilizam estas ferramentas para verificar ativos e coordenar transações, geram dados proprietários estruturados e específicos do setor dentro dos limites permitidos. Este ciclo de feedback melhora continuamente as operações e cria uma vantagem duradoura sobre os concorrentes de software generalista."
+      },
+      {
+        "title": "A Execução: Capacidade de Execução Rápida",
+        "text": [
+          "Compreender para onde o mercado se dirige é apenas o primeiro passo. Ao utilizar fluxos de trabalho modernos de IA e infraestrutura partilhada de estúdio dentro da Skaler, as minhas equipas reduzem o tempo necessário para construir e iterar software. Isto permite que o estúdio dedique o seu tempo e capital a resolver a fricção do mundo real: conformidade regulamentar, operações físicas e integração dos serviços nos fluxos de trabalho diários da indústria."
+        ]
+      }
+    ]
+  },
+  "partnerships": {
+    "title": "Transforme ativos inativos e conhecimento setorial em empresas operacionais preparadas para o futuro.",
+    "intro": [
+      "Faço parcerias com proprietários de ativos, especialistas da indústria e fontes de capital alinhadas para construir empresas operacionais defensáveis em torno de vantagens reais ou institucionais.",
+      "Imóveis, equipamentos especializados, propriedade intelectual ou direitos comerciais podem fornecer uma base sólida para uma nova empresa. Traz o ativo, a especialização no setor ou o capital para perseguir uma oportunidade; através da Skaler, trago a equipa de construção de empresas, a infraestrutura técnica e a liderança operacional para desenvolver o negócio."
+    ],
+    "sectionTitle": "Separação Económica",
+    "sectionIntro": "Para manter a clareza operacional e proteger os interesses dos parceiros, cada empresa separa a propriedade do ativo do risco da empresa operacional:",
+    "ownerTitle": "Economia do Proprietário",
+    "ownerText": "Os proprietários de ativos mantêm a titularidade dos seus ativos subjacentes e estabelecem acordos de acesso claros, como uma licença, arrendamento ou contrato de serviços, juntamente com a participação acionista acordada. A responsabilidade, os seguros e as obrigações de encerramento ou reposição são definidos antecipadamente antes de a empresa utilizar o ativo.",
+    "operatingTitle": "Economia Operacional",
+    "operatingText": "A nova empresa operacional gere a infraestrutura tecnológica, a angariação de clientes, a entrega diária e os custos operacionais. As contribuições, a estrutura acionista, o vesting, as metas e os direitos de decisão são acordados antes de comprometer recursos substanciais.",
+    "action": "Discutir uma Parceria"
+  },
+  "memos": {
+    "title": "Análises estruturais sobre o panorama pós-software.",
+    "articleTitle": "Os Cinco Fossos Competitivos da Era Pós-Software",
+    "lead": "Quando o desenvolvimento de software se torna mais rápido e barato, o que torna duradoura uma nova empresa numa indústria tradicional? A resposta reside na fricção do mundo real e nos canais próprios.",
+    "sections": [
+      {
+        "title": "I. Evitar a Armadilha do Software Comum",
+        "text": [
+          "O modelo de software tradicional enfrenta uma rápida deflação. Quando a geração de código e as funcionalidades padrão do produto são facilmente automatizadas, as vantagens puramente digitais podem erodir-se rapidamente. Se um negócio vive inteiramente num ecrã sem integração no mundo real, acesso a clientes ou dados proprietários, as suas margens enfrentarão uma pressão constante."
+        ]
+      },
+      {
+        "title": "II. Dados Reais de Terreno",
+        "text": [
+          "Uma vantagem de informação duradoura requer acesso permitido a dados que não possam ser facilmente extraídos da web ou sintetizados. Os dados reais têm origem na fronteira física: medições calibradas de instrumentos de campo, registos operacionais verificados, documentos legais reconciliados e avaliações físicas localizadas. Ancorar fluxos de trabalho de software a estas entradas do mundo real permite que a qualidade do serviço melhore com a entrega repetida."
+        ]
+      },
+      {
+        "title": "III. Conformidade Regulamentar como Escudo Estrutural",
+        "text": [
+          "Um agente automatizado pode redigir o resumo de um imóvel em segundos, mas não pode deter uma licença profissional nem assumir responsabilidade legal. Nos mercados europeus, os regimes de responsabilidade profissional, as acreditações técnicas, o Regulamento de IA da UE e as regras de proteção de dados representam responsabilidades operacionais significativas. Em vez de evitar a complexidade regulamentada, desenho empresas para cumprir diretamente estas normas. Ao ancorar a tecnologia a profissionais humanos qualificados e a rigorosos padrões de independência, a conformidade regulamentar torna-se uma barreira duradoura à entrada."
+        ]
+      },
+      {
+        "title": "IV. Poder de Processo e Profundidade de Fluxo de Trabalho",
+        "text": [
+          "Compradores profissionais e empresas não compram resultados brutos de IA; compram resultados fiáveis, redução de risco e responsabilidade clara. Integrar dados verificados e protocolos de estado claros diretamente nos fluxos de trabalho diários de advogados, representantes e gestores de ativos cria um poder de processo duradouro e custos de mudança naturais."
+        ]
+      },
+      {
+        "title": "V. Distribuição Própria e Permissionada",
+        "text": [
+          "Quando o software é abundante, o acesso de confiança aos decisores torna-se o principal estrangulamento comercial. A pesquisa pública e os portais abertos estão cada vez mais saturados de ruído automatizado. A distribuição tem de ser desenhada em simultâneo com o produto desde o primeiro dia. Construir redes profissionais permissionadas e relações diretas na indústria dá às empresas operacionais uma rota para o mercado clara e testável, sem depender exclusivamente de canais de publicidade alugados."
+        ]
+      }
+    ]
+  },
+  "about": {
+    "title": "Ligar a visão de futuro à execução prática.",
+    "intro": "Sou Pieter Paul Castelein, um fundador e criador de empresas neerlandês sediado em Portugal. Através da Skaler, reúno ideias, conhecimento da indústria, ativos, acesso a clientes, capital e pessoas excecionais para construir novas empresas para o mercado que se avizinha.",
+    "sections": [
+      {
+        "title": "Como Trabalho",
+        "text": [
+          "Decomponho problemas complexos e interligados da indústria até aos primeiros princípios: o que é conhecido, o que está a ser assumido e qual é a próxima questão que importa? Olho globalmente para a forma como os setores tradicionais operam e para onde a tecnologia e o comportamento do cliente os levarão a seguir, testando depois soluções práticas com clientes reais."
+        ]
+      },
+      {
+        "title": "Distribuição Própria e Relações na Indústria",
+        "text": [
+          "Quando o software é abundante, o acesso de confiança aos decisores torna-se essencial. Desenho a distribuição e as parcerias em conjunto com o produto desde o primeiro dia. Ao construir redes profissionais estruturadas e relações diretas no setor, dou às nossas empresas operacionais uma rota clara e testável para o mercado."
+        ]
+      },
+      {
+        "title": "O Flywheel de Talento da Skaler",
+        "text": [
+          "Através do estúdio Skaler em Oeiras, ligo especialistas experientes e mentores da indústria a talentos emergentes que demonstram fortes provas de trabalho. Juntos, a minha equipa e eu construímos o produto, as operações comerciais e os padrões de entrega necessários para um negócio sustentável."
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Discutir a Oportunidade",
+    "intro": [
+      "Diga-me o que poderia ser construído, a quem serviria e o que traz para a mesa. Recebo com agrado conversas com especialistas da indústria, empresas estabelecidas, investidores, proprietários de ativos e futuros fundadores.",
+      "A sua apresentação chega diretamente a mim. Comece com um resumo claro do problema do cliente, da oportunidade e da sua contribuição pretendida. Documentos sensíveis podem seguir posteriormente através de um processo acordado assim que estabelecermos um alinhamento mútuo."
+    ],
+    "summaryTitle": "Resumo da Oportunidade",
+    "summaryHelp": "Descreva brevemente o cliente, o estrangulamento da indústria e a especialização, ativo ou capital que traz."
+  },
+  "form": {
+    "name": "O seu nome",
+    "email": "O seu email",
+    "organisation": "Organização ou percurso profissional",
+    "startingPoint": "O que o traz aqui",
+    "options": {
+      "expertise": "Conhecimento do setor",
+      "company": "Uma empresa estabelecida",
+      "capital": "Capital",
+      "assets": "Ativos ou propriedade intelectual",
+      "founder": "Uma ideia para fundar uma empresa",
+      "other": "Outro"
+    },
+    "opportunity": "O que se poderia criar",
+    "contribution": "A sua contribuição",
+    "optional": "Opcional",
+    "action": "Abrir Rascunho de Email",
+    "explanation": "Abre a sua aplicação de email com a apresentação pronta para rever. O site não envia a mensagem. Pode editá-la antes de a enviar.",
+    "fallback": "Também pode enviar um email diretamente para paul@skaler.pt.",
+    "copyEmail": "Copiar endereço de email",
+    "copiedEmail": "Endereço de email copiado.",
+    "copyIntroduction": "Copiar apresentação",
+    "copiedIntroduction": "Apresentação copiada. Envie-a para paul@skaler.pt.",
+    "draftReady": "O seu rascunho de email está pronto. Reveja-o e envie-o na sua aplicação de email.",
+    "emailDidNotOpen": "Se a sua aplicação de email não abriu, copie a apresentação e envie-a para paul@skaler.pt.",
+    "subject": "Nova oportunidade de negócio",
+    "estateSubject": "Pedido de informação sobre a EstateOS",
+    "errors": {
+      "name": "Introduza o seu nome.",
+      "email": "Introduza um endereço de email válido.",
+      "opportunity": "Adicione uma breve descrição da oportunidade."
+    }
+  },
+  "privacy": {
+    "title": "Privacidade",
+    "noteTitle": "Aviso em fase de conclusão",
+    "note": "Esta pré-visualização descreve o funcionamento técnico atual do site. O aviso de privacidade completo aguarda a confirmação da entidade legal responsável, da morada da sede, das condições de tratamento dos emails e dos prazos de conservação.",
+    "sections": [
+      {
+        "title": "O formulário de apresentação",
+        "text": [
+          "O formulário de apresentação prepara um rascunho na sua própria aplicação de email. O site não nos envia a sua mensagem. Se optar por a enviar, o seu fornecedor de email e o nosso tratam a mensagem através dos respetivos serviços.",
+          "Pode contactar-nos diretamente sem utilizar o formulário. Comece por um resumo e utilize um processo acordado para documentos sensíveis."
+        ]
+      },
+      {
+        "title": "Informação técnica do site",
+        "text": [
+          "Esta pré-visualização está alojada na Vercel. O site não inclui ferramentas de análise, cookies publicitários nem conteúdos incorporados de terceiros. As fontes e as imagens são servidas pelo próprio site, sem ligação a serviços externos de fontes.",
+          "A Vercel pode tratar informações técnicas dos pedidos para prestar e proteger o seu serviço de alojamento."
+        ]
+      },
+      {
+        "title": "Contacto e ligações externas",
+        "text": [
+          "Para questões de privacidade, envie um email para paul@skaler.pt. Os outros sites para os quais este site contém ligações têm as suas próprias informações de privacidade."
+        ]
+      }
+    ],
+    "providerLink": "Política de privacidade da Vercel"
+  }
+}
