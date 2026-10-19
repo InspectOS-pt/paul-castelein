@@ -87,3 +87,41 @@ The build validates all 24 content/error pages, 16 legacy destinations and 63 pu
 No actionable P0/P1/P2 findings remain in this scope.
 
 Final result: passed
+
+
+## Final native figure system
+
+Latest visual truth: https://www.meta.ai/share/a/19d0d284-7e7b-49a4-8740-c8db183b536e. Supporting final illustration reference: https://meta.ai/share/c/hhkUckNd5X. This replaces the preceding raster sets, while retaining the existing site layout and Paul's approved business/privacy manuscripts. Only the personal-site section of the supplied two-site artifact is used.
+
+The live Meta artifact was opened and all five native cards inspected. Captured source DOM, compiled styles and desktop screenshots are stored privately under `qa/native-source-*` and `qa/native-reference-desktop-{1,2,3,4,5}.png`. The five cards were also rendered locally from that captured static DOM and styles, without source scripts, runtime, external fonts or account data. All source SVG shapes are retained; three copied arrowheads support the narrow flywheel sequence. Source fonts are self-hosted.
+
+### Comparison evidence and normalization
+
+- `qa/native-comparison-desktop-{1,2,3,4}.png` and `qa/native-comparison-desktop-5-fixed.png` compare source and implementation in the same image, in two 1000px-wide iframe viewports at 1× density. Full-view screenshots are 2040×1461 pixels.
+- `qa/native-comparison-mobile-{1,2,3,4,5}.png` compares two 390px-wide iframe viewports at 1× density. Focused captures for 1/2/3/5 are 840px wide, retaining both full component columns. The flywheel full-view capture is 1280×1861. These fixed iframe viewports provide reproducible responsive source/implementation widths independently of the outer browser window.
+- The source and implementation use the same locally hosted Instrument Serif, Inter and JetBrains Mono. Plain source card markup preserves the source media-query behavior; implemented styles use container queries to accommodate existing narrow homepage columns.
+- `qa/native-responsive-matrix.json` records 45 rendered checks: all five diagrams × EN/PT/ES × 360/454/1000px. Every case has no horizontal overflow, no flywheel-node overlap, and decorative SVGs hidden from screen readers.
+
+### Required fidelity surfaces
+
+Fonts/typography: source families, weights, thin serif hierarchy, mono labels and editable/selectable HTML text are retained. Copy is translated throughout each diagram rather than being embedded in English pixels. The rest of the site continues to use its existing Playfair Display and Instrument Sans.
+
+Spacing/layout: source desktop composition, thin dividers, SVG geometry, 16px card radii and generous whitespace are retained. Narrow cards use 20–24px padding; long labels wrap. The flywheel becomes a sequential four-pill diagram on narrow containers because the source circular arrangement overlaps at 390px. The source circle remains on sufficiently wide cards. Moat marker icons stack at narrow sizes to make room for text. Technical source footers, token annotations and line-width labels are intentionally omitted from public diagrams; concise translated captions remain. Figure numbers follow existing site order.
+
+Colors/tokens: paper #FAFAF8, ink #111, stone #E8E2D9 and alternating #F2EEE6 strata are preserved. No blue or terracotta is introduced. Heavy figure shadows are removed. The source's deliberately faded Trust column remains visually distinct from Proof.
+
+Asset quality: figures contain static HTML and original SVG paths, no figure raster images. Fonts load from local WOFF2 assets with license files. Source React code, dynamic scripts, iframes and remote imports are excluded from the release.
+
+Copy/content: all 108 source text nodes are translated for EN/PT/ES with escaped substitutions. Design-only phrases and the source's illustration-generation notes are removed; no business locale dictionaries, privacy details, form behavior or project states are changed.
+
+### Comparison history and verification
+
+The first desktop comparison found one P2 mismatch: source inline row fills had been removed during sanitization, leaving Five Moats without alternating stone layers. Explicit odd/even scoped backgrounds restore #FAFAF8/#F2EEE6; `qa/native-comparison-desktop-5-fixed.png` confirms the correction. Source h3 headings converted to in-figure h4 are included in the component reset to prevent host heading margins.
+
+The actual homepage was opened separately at 1280px; body typography remained unchanged, five native diagrams rendered, no old infographic image references remained, and no app-origin console errors or horizontal overflow appeared. A 390px iframe of the actual Portuguese homepage also showed all five diagrams without horizontal overflow; the mobile menu opened/closed, and switching to Spanish preserved the Thesis anchor and changed the native diagram copy.
+
+The build validates 24 content/error pages, 16 legacy destinations and 71 public files. An independent review confirms all native CSS selectors are scoped, templates contain no unsafe active elements/events/external links, SVG geometry matches the source, substitutions are escaped, and the five old rasters plus source/provenance/QA remain outside the release. After formal-origin regeneration, only the nine diagram-bearing HTML pages differ.
+
+No actionable P0/P1/P2 findings remain.
+
+Final result: passed

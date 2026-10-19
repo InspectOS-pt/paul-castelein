@@ -35,6 +35,7 @@ def shell(key,d,lang,body,error=False):
  if key=='memos':schema.update(headline=d['memos']['articleTitle'],author={'@type':'Person','name':'Pieter Paul Castelein'},datePublished='2026-10-19')
  if not key:schema.update({'@type':'ProfilePage','mainEntity':{'@type':'Person','name':'Pieter Paul Castelein','jobTitle':ui['identity'].split(' · ')[0],'sameAs':['https://www.linkedin.com/in/pieter-paul-castelein/'],'worksFor':{'@type':'Organization','name':'Skaler','url':'https://www.skaler.pt/'}}})
  structured=json.dumps(schema,ensure_ascii=False).replace('</','<\\/')
+ figure_styles='<link rel="stylesheet" href="/assets/fonts/native-fonts.css"><link rel="stylesheet" href="/assets/native-figures.css">' if key in ['', 'thesis', 'memos'] and not error else ''
  return f'''<!doctype html><html lang="{LANGS[lang][0]}"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(title)}</title><meta name="description" content="{e(description)}"><meta name="author" content="Pieter Paul Castelein">
@@ -44,7 +45,7 @@ def shell(key,d,lang,body,error=False):
 <meta property="og:image" content="{ORIGIN}/og.jpg?v=20261019-editorial"><meta property="og:image:alt" content="Pieter Paul Castelein. {e(ui['identity'])}">
 <meta name="twitter:card" content="summary_large_image"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/assets/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/fonts/reference-fonts.css"><link rel="stylesheet" href="/assets/reference.css">{chr(60)+'link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/assets/reference-interior.css">' if key or error else ''}<script src="/main.js" defer></script><script type="application/ld+json">{structured}</script>
+<link rel="stylesheet" href="/assets/fonts/reference-fonts.css"><link rel="stylesheet" href="/assets/reference.css">{chr(60)+'link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/assets/reference-interior.css">' if key or error else ''}{figure_styles}<script src="/main.js" defer></script><script type="application/ld+json">{structured}</script>
 </head><body class="{'reference-home' if not key and not error else 'reference-interior'}"><a class="skip-link" href="#main">{e(ui['skip'])}</a>
 {reference_header(d,lang,key)}
 <main id="main">{body}</main>{reference_footer(d,lang)}</body></html>'''

@@ -1,0 +1,266 @@
+/* Native copies of Paul's selected Meta diagrams.
+ * Source utility rules are restricted to .native-diagram.
+ * Breakpoints measure each diagram, including narrow desktop columns.
+ */
+.native-diagram {
+  container: native-diagram / inline-size;
+  width:100%; min-width:0; color:#111; background:#FAFAF8;
+  font-family:Inter,Arial,sans-serif; font-size:14px; line-height:1.5;
+  font-weight:400; font-synthesis:none; text-align:left;
+  overflow-wrap:anywhere; isolation:isolate;
+}
+.native-diagram *, .native-diagram *::before, .native-diagram *::after {
+  box-sizing:border-box; border-width:0; border-style:solid; border-color:#E8E2D9;
+  --tw-translate-x:0; --tw-translate-y:0; --tw-rotate:0;
+  --tw-skew-x:0; --tw-skew-y:0; --tw-scale-x:1; --tw-scale-y:1;
+}
+.native-diagram div {min-width:0}
+.native-diagram p, .native-diagram h3, .native-diagram h4 {margin:0; color:inherit; font-size:inherit; line-height:inherit; max-width:none}
+.native-diagram h3, .native-diagram h4 {font-weight:400}
+.native-diagram svg {display:block; flex-shrink:0; vertical-align:middle}
+.native-diagram .native-card {border-radius:16px; box-shadow:none}
+.native-diagram .absolute {position:absolute}
+.native-diagram .relative {position:relative}
+.native-diagram .inset-0 {inset:0}
+.native-diagram .-top-3 {top:-.75rem}
+.native-diagram .bottom-\[8\%\] {bottom:8%}
+.native-diagram .left-1\/2 {left:50%}
+.native-diagram .left-6 {left:1.5rem}
+.native-diagram .left-\[4\%\] {left:4%}
+.native-diagram .right-\[4\%\] {right:4%}
+.native-diagram .top-1\/2 {top:50%}
+.native-diagram .top-\[8\%\] {top:8%}
+.native-diagram .mx-auto {margin-left:auto;margin-right:auto}
+.native-diagram .my-4 {margin-top:1rem;margin-bottom:1rem}
+.native-diagram .-mt-2 {margin-top:-.5rem}
+.native-diagram .mb-10 {margin-bottom:2.5rem}
+.native-diagram .mb-2 {margin-bottom:.5rem}
+.native-diagram .mb-3 {margin-bottom:.75rem}
+.native-diagram .mb-4 {margin-bottom:1rem}
+.native-diagram .mb-6 {margin-bottom:1.5rem}
+.native-diagram .mt-0\.5 {margin-top:.125rem}
+.native-diagram .mt-1 {margin-top:.25rem}
+.native-diagram .mt-10 {margin-top:2.5rem}
+.native-diagram .mt-12 {margin-top:3rem}
+.native-diagram .mt-2 {margin-top:.5rem}
+.native-diagram .mt-3 {margin-top:.75rem}
+.native-diagram .mt-6 {margin-top:1.5rem}
+.native-diagram .mt-8 {margin-top:2rem}
+.native-diagram .block {display:block}
+.native-diagram .flex {display:flex}
+.native-diagram .inline-flex {display:inline-flex}
+.native-diagram .grid {display:grid}
+.native-diagram .hidden {display:none}
+.native-diagram .aspect-square {aspect-ratio:1/1}
+.native-diagram .h-10 {height:2.5rem}
+.native-diagram .h-2 {height:.5rem}
+.native-diagram .h-20 {height:5rem}
+.native-diagram .h-6 {height:1.5rem}
+.native-diagram .h-7 {height:1.75rem}
+.native-diagram .h-8 {height:2rem}
+.native-diagram .h-9 {height:2.25rem}
+.native-diagram .h-full {height:100%}
+.native-diagram .h-px {height:1px}
+.native-diagram .w-10 {width:2.5rem}
+.native-diagram .w-12 {width:3rem}
+.native-diagram .w-16 {width:4rem}
+.native-diagram .w-2 {width:.5rem}
+.native-diagram .w-20 {width:5rem}
+.native-diagram .w-6 {width:1.5rem}
+.native-diagram .w-7 {width:1.75rem}
+.native-diagram .w-8 {width:2rem}
+.native-diagram .w-9 {width:2.25rem}
+.native-diagram .w-full {width:100%}
+.native-diagram .w-px {width:1px}
+.native-diagram .min-w-0 {min-width:0}
+.native-diagram .max-w-\[180px\] {max-width:180px}
+.native-diagram .max-w-\[18ch\] {max-width:18ch}
+.native-diagram .max-w-\[22ch\] {max-width:22ch}
+.native-diagram .max-w-\[680px\] {max-width:680px}
+.native-diagram .max-w-\[70ch\] {max-width:70ch}
+.native-diagram .max-w-\[90px\] {max-width:90px}
+.native-diagram .flex-1 {flex:1 1 0%}
+.native-diagram .shrink-0 {flex-shrink:0}
+.native-diagram .-translate-x-1\/2 {--tw-translate-x:-50%}
+.native-diagram .-translate-x-1\/2,
+.native-diagram .-translate-y-1\/2 {transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+.native-diagram .-translate-y-1\/2 {--tw-translate-y:-50%}
+.native-diagram .flex-col {flex-direction:column}
+.native-diagram .flex-wrap {flex-wrap:wrap}
+.native-diagram .items-start {align-items:flex-start}
+.native-diagram .items-center {align-items:center}
+.native-diagram .items-baseline {align-items:baseline}
+.native-diagram .items-stretch {align-items:stretch}
+.native-diagram .justify-center {justify-content:center}
+.native-diagram .justify-between {justify-content:space-between}
+.native-diagram .gap-1 {gap:.25rem}
+.native-diagram .gap-2 {gap:.5rem}
+.native-diagram .gap-3 {gap:.75rem}
+.native-diagram .gap-4 {gap:1rem}
+.native-diagram .gap-6 {gap:1.5rem}
+.native-diagram .gap-8 {gap:2rem}
+.native-diagram .space-y-2>:not([hidden])~:not([hidden]) {--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}
+.native-diagram .space-y-5>:not([hidden])~:not([hidden]) {--tw-space-y-reverse:0;margin-top:calc(1.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem*var(--tw-space-y-reverse))}
+.native-diagram .space-y-8>:not([hidden])~:not([hidden]) {--tw-space-y-reverse:0;margin-top:calc(2rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem*var(--tw-space-y-reverse))}
+.native-diagram .divide-y>:not([hidden])~:not([hidden]) {--tw-divide-y-reverse:0;border-top-width:calc(1px*(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px*var(--tw-divide-y-reverse))}
+.native-diagram .divide-\[\#E8E2D9\]>:not([hidden])~:not([hidden]) {--tw-divide-opacity:1;border-color:rgb(232 226 217/var(--tw-divide-opacity,1))}
+.native-diagram .overflow-hidden {overflow:hidden}
+.native-diagram .rounded {border-radius:.25rem}
+.native-diagram .rounded-\[10px\] {border-radius:10px}
+.native-diagram .rounded-\[12px\] {border-radius:12px}
+.native-diagram .rounded-\[16px\] {border-radius:16px}
+.native-diagram .rounded-\[6px\] {border-radius:6px}
+.native-diagram .rounded-\[8px\] {border-radius:8px}
+.native-diagram .rounded-full {border-radius:9999px}
+.native-diagram .border {border-width:1px}
+.native-diagram .border-t {border-top-width:1px}
+.native-diagram .border-\[\#111\] {--tw-border-opacity:1;border-color:rgb(17 17 17/var(--tw-border-opacity,1))}
+.native-diagram .border-\[\#E8E2D9\] {--tw-border-opacity:1;border-color:rgb(232 226 217/var(--tw-border-opacity,1))}
+.native-diagram .border-\[\#FAFAF8\] {--tw-border-opacity:1;border-color:rgb(250 250 248/var(--tw-border-opacity,1))}
+.native-diagram .bg-\[\#111\] {--tw-bg-opacity:1;background-color:rgb(17 17 17/var(--tw-bg-opacity,1))}
+.native-diagram .bg-\[\#E8E2D9\] {--tw-bg-opacity:1;background-color:rgb(232 226 217/var(--tw-bg-opacity,1))}
+.native-diagram .bg-\[\#FAFAF8\] {--tw-bg-opacity:1;background-color:rgb(250 250 248/var(--tw-bg-opacity,1))}
+.native-diagram .bg-\[\#FFFEFB\] {--tw-bg-opacity:1;background-color:rgb(255 254 251/var(--tw-bg-opacity,1))}
+.native-diagram .bg-white {--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}
+.native-diagram .p-3 {padding:.75rem}
+.native-diagram .p-4 {padding:1rem}
+.native-diagram .p-6 {padding:1.5rem}
+.native-diagram .p-8 {padding:2rem}
+.native-diagram .px-2 {padding-left:.5rem;padding-right:.5rem}
+.native-diagram .px-3 {padding-left:.75rem;padding-right:.75rem}
+.native-diagram .px-4 {padding-left:1rem;padding-right:1rem}
+.native-diagram .px-5 {padding-left:1.25rem;padding-right:1.25rem}
+.native-diagram .px-6 {padding-left:1.5rem;padding-right:1.5rem}
+.native-diagram .px-8 {padding-left:2rem;padding-right:2rem}
+.native-diagram .py-1 {padding-top:.25rem;padding-bottom:.25rem}
+.native-diagram .py-2 {padding-top:.5rem;padding-bottom:.5rem}
+.native-diagram .py-3 {padding-top:.75rem;padding-bottom:.75rem}
+.native-diagram .py-4 {padding-top:1rem;padding-bottom:1rem}
+.native-diagram .py-6 {padding-top:1.5rem;padding-bottom:1.5rem}
+.native-diagram .pb-12 {padding-bottom:3rem}
+.native-diagram .pt-10 {padding-top:2.5rem}
+.native-diagram .pt-4 {padding-top:1rem}
+.native-diagram .text-center {text-align:center}
+.native-diagram .font-mono {font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}
+.native-diagram .text-\[10px\] {font-size:10px}
+.native-diagram .text-\[11px\] {font-size:11px}
+.native-diagram .text-\[12px\] {font-size:12px}
+.native-diagram .text-\[13px\] {font-size:13px}
+.native-diagram .text-\[14px\] {font-size:14px}
+.native-diagram .text-\[17px\] {font-size:17px}
+.native-diagram .text-\[18px\] {font-size:18px}
+.native-diagram .text-\[20px\] {font-size:20px}
+.native-diagram .text-\[28px\] {font-size:28px}
+.native-diagram .text-\[30px\] {font-size:30px}
+.native-diagram .text-\[8px\] {font-size:8px}
+.native-diagram .text-\[9px\] {font-size:9px}
+.native-diagram .font-medium {font-weight:500}
+.native-diagram .font-normal {font-weight:400}
+.native-diagram .uppercase {text-transform:uppercase}
+.native-diagram .italic {font-style:italic}
+.native-diagram .leading-\[1\.05\] {line-height:1.05}
+.native-diagram .leading-\[1\.2\] {line-height:1.2}
+.native-diagram .leading-\[1\.3\] {line-height:1.3}
+.native-diagram .leading-\[1\.4\] {line-height:1.4}
+.native-diagram .leading-\[1\.5\] {line-height:1.5}
+.native-diagram .leading-none {line-height:1}
+.native-diagram .tracking-\[0\.05em\] {letter-spacing:.05em}
+.native-diagram .tracking-\[0\.12em\] {letter-spacing:.12em}
+.native-diagram .tracking-\[0\.18em\] {letter-spacing:.18em}
+.native-diagram .text-\[\#111\] {--tw-text-opacity:1;color:rgb(17 17 17/var(--tw-text-opacity,1))}
+.native-diagram .text-\[\#555\] {--tw-text-opacity:1;color:rgb(85 85 85/var(--tw-text-opacity,1))}
+.native-diagram .text-\[\#666\] {--tw-text-opacity:1;color:rgb(102 102 102/var(--tw-text-opacity,1))}
+.native-diagram .text-\[\#777\] {--tw-text-opacity:1;color:rgb(119 119 119/var(--tw-text-opacity,1))}
+.native-diagram .text-\[\#999\] {--tw-text-opacity:1;color:rgb(153 153 153/var(--tw-text-opacity,1))}
+.native-diagram .text-\[\#FAFAF8\] {--tw-text-opacity:1;color:rgb(250 250 248/var(--tw-text-opacity,1))}
+.native-diagram .text-white {--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}
+.native-diagram .opacity-20 {opacity:.2}
+.native-diagram .opacity-30 {opacity:.3}
+.native-diagram .opacity-40 {opacity:.4}
+.native-diagram .opacity-60 {opacity:.6}
+/* Cancel the host page's viewport-based md utilities in small containers. */
+.native-diagram .md\:grid-cols-2,
+.native-diagram .md\:grid-cols-3,
+.native-diagram .md\:grid-cols-\[1fr_96px_1fr\] {grid-template-columns:minmax(0,1fr)}
+.native-diagram .md\:pl-10 {padding-left:0}
+.native-diagram .md\:border-l {border-left-width:0}
+.native-diagram .md\:divide-x > :not([hidden]) ~ :not([hidden]) {border-left-width:0; border-right-width:0}
+.native-diagram .serif {font-family:"Instrument Serif",Georgia,serif}
+.native-diagram .mono, .native-diagram .font-mono {font-family:"JetBrains Mono",monospace}
+.native-diagram .native-card__body {padding:24px 24px 28px}
+.native-diagram .native-card__body > .flex.justify-between {gap:16px; flex-wrap:wrap}
+.native-diagram .native-card__body > .flex.justify-between > span {max-width:100%}
+.native-diagram .native-card__body h3, .native-diagram .native-card__body h4 {text-wrap:pretty}
+.native-diagram .shadow-\[0_1px_3px_rgba\(0\,0\,0\,0\.04\)\] {box-shadow:none}
+.native-diagram [class*="shadow-"] {box-shadow:none}
+.native-diagram .native-moat-row {gap:16px; padding:24px 20px}
+.native-diagram .native-moat-row:nth-child(odd) {background:#FAFAF8}
+.native-diagram .native-moat-row:nth-child(even) {background:#F2EEE6}
+.native-diagram .native-moat-markers {flex-direction:column; align-items:center; gap:10px}
+
+/* A linear reading order keeps all four pills legible in a narrow column. */
+.native-diagram .native-flywheel {display:flex; flex-direction:column; gap:8px; aspect-ratio:auto; max-width:440px}
+.native-diagram .native-flywheel-connectors {display:none}
+.native-diagram .native-flywheel-node,
+.native-diagram .native-flywheel-center {position:static; inset:auto; transform:none; width:100%; max-width:none}
+.native-diagram .native-flywheel-node > div {width:100%; box-shadow:none; padding:12px 20px}
+.native-diagram .native-flywheel-node .serif {font-size:20px; line-height:1.15}
+.native-diagram .native-flywheel-node .mono {font-size:11px; line-height:1.5}
+.native-diagram .native-flywheel-node .font-mono {font-size:9px}
+.native-diagram .native-flywheel-step {display:block; width:30px; height:30px; margin:4px auto 0}
+.native-diagram .native-flywheel-center {margin-top:8px}
+.native-diagram .native-flywheel-center > div {padding:20px; border-radius:12px}
+.native-diagram .native-flywheel-center .mono {font-size:10px; line-height:1.5}
+
+@container native-diagram (min-width:720px) {
+  .native-diagram .md\:block {display:block}
+  .native-diagram .md\:flex {display:flex}
+  .native-diagram .md\:hidden {display:none}
+  .native-diagram .md\:aspect-\[1\.2\/1\] {aspect-ratio:1.2/1}
+  .native-diagram .md\:grid-cols-2 {grid-template-columns:repeat(2,minmax(0,1fr))}
+  .native-diagram .md\:grid-cols-3 {grid-template-columns:repeat(3,minmax(0,1fr))}
+  .native-diagram .md\:grid-cols-\[1fr_96px_1fr\] {grid-template-columns:1fr 96px 1fr}
+  .native-diagram .md\:gap-0 {gap:0}
+  .native-diagram .md\:divide-x>:not([hidden])~:not([hidden]) {--tw-divide-x-reverse:0;border-right-width:calc(1px*var(--tw-divide-x-reverse));border-left-width:calc(1px*(1 - var(--tw-divide-x-reverse)))}
+  .native-diagram .md\:divide-y-0>:not([hidden])~:not([hidden]) {--tw-divide-y-reverse:0;border-top-width:calc(0px*(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(0px*var(--tw-divide-y-reverse))}
+  .native-diagram .md\:border-l {border-left-width:1px}
+  .native-diagram .md\:px-12 {padding-left:3rem;padding-right:3rem}
+  .native-diagram .md\:px-8 {padding-left:2rem;padding-right:2rem}
+  .native-diagram .md\:pl-10 {padding-left:2.5rem}
+  .native-diagram .md\:text-\[36px\] {font-size:36px}
+  .native-diagram .md\:text-\[38px\] {font-size:38px}
+  .native-diagram .md\:text-\[40px\] {font-size:40px}
+  .native-diagram .native-card__body {padding:40px 48px 48px}
+  .native-diagram .native-moat-row {gap:24px; padding:24px 32px}
+  .native-diagram .native-moat-markers {flex-direction:row; gap:16px}
+}
+
+/* Source circular composition needs enough room for readable side pills. */
+@container native-diagram (min-width:740px) {
+  .native-diagram .native-flywheel {display:block; aspect-ratio:1.2 / 1; max-width:680px}
+  .native-diagram .native-flywheel-connectors {display:block}
+  .native-diagram .native-flywheel-node {position:absolute; width:max-content; max-width:45%}
+  .native-diagram .native-flywheel-node[class~="top-[8%]"] {top:8%; left:50%; bottom:auto; right:auto; transform:translateX(-50%)}
+  .native-diagram .native-flywheel-node[class~="bottom-[8%]"] {bottom:8%; left:50%; top:auto; right:auto; transform:translateX(-50%)}
+  .native-diagram .native-flywheel-node[class~="top-1/2"] {top:50%; bottom:auto; max-width:28%; transform:translateY(-50%)}
+  .native-diagram .native-flywheel-node[class~="right-[4%]"] {right:4%; left:auto}
+  .native-diagram .native-flywheel-node[class~="left-[4%]"] {left:4%; right:auto}
+  .native-diagram .native-flywheel-node > div {padding:12px 20px}
+  .native-diagram .native-flywheel-node .serif {font-size:14px; line-height:1.15}
+  .native-diagram .native-flywheel-node .mono {font-size:9px; line-height:1.4}
+  .native-diagram .native-flywheel-step {display:none}
+  .native-diagram .native-flywheel-center {position:absolute; top:50%; left:50%; right:auto; bottom:auto; width:180px; max-width:30%; margin:0; transform:translate(-50%,-50%)}
+  .native-diagram .native-flywheel-center > div {padding:16px}
+  .native-diagram .native-flywheel-center .mono {font-size:9px; line-height:1.4}
+  .native-diagram .native-flywheel-center .text-\[8px\] {font-size:8px}
+}
+
+@container native-diagram (max-width:359px) {
+  .native-diagram .native-card__body {padding:24px 20px}
+  .native-diagram .native-card__body > .mb-10 {margin-bottom:28px}
+  .native-diagram .native-card__body > .mt-12 {margin-top:32px}
+  .native-diagram .native-moat-row {padding:20px 16px; gap:12px}
+  .native-diagram .native-moat-markers .w-10 {width:32px; height:32px}
+  .native-diagram .native-moat-markers .w-8 {width:28px; height:28px}
+  .native-diagram .native-flywheel-node > div {padding:12px 16px}
+}

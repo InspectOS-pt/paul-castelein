@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-19",
+  "source": "https://www.meta.ai/share/a/19d0d284-7e7b-49a4-8740-c8db183b536e",
+  "supportingReference": "https://meta.ai/share/c/hhkUckNd5X",
+  "scope": "Personal site only; existing page layout, business manuscripts, privacy notice and form preserved.",
+  "format": "Static HTML/CSS and original SVG shapes; no source runtime, iframe, tracking or remote fonts.",
+  "mapping": {
+    "1": "Source 1: Trust to Proof",
+    "2": "Source 3: Business Model 2030",
+    "3": "Source 2: Information Asymmetry Collapse",
+    "4": "Source 4: Vertical Data Flywheel",
+    "5": "Source 5: Five Moats"
+  },
+  "adaptations": [
+    "EN/PT/ES native text with escaped substitutions",
+    "Technical design annotations and demonstration footers removed",
+    "Native source headlines retained as h4 within site sections",
+    "Figure numbers follow existing site order",
+    "Scoped styles and container queries prevent host style leakage",
+    "Narrow flywheel uses the same pills in sequence with copied arrowheads",
+    "Alternating Five Moats stone fills retained explicitly in CSS",
+    "Decorative SVGs and source glyph icons hidden from assistive technology",
+    "Fonts locally hosted with SIL Open Font License files"
+  ],
+  "files": [
+    {
+      "file": "scripts/templates/native-figures/trust.html",
+      "sha256": "cc30046fa2da2935abd182c7894913e69db6b5abf0c177d0c25f12dbd291aec7"
+    },
+    {
+      "file": "scripts/templates/native-figures/model.html",
+      "sha256": "571ba3f978a1729f729de722bdb9d170609b095998be67ad26b3f46a3e1b0129"
+    },
+    {
+      "file": "scripts/templates/native-figures/asymmetry.html",
+      "sha256": "77303eee63604df743fdcae18f0d2c84f84b303253aef45eb10e947aeb0e9cd1"
+    },
+    {
+      "file": "scripts/templates/native-figures/flywheel.html",
+      "sha256": "0ba8ef03b61764e217b688dc925bdce1560b69e9ea3f828f0c54e963b4cddf33"
+    },
+    {
+      "file": "scripts/templates/native-figures/moats.html",
+      "sha256": "dccea3362f5bc6f6ebf3977e79f058ab1168b6cf6eac4a7f8651f444e2bca26f"
+    },
+    {
+      "file": "content/native-figure-copy.json",
+      "sha256": "453634eb7696c3b48f18863be524e05e5f489d48cc96569cadbbdf44536c77a2"
+    },
+    {
+      "file": "assets/native-figures.css",
+      "sha256": "1dd946e0418b3b29c92e77d6e8cd3133c6ade937fbf6573b5e20f489b03b2c4d"
+    },
+    {
+      "file": "assets/fonts/native-fonts.css",
+      "sha256": "d1a2bfef006c652ec300464c733eae607ae42287c130afcbbc3579477d6224f2"
+    }
+  ]
+}
