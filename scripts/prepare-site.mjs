@@ -24,6 +24,9 @@ for(const page of pages){
  if(/[—–]/u.test(html))throw Error('Unexpected dash character in '+page);
  if(/past credentials|past resume|unsolicited pitches|PPTX\+|DOCX\+/i.test(html))throw Error('Removed copy remains in '+page);
  // Owner-marked presentation text must stay removed in every language rebuild.
+ if(!redirect&&!html.includes('<span class="reference-wordmark">Castelein.</span>'))throw Error('Approved Castelein wordmark missing: '+page);
+ const footer=html.match(/<footer class="reference-footer"[^>]*>[\s\S]*?<\/footer>/)?.[0]||'';
+ if(/(?:Founder of|Fundador da|Fundador de) Skaler\.pt/i.test(footer))throw Error('Removed footer founder clause remains: '+page);
  if(/Dutch founder|fundador(?: e criador de empresas)? neerlandês|fundador(?: y creador de empresas)? neerlandés/i.test(html))throw Error('Superseded profile wording remains in '+page);
  if(/reference-identity|(?:The Architect|O Arquiteto|El Arquitecto) · Castelein\.eu\.com · Portugal|Skaler · Venture Studio/i.test(html))throw Error('Removed presentation label remains in '+page);
  for(const [figure] of html.matchAll(/<figure\b[^>]*>[\s\S]*?<\/figure>/g)){
