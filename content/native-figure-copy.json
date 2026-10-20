@@ -1,7 +1,6 @@
 {
   "en": {
     "trust": {
-      "caption": "From informal credibility to documented, accountable verification.",
       "texts": [
         "Fig 01: Replacing Trust with Proof",
         "Editorial / Comparison",
@@ -27,7 +26,6 @@
       ]
     },
     "asymmetry": {
-      "caption": "The value of information shifts from exclusive access to verification.",
       "texts": [
         "Fig 03: Information Asymmetry Collapse",
         "When processing cost → 0,",
@@ -49,7 +47,6 @@
       ]
     },
     "model": {
-      "caption": "Physical verification and permissioned distribution, with clear disclosure rules.",
       "texts": [
         "Fig 02: Business Model of 2030",
         "Verified Reality + Permissioned Distribution",
@@ -76,7 +73,6 @@
       ]
     },
     "flywheel": {
-      "caption": "Four ventures connect evidence, buyer intelligence, professional distribution and private workspaces.",
       "texts": [
         "Fig. 04",
         "The Vertical Data Flywheel",
@@ -96,7 +92,6 @@
       ]
     },
     "moats": {
-      "caption": "Five sources of lasting advantage beyond commodity software.",
       "texts": [
         "Fig 05: Five Moats",
         "When software becomes abundant code alone ceases to be a lasting advantage.",
@@ -132,7 +127,6 @@
   },
   "pt": {
     "trust": {
-      "caption": "Da credibilidade informal à verificação documentada e responsável.",
       "texts": [
         "Fig. 01: Substituir a confiança por provas",
         "Editorial / Comparação",
@@ -158,7 +152,6 @@
       ]
     },
     "asymmetry": {
-      "caption": "O valor da informação passa do acesso exclusivo para a verificação.",
       "texts": [
         "Fig. 03: Colapso da assimetria de informação",
         "Quando o custo de processamento → 0,",
@@ -180,7 +173,6 @@
       ]
     },
     "model": {
-      "caption": "Verificação física e distribuição permissionada, com regras claras de divulgação.",
       "texts": [
         "Fig. 02: Modelo de negócio de 2030",
         "Realidade Verificada + Distribuição Permissionada",
@@ -207,7 +199,6 @@
       ]
     },
     "flywheel": {
-      "caption": "Quatro empresas ligam evidência, informação para compradores, distribuição profissional e espaços de trabalho privados.",
       "texts": [
         "Fig. 04",
         "O ciclo de dados vertical",
@@ -227,7 +218,6 @@
       ]
     },
     "moats": {
-      "caption": "Cinco fontes de vantagem duradoura para além do software indiferenciado.",
       "texts": [
         "Fig. 05: Cinco barreiras competitivas",
         "Quando o software se torna abundante, o código por si só deixa de constituir uma vantagem duradoura.",
@@ -263,7 +253,6 @@
   },
   "es": {
     "trust": {
-      "caption": "De la credibilidad informal a la verificación documentada y responsable.",
       "texts": [
         "Fig. 01: Sustituir la confianza por pruebas",
         "Editorial / Comparación",
@@ -289,7 +278,6 @@
       ]
     },
     "asymmetry": {
-      "caption": "El valor de la información pasa del acceso exclusivo a la verificación.",
       "texts": [
         "Fig. 03: Colapso de la asimetría de información",
         "Cuando el coste de procesamiento → 0,",
@@ -311,7 +299,6 @@
       ]
     },
     "model": {
-      "caption": "Verificación física y distribución por permisos, con reglas claras de divulgación.",
       "texts": [
         "Fig. 02: Modelo de negocio de 2030",
         "Realidad Verificada + Distribución por Permisos",
@@ -338,7 +325,6 @@
       ]
     },
     "flywheel": {
-      "caption": "Cuatro empresas conectan evidencia, información para compradores, distribución profesional y espacios de trabajo privados.",
       "texts": [
         "Fig. 04",
         "El ciclo de datos vertical",
@@ -358,7 +344,6 @@
       ]
     },
     "moats": {
-      "caption": "Cinco fuentes de ventaja duradera más allá del software indiferenciado.",
       "texts": [
         "Fig. 05: Cinco barreras competitivas",
         "Cuando el software se vuelve abundante, el código por sí solo deja de constituir una ventaja duradera.",

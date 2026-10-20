@@ -23,6 +23,12 @@ for(const page of pages){
  for(const [,json] of html.matchAll(/<script type="application\/(?:ld\+)?json"[^>]*>([\s\S]*?)<\/script>/g))JSON.parse(json);
  if(/[—–]/u.test(html))throw Error('Unexpected dash character in '+page);
  if(/past credentials|past resume|unsolicited pitches|PPTX\+|DOCX\+/i.test(html))throw Error('Removed copy remains in '+page);
+ // Owner-marked presentation text must stay removed in every language rebuild.
+ if(/Dutch founder|fundador(?: e criador de empresas)? neerlandês|fundador(?: y creador de empresas)? neerlandés/i.test(html))throw Error('Superseded profile wording remains in '+page);
+ if(/reference-identity|(?:The Architect|O Arquiteto|El Arquitecto) · Castelein\.eu\.com · Portugal|Skaler · Venture Studio/i.test(html))throw Error('Removed presentation label remains in '+page);
+ for(const [figure] of html.matchAll(/<figure\b[^>]*>[\s\S]*?<\/figure>/g)){
+  if(figure.includes('class="native-diagram"')&&figure.includes('<figcaption'))throw Error('Removed diagram caption remains in '+page);
+ }
  const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
  if(new Set(ids).size!==ids.length)throw Error('Duplicate id: '+page);
 }

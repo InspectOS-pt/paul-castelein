@@ -22,7 +22,8 @@
     "Fonts locally hosted with SIL Open Font License files",
     "Later minimal flywheel replaces the earlier pills and framed center with four dots, outside labels and open center text",
     "Personal-site no-blue palette retained; the latest Skaler blue-arrow reference informs composition",
-    "Flywheel uses grid-based circular placement from 720px and a readable linear sequence below that width"
+    "Flywheel uses grid-based circular placement from 720px and a readable linear sequence below that width",
+    "External figure captions and their number badges removed in all three languages at the owner’s request on 2026-10-20; internal diagram headings retained"
   ],
   "files": [
     {
@@ -47,7 +48,7 @@
     },
     {
       "file": "content/native-figure-copy.json",
-      "sha256": "feb237ae2c2902e531181e80f12ec74fdb0caccfb915c2c228b157a57fe76843"
+      "sha256": "cfd03114554a021d1eb20509b018540c41d3b7d697888dd6daced75a32178659"
     },
     {
       "file": "assets/native-figures.css",

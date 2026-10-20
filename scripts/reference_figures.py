@@ -32,8 +32,8 @@ _TOKEN = re.compile(r"\{\{t(\d{2})\}\}")
 def reference_figure(n, lang, dark=False):
     """Render a native figure, retaining the existing site-slot API.
 
-    ``dark`` changes only the outer caption styling hook. Figure text remains
-    normal accessible HTML; decorative SVGs and glyphs are hidden from readers.
+    ``dark`` is retained for existing call sites. Figure text remains normal
+    accessible HTML. Paul requested no external captions or number badges.
     """
     kind, max_width = FIGURES[n]
     copy = COPY[lang][kind]
@@ -43,9 +43,5 @@ def reference_figure(n, lang, dark=False):
     return (
         f'<figure class="{classes}" style="--figure-max:{max_width}px">'
         f'<div class="native-diagram" data-kind="{kind}">{markup}</div>'
-        '<figcaption class="reference-figure__caption">'
-        f'<span class="reference-figure__number">Fig. {n}</span>'
-        f'<span class="reference-figure__text">{escape(copy["caption"])}</span>'
-        '</figcaption>'
         '</figure>'
     )

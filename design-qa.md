@@ -155,3 +155,13 @@ Final result: passed
 Final integration check found and fixed [P2] square paper corners around rounded cards in the dark Thesis section. The native wrapper now has the same 16px radius as the inner card; layout dimensions and label positions are unaffected. Final live evidence is `qa/minimal-flywheel-live-proof.jpg`. The fresh formal-site browser reported no warnings or errors. The official domain and stable preview both served all seven changed public files with exact SHA1 matches (`qa/minimal-live-verification.json`).
 
 Final result: passed
+
+## Owner-marked text cleanup and operator wording · 2026-10-20
+
+Removed the header identity subtitle, Architect/location hero badge, standalone Skaler/Venture Studio principle sublabel, and all five external diagram captions with their FIG number badges. The shared header and figure renderer apply these removals to English, Portuguese and Spanish, including standalone Thesis and Memos pages. Internal diagram headings, SVGs and substantive diagram text remain. The portrait caption remains separate.
+
+Changed the About profile descriptor and repeated introduction from Dutch founder to Operator in English and Operador in Portuguese/Spanish, on the homepage and standalone About pages. Other approved business copy, metadata, privacy text, forms and navigation are preserved.
+
+Validation: the build passed 24 content/error pages, 16 legacy destinations and the 71-file release allowlist. Browser checks covered all 21 content pages at 1280px and 390px (42 cases), with no removed labels/captions, superseded profile wording, WhatsApp/Meta AI references or horizontal overflow. All six home/About pages display Operator/Operador at both widths. Evidence: `qa/red-block-operator-browser-checks.json`, earlier hero captures `qa/red-block-home-desktop.jpg` and `qa/red-block-home-mobile.jpg`.
+
+Build guards reject reintroduced identity/badge/sublabel markup, external native-diagram captions and superseded profile wording. Negative injection checks confirmed rejection, followed by a clean build (`qa/red-block-regression-check.json`, `qa/operator-regression-check.json`). `AGENTS.md` records the owner's presentation constraints for future changes. The native-copy provenance now records the caption removal; no private source or QA files are published.
