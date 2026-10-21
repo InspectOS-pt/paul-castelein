@@ -1,4 +1,4 @@
-/* Only local UI and local email drafts. No requests or form submissions. */
+/* Local navigation and same-origin introduction submission. */
 (() => {
  const menus=document.querySelectorAll('.mobile-menu');
  document.addEventListener('keydown',event=>{
@@ -13,28 +13,31 @@
  for(const a of document.querySelectorAll('.language-nav a')){const target=new URL(a.href);target.search=location.search;target.hash=location.hash;a.href=target.href;}
  const form=document.querySelector('#introduction-form');if(!form)return;
  const copy=JSON.parse(document.querySelector('#form-copy').textContent);
- const fields=Object.fromEntries(['name','email','organisation','startingPoint','opportunity','contribution'].map(key=>[key,document.getElementById(key)]));
- const status=document.querySelector('#draft-status'),fallback=document.querySelector('#draft-fallback'),copyArea=document.querySelector('#draft-copy');
+ const fields=Object.fromEntries(['name','email','organisation','startingPoint','startingPointOther','opportunity','contribution'].map(key=>[key,document.getElementById(key)]));
+ const status=document.querySelector('#form-status'),fieldset=document.querySelector('#introduction-fields'),submit=form.querySelector('[type="submit"]');
  const query=new URLSearchParams(location.search),start=query.get('starting-point');
  if(Object.hasOwn(copy.options,start))fields.startingPoint.value=start;
- const estate=query.get('subject')==='estateos';
- if(estate){fields.startingPoint.value='other';fields.opportunity.value=copy.estateSubject;}
- async function copyText(text,area){try{await navigator.clipboard.writeText(text);return true;}catch{if(area){area.focus();area.select();}return false;}}
- document.querySelector('#copy-email').addEventListener('click',async()=>{document.querySelector('#copy-status').textContent=await copyText('paul@skaler.pt')?copy.copiedEmail:'paul@skaler.pt';});
+ if(query.get('subject')==='estateos'){fields.startingPoint.value='other';fields.startingPointOther.value=copy.estateSubject;fields.opportunity.value=copy.estateSubject;}
  function showError(key,message){document.getElementById(`${key}-error`).textContent=message;if(message)fields[key].setAttribute('aria-invalid','true');else fields[key].removeAttribute('aria-invalid');}
- let draft='';
- function prepare(){
-  const subject=estate?copy.estateSubject:copy.subject;
-  const body=[`${copy.name}: ${fields.name.value.trim()}`,`${copy.email}: ${fields.email.value.trim()}`,`${copy.organisation}: ${fields.organisation.value.trim()}`,`${copy.startingPoint}: ${copy.options[fields.startingPoint.value]}`,'',`${copy.opportunity}:\n${fields.opportunity.value.trim()}`,'',`${copy.contribution}:\n${fields.contribution.value.trim()}`].join('\n');
-  draft=`${subject}\n\n${body}`;form.dataset.draftHref=`mailto:paul@skaler.pt?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;copyArea.value=draft;
- }
- for(const field of Object.values(fields))field.addEventListener('input',()=>{if(Object.hasOwn(copy.errors,field.id))showError(field.id,'');prepare();});
- form.addEventListener('submit',event=>{
-  event.preventDefault();let invalid;
-  for(const key of Object.keys(copy.errors)){const valid=fields[key].value.trim()&&(key!=='email'||fields.email.validity.valid);showError(key,valid?'':copy.errors[key]);if(!valid&&!invalid)invalid=fields[key];}
+ function syncOther(){const active=fields.startingPoint.value==='other';document.querySelector('#startingPointOther-field').hidden=!active;fields.startingPointOther.disabled=!active;fields.startingPointOther.required=active;if(!active)showError('startingPointOther','');}
+ fields.startingPoint.addEventListener('change',syncOther);
+ for(const field of Object.values(fields))field.addEventListener('input',()=>{if(Object.hasOwn(copy.errors,field.id))showError(field.id,'');status.textContent='';});
+ let sending=false;
+ form.addEventListener('submit',async event=>{
+  event.preventDefault();if(sending)return;let invalid;
+  for(const key of Object.keys(copy.errors)){const valid=(key==='startingPointOther'&&fields.startingPoint.value!=='other')||(fields[key].value.trim()&&(key!=='email'||fields.email.validity.valid));showError(key,valid?'':copy.errors[key]);if(!valid&&!invalid)invalid=fields[key];}
   if(invalid){status.textContent='';invalid.focus();return;}
-  prepare();fallback.hidden=false;status.textContent=copy.draftReady;location.href=form.dataset.draftHref;
+  const payload=Object.fromEntries(Object.entries(fields).filter(([key])=>key!=='startingPointOther'||fields.startingPoint.value==='other').map(([key,field])=>[key,field.value.trim()]));
+  payload.locale=document.documentElement.lang.split('-')[0];payload.website=document.querySelector('#website').value;
+  sending=true;fieldset.disabled=true;submit.textContent=copy.sending;form.setAttribute('aria-busy','true');status.textContent=copy.sending;
+  const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),55000);
+  try{
+   const response=await fetch(form.action,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),credentials:'same-origin',signal:controller.signal});
+   const result=await response.json();
+   if(!response.ok||result.ok!==true||result.code!=='sent')throw new Error(result.code==='unavailable'?'unavailable':result.code==='invalid'?'invalid':'failed');
+   form.reset();syncOther();status.textContent=copy.sent;
+  }catch(error){status.textContent=error.message==='unavailable'?copy.unavailable:error.message==='invalid'?copy.invalid:copy.failed;}
+  finally{clearTimeout(timeout);sending=false;fieldset.disabled=false;submit.textContent=copy.action;form.removeAttribute('aria-busy');}
  });
- document.querySelector('#copy-introduction').addEventListener('click',async()=>{if(await copyText(draft,copyArea))status.textContent=copy.copiedIntroduction;});
- prepare();document.querySelector('#introduction-fields').disabled=false;
+ syncOther();fieldset.disabled=false;
 })();

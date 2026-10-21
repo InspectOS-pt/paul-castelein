@@ -258,27 +258,28 @@
     "opportunity": "Qué podría construirse",
     "contribution": "Su aportación",
     "optional": "Opcional",
-    "action": "Abrir Borrador de Correo",
-    "explanation": "Abre su aplicación de correo con la presentación preparada para revisarla. El sitio web no envía el mensaje. Puede editarlo antes de enviarlo.",
-    "fallback": "También puede escribir directamente a paul@skaler.pt.",
-    "copyEmail": "Copiar dirección de correo",
-    "copiedEmail": "Dirección de correo copiada.",
-    "copyIntroduction": "Copiar presentación",
-    "copiedIntroduction": "Presentación copiada. Envíela a paul@skaler.pt.",
-    "draftReady": "Su borrador de correo está listo. Revíselo y envíelo desde su aplicación de correo.",
-    "emailDidNotOpen": "Si su aplicación de correo no se ha abierto, copie su presentación y envíela a paul@skaler.pt.",
-    "subject": "Nueva oportunidad de negocio",
+    "action": "Enviar presentación",
+    "explanation": "Su presentación se envía de forma segura a través de este sitio web. Comparta solo un resumen.",
+    "fallback": "Active JavaScript para utilizar este formulario de contacto.",
     "estateSubject": "Consulta sobre EstateOS",
     "errors": {
       "name": "Introduzca su nombre.",
       "email": "Introduzca una dirección de correo válida.",
-      "opportunity": "Añada una breve descripción de la oportunidad."
-    }
+      "opportunity": "Añada una breve descripción de la oportunidad.",
+      "startingPointOther": "Especifique qué le trae por aquí."
+    },
+    "privacy": "Aviso de privacidad",
+    "sending": "Enviando su presentación...",
+    "sent": "Su presentación se ha enviado. Gracias.",
+    "unavailable": "El contacto no está disponible temporalmente. Su mensaje no se ha enviado. Vuelva a intentarlo más tarde.",
+    "invalid": "Revise sus datos y utilice una dirección de correo válida antes de volver a intentarlo.",
+    "failed": "No se ha podido confirmar el envío de su presentación. Los datos que ha introducido siguen en el formulario. Vuelva a intentarlo más tarde.",
+    "startingPointOther": "Especifique"
   },
   "privacy": {
     "title": "Privacidad",
     "intro": "Cómo se tratan los datos personales en este sitio web y cuando contacta con Pieter Paul Castelein sobre una oportunidad.",
-    "noteTitle": "Última actualización: 19 de octubre de 2026",
+    "noteTitle": "Última actualización: 21 de octubre de 2026",
     "note": "Este aviso abarca castelein.eu.com y su vista previa de revisión, incluidos el formulario de presentación y las consultas enviadas a paul@skaler.pt.",
     "sections": [
       {
@@ -292,8 +293,8 @@
       {
         "title": "El formulario de presentación",
         "text": [
-          "El formulario prepara un borrador en su propia aplicación de correo electrónico. Los campos se procesan en su navegador y no se envían a un servidor del sitio web, no se guardan en el almacenamiento del sitio ni se envían desde este a un servicio de CRM o IA. Puede revisar, modificar o descartar el borrador antes de enviarlo.",
-          "Si envía el correo, su proveedor de correo electrónico y el servicio receptor procesan el mensaje. También puede escribir directamente a paul@skaler.pt. Facilitar información es voluntario, pero necesito detalles suficientes para responder. Empiece con un resumen y acuerde un proceso adecuado antes de compartir documentos sensibles o datos personales de otras personas."
+          "Cuando envía el formulario, su nombre, dirección de correo electrónico, motivo del contacto y resumen de la oportunidad, junto con los datos opcionales sobre su organización y aportación, se envían a un servidor alojado en Vercel. El servidor valida el envío y remite el mensaje a través del servicio de correo configurado al buzón receptor. El formulario indica que el envío se ha realizado solo después de que el servicio de correo acepte el mensaje; esto no garantiza la entrega en la bandeja de entrada ni una respuesta.",
+          "Antes de enviar, los campos permanecen en su navegador. El sitio web no mantiene una base de datos separada de consultas ni envía los datos a un servicio de CRM o IA. Facilitar información es voluntario, pero necesito detalles suficientes para responder. Empiece con un resumen y acuerde un proceso adecuado antes de compartir documentos sensibles o datos personales de otras personas."
         ]
       },
       {
@@ -307,7 +308,7 @@
         "title": "Acceso y proveedores de servicios",
         "text": [
           "Las consultas las gestiono yo y, cuando es necesario, personas que me ayudan a evaluar la oportunidad o a responder a ella. Los proveedores de servicios de correo electrónico y TI procesan información para entregar, almacenar y proteger esa correspondencia. El acceso y la comunicación de datos se limitan a lo necesario para esos fines, para el cumplimiento de obligaciones legales o para la protección de derechos.",
-          "El propio sitio web no tiene un buzón de correo, integración con CRM ni procesamiento mediante IA de los datos introducidos en el formulario. Si una conversación da lugar a un proyecto o servicio que implique un tratamiento adicional, se facilitará la información de privacidad correspondiente a esa actividad. Puede escribir a paul@skaler.pt para consultar qué proveedores o destinatarios intervienen en su consulta."
+          "El sitio web remite los envíos del formulario a través de un servicio de correo; no tiene integración con CRM ni procesamiento mediante IA de los datos introducidos. Si una conversación da lugar a un proyecto o servicio que implique un tratamiento adicional, se facilitará la información de privacidad correspondiente a esa actividad. Puede escribir a paul@skaler.pt para consultar qué proveedores o destinatarios intervienen en su consulta."
         ]
       },
       {
@@ -327,7 +328,7 @@
       {
         "title": "Durante cuánto tiempo se conservan los datos",
         "text": [
-          "El sitio web no almacena los datos introducidos en el formulario de presentación. Conservo la correspondencia de las consultas solo mientras sea necesaria para responder, evaluar la oportunidad y gestionar una conversación empresarial en curso. La información se elimina cuando deja de ser necesaria, salvo que una obligación legal o la formulación, el ejercicio o la defensa de reclamaciones requiera que se siga conservando.",
+          "El sitio web no mantiene una base de datos separada de consultas. Los datos del formulario se procesan para entregar el mensaje al servicio de correo receptor. Conservo la correspondencia de las consultas solo mientras sea necesaria para responder, evaluar la oportunidad y gestionar una conversación empresarial en curso. La información se elimina cuando deja de ser necesaria, salvo que una obligación legal o la formulación, el ejercicio o la defensa de reclamaciones requiera que se siga conservando.",
           "Si una conversación se convierte en una relación comercial, los registros pertinentes se conservan durante esa relación y conforme a los requisitos legales aplicables. La información técnica se conserva para los fines de alojamiento y seguridad descritos anteriormente, según las condiciones de conservación aplicables del proveedor. Puede solicitar la eliminación de datos o preguntar por la conservación de un registro concreto en paul@skaler.pt."
         ]
       },
@@ -341,7 +342,7 @@
       {
         "title": "Decisiones automatizadas y cambios",
         "text": [
-          "Este sitio web no elabora perfiles de los visitantes ni toma decisiones exclusivamente automatizadas con efectos jurídicos o de importancia similar. La preparación de un borrador de correo electrónico no supone evaluar ni aceptar una oportunidad.",
+          "Este sitio web no elabora perfiles de los visitantes ni toma decisiones exclusivamente automatizadas con efectos jurídicos o de importancia similar. El envío de una presentación no supone evaluar ni aceptar una oportunidad.",
           "Los enlaces externos abren servicios con sus propias prácticas de privacidad. Este aviso se actualizará si cambian el sitio web o el tratamiento que describe; la fecha indicada arriba identifica la revisión más reciente."
         ]
       }
