@@ -1,6 +1,8 @@
 import { cpSync,existsSync,mkdirSync,readFileSync,rmSync,statSync,writeFileSync } from 'node:fs';
 import path from 'node:path';
 const base=process.cwd();
+const origin=(process.env.CASTELEIN_SITE_ORIGIN||'https://castelein.eu.com').replace(/\/+$/,'');
+const indexable=['https://castelein.eu.com','https://www.castelein.eu.com'].includes(origin)&&['','production'].includes(process.env.VERCEL_ENV||'');
 const pages=JSON.parse(readFileSync('content/public-pages.json','utf8'));
 const locales=['en','pt','es'].map(lang=>JSON.parse(readFileSync(`content/locales/${lang}.json`,'utf8')));
 function shape(a,b,at=''){
@@ -13,7 +15,8 @@ const contentPages=pages.filter(page=>!readFileSync(page,'utf8').includes('http-
 for(const page of pages){
  const html=readFileSync(page,'utf8'),redirect=html.includes('http-equiv="refresh"');
  if(!redirect&&(html.match(/<h1\b/g)||[]).length!==1)throw Error('Expected one h1: '+page);
- if(!html.includes('noindex,nofollow'))throw Error('Preview indexing rule missing: '+page);
+ const expectedRobots=indexable&&!redirect&&!page.endsWith('404.html')?'index,follow':'noindex,nofollow';
+ if(!html.includes(`<meta name="robots" content="${expectedRobots}">`))throw Error('Incorrect indexing rule: '+page);
  if(!redirect&&(html.match(/hreflang="x-default"/g)||[]).length!==1)throw Error('Missing alternate languages: '+page);
  for(const [,src] of html.matchAll(/(?:src|href)="(\/[^"#?]*)[^"]*"/g)){
   let file=path.join(base,src);
@@ -39,6 +42,8 @@ for(const page of pages){
  const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
  if(new Set(ids).size!==ids.length)throw Error('Duplicate id: '+page);
 }
+const expectedRobotsTxt=indexable?`User-agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: ${origin}/sitemap.xml\n`:'User-agent: *\nDisallow: /\n';
+if(readFileSync('robots.txt','utf8')!==expectedRobotsTxt)throw Error('Incorrect robots.txt policy');
 const out=path.join(base,'dist');rmSync(out,{recursive:true,force:true});mkdirSync(out,{recursive:true});
 const nativeFigureFiles=["assets/fonts/native-instrument-serif-italic-latin-ext.woff2","assets/fonts/native-instrument-serif-italic-latin.woff2","assets/fonts/native-instrument-serif-normal-latin-ext.woff2","assets/fonts/native-instrument-serif-normal-latin.woff2","assets/fonts/native-inter-normal-latin-ext.woff2","assets/fonts/native-inter-normal-latin.woff2","assets/fonts/native-jetbrains-mono-normal-latin-ext.woff2","assets/fonts/native-jetbrains-mono-normal-latin.woff2","assets/fonts/native-Instrument-Serif-OFL.txt","assets/fonts/native-Inter-OFL.txt","assets/fonts/native-JetBrains-Mono-OFL.txt","assets/fonts/native-fonts.css","assets/native-figures.css"];
 const publicFiles=[...pages,...nativeFigureFiles,'styles.css','main.js','favicon.svg','og.jpg','robots.txt','sitemap.xml','llms.txt','vercel.json','assets/portrait.webp','assets/reference.css','assets/reference-interior.css','assets/fonts/reference-fonts.css','assets/fonts/playfair-display-latin.woff2','assets/fonts/playfair-display-latin-ext.woff2','assets/fonts/instrument-sans-latin.woff2','assets/fonts/instrument-sans-latin-ext.woff2','assets/fonts/playfair-display-OFL.txt','assets/fonts/instrument-sans-OFL.txt'];

@@ -11,6 +11,7 @@ ROOT=Path(__file__).resolve().parent.parent
 ORIGIN=os.environ.get('CASTELEIN_SITE_ORIGIN','https://castelein.eu.com').rstrip('/')
 o=urlsplit(ORIGIN)
 if o.scheme!='https' or not o.netloc or o.path or o.query or o.fragment or o.username or o.password: raise ValueError('Expected HTTPS origin')
+INDEXABLE=ORIGIN in {'https://castelein.eu.com','https://www.castelein.eu.com'} and os.environ.get('VERCEL_ENV','') in {'','production'}
 LANGS={'en':('en','English',''),'pt':('pt-PT','Português','/pt'),'es':('es','Español','/es')}
 PAGES=['','thesis','partnerships','memos','about','contact','privacy']
 FILES=[]
@@ -39,7 +40,7 @@ def shell(key,d,lang,body,error=False):
  return f'''<!doctype html><html lang="{LANGS[lang][0]}"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(title)}</title><meta name="description" content="{e(description)}"><meta name="author" content="Pieter Paul Castelein">
-<meta name="robots" content="noindex,nofollow"><meta name="color-scheme" content="light"><meta name="theme-color" content="#fafaf8">
+<meta name="robots" content="{'index,follow' if INDEXABLE and not error else 'noindex,nofollow'}"><meta name="color-scheme" content="light"><meta name="theme-color" content="#fafaf8">
 <link rel="canonical" href="{e(url)}">{alternates}<meta property="og:type" content="{'article' if key=='memos' else 'website'}">
 <meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(description)}"><meta property="og:url" content="{e(url)}">
 <meta property="og:image" content="{ORIGIN}/og.jpg?v=20261019-editorial"><meta property="og:image:alt" content="Pieter Paul Castelein. {e(ui['identity'])}">
@@ -111,7 +112,7 @@ for old,new in ALIASES.items():write(old+'index.html',f'<!doctype html><html lan
 (ROOT/'vercel.json').write_text(json.dumps({'$schema':'https://openapi.vercel.sh/vercel.json','framework':None,'buildCommand':'python3 scripts/build-site.py','installCommand':'','outputDirectory':'dist','functions':{'api/enquiry.py':{'maxDuration':60,'excludeFiles':'{assets/**,content/**,scripts/**,tests/**,qa/**,research/**,dist/**,**/*.html,**/*.md}'}},'redirects':[{'source':'/'+old.rstrip('/'),'destination':new,'permanent':True} for old,new in ALIASES.items()]},indent=2)+'\n')
 urls=[ORIGIN+route(key,lang) for lang in LANGS for key in PAGES]
 (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>'+e(u)+'</loc></url>' for u in urls)+'</urlset>\n')
-(ROOT/'robots.txt').write_text('User-agent: *\nDisallow: /\n')
-(ROOT/'llms.txt').write_text('# Pieter Paul Castelein\n\nPersonal thesis and partnership portal.\nPreview for content review.\n\n'+'\n'.join('- '+u for u in urls)+'\n')
+(ROOT/'robots.txt').write_text('User-agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: '+ORIGIN+'/sitemap.xml\n' if INDEXABLE else 'User-agent: *\nDisallow: /\n')
+(ROOT/'llms.txt').write_text('# Pieter Paul Castelein\n\nPersonal thesis and partnership portal.\n'+('' if INDEXABLE else 'Preview for content review.\n')+'\n'+'\n'.join('- '+u for u in urls)+'\n')
 (ROOT/'content/public-pages.json').write_text(json.dumps(FILES,indent=2)+'\n')
 print(f'Generated 21 content pages, 3 error pages and {len(ALIASES)} legacy destinations.')

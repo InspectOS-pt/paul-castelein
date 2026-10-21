@@ -1,7 +1,6 @@
 # Pieter Paul Castelein
 
 Personal thesis and partnership portal.
-Preview for content review.
 
 - https://castelein.eu.com/
 - https://castelein.eu.com/thesis/

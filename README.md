@@ -2,7 +2,7 @@
 
 Public review preview: https://paul-castelein-preview.vercel.app/
 
-This is the personal site only. Skaler is maintained separately. The preview is temporarily hosted in Yi's Vercel project; the company account and formal domain will be configured separately.
+This is the personal site only. Skaler is maintained separately. The formal site is https://www.castelein.eu.com/ in the company Vercel workspace; the review preview remains in Yi's separate project.
 
 ## October 19 source and design
 
@@ -31,7 +31,7 @@ The notices explain the server-submitted contact form, email delivery, enquiry p
 
 The notice uses the identity/contact, purpose, recipient and retention-criteria structure in [GDPR Article 13](https://eur-lex.europa.eu/eli/reg/2016/679/oj), with hosting information linked to [Vercel's privacy notice](https://vercel.com/legal/privacy-policy) and [data processing addendum](https://vercel.com/legal/dpa), and the [CNPD](https://www.cnpd.pt/) as the Portuguese authority. These references do not verify private mailbox configuration.
 
-Review indexing remains disabled in both metadata and `robots.txt`; any later decision to enable indexing must update the generator and its build validator together.
+Production indexing is enabled on the official apex and www origins: public pages use `index,follow`, and `robots.txt` allows crawling with the sitemap advertised. API routes are excluded; error and legacy redirect pages retain `noindex,nofollow`. Preview and development builds retain `Disallow: /` and `noindex,nofollow`, even when their origin defaults to the official domain. A separate preview project remains blocked when its origin is its preview hostname, including Vercel's Production target for that project.
 
 ## Build and local preview
 
@@ -43,6 +43,8 @@ python3 scripts/serve-site.py --port 4187
 ```
 
 The default origin without the environment variable is `https://castelein.eu.com`. Setting the public origin changes canonical, language alternates and social metadata without changing account-specific settings.
+
+Run `python3 scripts/test-indexing.py` to verify all generated pages and the static bundle across official production, Vercel preview/development and separate preview-project builds. The test uses temporary copies and does not deploy or send email.
 
 The build validates locale structure, page headings, internal resources, indexing rules and JSON metadata, then packages only public files in `dist/`. Manuscripts, chat attachments, source code, QA and credentials are excluded. Former page addresses resolve to the current equivalent through Vercel redirects and local HTML fallbacks. Former homepage anchors remain usable.
 
@@ -65,6 +67,6 @@ The endpoint does not log enquiry payloads or expose server/provider errors. It 
 - Replace the portrait if Paul supplies a higher-quality approved original.
 - The privacy notice has been completed for the current personal site. If company ownership, email handling, tracking or form submission changes during deployment, update the notice to match before enabling those changes.
 - Deploy from the repository root with the Python function, configure server SMTP variables and confirm a controlled enquiry arrives before merging/releasing the form. Do not replace a functioning production site with a form that has not passed delivery verification. No formal domain or DNS changes are part of this update.
-- Enable indexing only when the owner is ready. Review pages currently remain `noindex,nofollow`, with crawling disabled.
+- Production crawling/indexing was authorized on October 21. Preserve the preview restrictions when updating either deployment.
 
 No registration credentials, verification codes or private communications are included in source or release files.
