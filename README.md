@@ -46,7 +46,7 @@ The default origin without the environment variable is `https://castelein.eu.com
 
 The build validates locale structure, page headings, internal resources, indexing rules and JSON metadata, then packages only public files in `dist/`. Manuscripts, chat attachments, source code, QA and credentials are excluded. Former page addresses resolve to the current equivalent through Vercel redirects and local HTML fallbacks. Former homepage anchors remain usable.
 
-The contact form submits JSON to the same-origin `/api/enquiry` function. It preserves input on failure, prevents duplicate clicks while sending, and shows success only after SMTP acceptance. SMTP acceptance does not verify arrival in the inbox. Validation and sending, success, unavailable and failure states are translated. Direct email/copy widgets and email-app fallbacks are removed from the contact pages; the privacy contact remains in the legal notice.
+The contact form submits JSON to the same-origin `/api/enquiry` function. Selecting Other reveals a required Please specify field (maximum 200 characters) in every language. The server validates the explanation and includes it in the email only for Other; hidden explanations are omitted. It preserves input on failure, prevents duplicate clicks while sending, and shows success only after SMTP acceptance. SMTP acceptance does not verify arrival in the inbox. Validation and sending, success, unavailable and failure states are translated. Direct email/copy widgets and email-app fallbacks are removed from the contact pages; the privacy contact remains in the legal notice.
 
 ## Contact delivery setup and release check
 

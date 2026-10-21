@@ -265,14 +265,16 @@
     "errors": {
       "name": "Please enter your name.",
       "email": "Please enter a valid email address.",
-      "opportunity": "Please add a short description of the opportunity."
+      "opportunity": "Please add a short description of the opportunity.",
+      "startingPointOther": "Please specify what brings you here."
     },
     "privacy": "Privacy notice",
     "sending": "Sending your introduction...",
     "sent": "Your introduction has been sent. Thank you.",
     "unavailable": "Contact is temporarily unavailable. Your message has not been sent. Please try again later.",
     "invalid": "Please check your details and use a valid email address before trying again.",
-    "failed": "We could not confirm that your introduction was sent. Your entries are still here. Please try again later."
+    "failed": "We could not confirm that your introduction was sent. Your entries are still here. Please try again later.",
+    "startingPointOther": "Please specify"
   },
   "privacy": {
     "title": "Privacy",

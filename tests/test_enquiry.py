@@ -99,6 +99,37 @@ class EnquiryTests(unittest.TestCase):
                     self.assertEqual((code, result['ok']), (400, False))
             smtp.assert_not_called()
 
+    def test_other_requires_a_bounded_specific_reason(self):
+        cases = ({}, {'startingPointOther': ''}, {'startingPointOther': '   '},
+                 {'startingPointOther': 'x' * 201}, {'startingPointOther': ['reason']},
+                 {'startingPointOther': 'Reason\nBcc: someone'}, {'startingPointOther': 'Bad\x7f'})
+        with patch.dict(os.environ, ENV, clear=True), patch('api.enquiry.smtplib.SMTP') as smtp, server() as port:
+            for change in cases:
+                with self.subTest(change=change):
+                    code, result, _ = request(port, {**DATA, 'startingPoint': 'other', **change})
+                    self.assertEqual((code, result['ok']), (400, False))
+            smtp.assert_not_called()
+
+    def test_other_reason_is_delivered_in_each_language(self):
+        with patch.dict(os.environ, ENV, clear=True), patch('api.enquiry.smtplib.SMTP') as smtp, server() as port:
+            smtp.return_value.send_message.return_value = {}
+            for locale, reason in [('en', 'A research collaboration'), ('pt', 'Uma colaboração de investigação'), ('es', 'Una colaboración de investigación')]:
+                with self.subTest(locale=locale):
+                    code, result, _ = request(port, {**DATA, 'locale': locale, 'startingPoint': 'other', 'startingPointOther': reason})
+                    self.assertEqual((code, result['ok']), (200, True))
+                    body = smtp.return_value.send_message.call_args.args[0].get_content()
+                    self.assertIn('startingPoint: other', body)
+                    self.assertIn('startingPointOther: ' + reason, body)
+
+    def test_non_other_never_delivers_stale_hidden_reason(self):
+        with patch.dict(os.environ, ENV, clear=True), patch('api.enquiry.smtplib.SMTP') as smtp, server() as port:
+            smtp.return_value.send_message.return_value = {}
+            code, result, _ = request(port, {**DATA, 'startingPointOther': 'Do not send this old reason'})
+            self.assertEqual((code, result['ok']), (200, True))
+            body = smtp.return_value.send_message.call_args.args[0].get_content()
+            self.assertNotIn('Do not send this old reason', body)
+            self.assertNotIn('startingPointOther', body)
+
     def test_exact_origin_required(self):
         with patch.dict(os.environ, ENV, clear=True), server() as port:
             for origin in (None, 'null', 'https://www.castelein.eu.com.evil.test', 'https://evil.test', ORIGIN + '/'):

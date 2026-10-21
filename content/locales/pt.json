@@ -265,14 +265,16 @@
     "errors": {
       "name": "Introduza o seu nome.",
       "email": "Introduza um endereço de email válido.",
-      "opportunity": "Adicione uma breve descrição da oportunidade."
+      "opportunity": "Adicione uma breve descrição da oportunidade.",
+      "startingPointOther": "Especifique o que o traz aqui."
     },
     "privacy": "Aviso de privacidade",
     "sending": "A enviar a sua apresentação...",
     "sent": "A sua apresentação foi enviada. Obrigado.",
     "unavailable": "O contacto está temporariamente indisponível. A sua mensagem não foi enviada. Tente novamente mais tarde.",
     "invalid": "Verifique os seus dados e utilize um endereço de email válido antes de tentar novamente.",
-    "failed": "Não foi possível confirmar o envio da sua apresentação. Os dados que introduziu continuam no formulário. Tente novamente mais tarde."
+    "failed": "Não foi possível confirmar o envio da sua apresentação. Os dados que introduziu continuam no formulário. Tente novamente mais tarde.",
+    "startingPointOther": "Especifique"
   },
   "privacy": {
     "title": "Privacidade",

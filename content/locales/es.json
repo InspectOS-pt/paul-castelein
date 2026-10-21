@@ -265,14 +265,16 @@
     "errors": {
       "name": "Introduzca su nombre.",
       "email": "Introduzca una dirección de correo válida.",
-      "opportunity": "Añada una breve descripción de la oportunidad."
+      "opportunity": "Añada una breve descripción de la oportunidad.",
+      "startingPointOther": "Especifique qué le trae por aquí."
     },
     "privacy": "Aviso de privacidad",
     "sending": "Enviando su presentación...",
     "sent": "Su presentación se ha enviado. Gracias.",
     "unavailable": "El contacto no está disponible temporalmente. Su mensaje no se ha enviado. Vuelva a intentarlo más tarde.",
     "invalid": "Revise sus datos y utilice una dirección de correo válida antes de volver a intentarlo.",
-    "failed": "No se ha podido confirmar el envío de su presentación. Los datos que ha introducido siguen en el formulario. Vuelva a intentarlo más tarde."
+    "failed": "No se ha podido confirmar el envío de su presentación. Los datos que ha introducido siguen en el formulario. Vuelva a intentarlo más tarde.",
+    "startingPointOther": "Especifique"
   },
   "privacy": {
     "title": "Privacidad",

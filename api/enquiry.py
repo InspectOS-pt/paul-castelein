@@ -10,7 +10,7 @@ import ssl
 from urllib.parse import urlsplit
 
 MAX_BODY = 24 * 1024
-LIMITS = {"name": 120, "email": 254, "organisation": 200,
+LIMITS = {"name": 120, "email": 254, "organisation": 200, "startingPointOther": 200,
           "opportunity": 6000, "contribution": 3000}
 STARTING_POINTS = {"expertise", "company", "capital", "assets", "founder", "other"}
 
@@ -63,13 +63,18 @@ def validate(payload):
         value = value.strip()
         if any((ord(char) < 32 and char not in "\n\t") or ord(char) == 127 for char in value):
             raise ValueError("invalid")
-        if key in {"name", "email", "organisation"} and any(char in value for char in "\n\t"):
+        if key in {"name", "email", "organisation", "startingPointOther"} and any(char in value for char in "\n\t"):
             raise ValueError("invalid")
         fields[key] = value
     if not fields["name"] or not fields["opportunity"] or not valid_email(fields["email"]):
         raise ValueError("invalid")
     if payload.get("startingPoint") not in STARTING_POINTS or payload.get("locale") not in {"en", "pt", "es"}:
         raise ValueError("invalid")
+    if payload["startingPoint"] == "other":
+        if not fields["startingPointOther"]:
+            raise ValueError("invalid")
+    else:
+        fields["startingPointOther"] = ""
     fields.update(startingPoint=payload["startingPoint"], locale=payload["locale"])
     return fields
 
@@ -97,8 +102,11 @@ def deliver(fields, config):
     message["To"] = recipient
     message["Reply-To"] = fields["email"]
     message["Subject"] = "Castelein website introduction"
-    message.set_content("\n\n".join(f"{key}: {fields[key]}" for key in
-                        ("name", "email", "organisation", "startingPoint", "locale", "opportunity", "contribution")))
+    keys = ["name", "email", "organisation", "startingPoint"]
+    if fields.get("startingPointOther"):
+        keys.append("startingPointOther")
+    keys.extend(["locale", "opportunity", "contribution"])
+    message.set_content("\n\n".join(f"{key}: {fields[key]}" for key in keys))
     context = ssl.create_default_context()
     client = None
     try:
