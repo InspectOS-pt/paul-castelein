@@ -4,6 +4,12 @@
   "buildCommand": "python3 scripts/build-site.py",
   "installCommand": "",
   "outputDirectory": "dist",
+  "functions": {
+    "api/enquiry.py": {
+      "maxDuration": 60,
+      "excludeFiles": "{assets/**,content/**,scripts/**,tests/**,qa/**,research/**,dist/**,**/*.html,**/*.md}"
+    }
+  },
   "redirects": [
     {
       "source": "/how-we-build",

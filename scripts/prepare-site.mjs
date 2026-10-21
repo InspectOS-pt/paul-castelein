@@ -23,6 +23,10 @@ for(const page of pages){
  for(const [,json] of html.matchAll(/<script type="application\/(?:ld\+)?json"[^>]*>([\s\S]*?)<\/script>/g))JSON.parse(json);
  if(/[—–]/u.test(html))throw Error('Unexpected dash character in '+page);
  if(/past credentials|past resume|unsolicited pitches|PPTX\+|DOCX\+/i.test(html))throw Error('Removed copy remains in '+page);
+ if(/(?:^|\/)contact\/index\.html$/.test(page)){
+  if(/mailto:|paul@skaler\.pt|copy-email|draft-fallback/.test(html))throw Error('Removed public contact email/draft remains: '+page);
+  if(!html.includes('action="/api/enquiry"')||!html.includes('id="form-status"'))throw Error('Contact submission markup missing: '+page);
+ }
  // Owner-marked presentation text must stay removed in every language rebuild.
  if(!redirect&&!html.includes('<span class="reference-wordmark">Castelein.</span>'))throw Error('Approved Castelein wordmark missing: '+page);
  const footer=html.match(/<footer class="reference-footer"[^>]*>[\s\S]*?<\/footer>/)?.[0]||'';
@@ -39,7 +43,8 @@ const out=path.join(base,'dist');rmSync(out,{recursive:true,force:true});mkdirSy
 const nativeFigureFiles=["assets/fonts/native-instrument-serif-italic-latin-ext.woff2","assets/fonts/native-instrument-serif-italic-latin.woff2","assets/fonts/native-instrument-serif-normal-latin-ext.woff2","assets/fonts/native-instrument-serif-normal-latin.woff2","assets/fonts/native-inter-normal-latin-ext.woff2","assets/fonts/native-inter-normal-latin.woff2","assets/fonts/native-jetbrains-mono-normal-latin-ext.woff2","assets/fonts/native-jetbrains-mono-normal-latin.woff2","assets/fonts/native-Instrument-Serif-OFL.txt","assets/fonts/native-Inter-OFL.txt","assets/fonts/native-JetBrains-Mono-OFL.txt","assets/fonts/native-fonts.css","assets/native-figures.css"];
 const publicFiles=[...pages,...nativeFigureFiles,'styles.css','main.js','favicon.svg','og.jpg','robots.txt','sitemap.xml','llms.txt','vercel.json','assets/portrait.webp','assets/reference.css','assets/reference-interior.css','assets/fonts/reference-fonts.css','assets/fonts/playfair-display-latin.woff2','assets/fonts/playfair-display-latin-ext.woff2','assets/fonts/instrument-sans-latin.woff2','assets/fonts/instrument-sans-latin-ext.woff2','assets/fonts/playfair-display-OFL.txt','assets/fonts/instrument-sans-OFL.txt'];
 for(const file of publicFiles){mkdirSync(path.dirname(path.join(out,file)),{recursive:true});cpSync(file,path.join(out,file));}
-// A prebuilt public bundle needs routing only, not commands referring to source files.
+// Static files need routing only. Deploy the source api/enquiry.py separately;
+// uploading this static directory alone does not provide contact submission.
 const sourceConfig=JSON.parse(readFileSync('vercel.json','utf8'));
 writeFileSync(path.join(out,'vercel.json'),JSON.stringify({redirects:sourceConfig.redirects},null,2)+'\n');
 console.log(`Validated ${contentPages.length} content/error pages in 3 languages, ${pages.length-contentPages.length} legacy destinations and ${publicFiles.length} public files. Source manuscripts and QA excluded.`);

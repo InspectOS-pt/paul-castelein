@@ -258,27 +258,26 @@
     "opportunity": "What could be built",
     "contribution": "What you bring",
     "optional": "Optional",
-    "action": "Open Email Draft",
-    "explanation": "Opens your email app with the introduction ready to review. The website does not send the message. You can edit it before sending.",
-    "fallback": "You can also email paul@skaler.pt directly.",
-    "copyEmail": "Copy email address",
-    "copiedEmail": "Email address copied.",
-    "copyIntroduction": "Copy introduction",
-    "copiedIntroduction": "Introduction copied. Send it to paul@skaler.pt.",
-    "draftReady": "Your email draft is ready. Review and send it in your email app.",
-    "emailDidNotOpen": "If your email app did not open, copy your introduction and send it to paul@skaler.pt.",
-    "subject": "New business opportunity",
+    "action": "Send introduction",
+    "explanation": "Your introduction is sent securely through this website. Please share a summary only.",
+    "fallback": "Please enable JavaScript to use this contact form.",
     "estateSubject": "EstateOS inquiry",
     "errors": {
       "name": "Please enter your name.",
       "email": "Please enter a valid email address.",
       "opportunity": "Please add a short description of the opportunity."
-    }
+    },
+    "privacy": "Privacy notice",
+    "sending": "Sending your introduction...",
+    "sent": "Your introduction has been sent. Thank you.",
+    "unavailable": "Contact is temporarily unavailable. Your message has not been sent. Please try again later.",
+    "invalid": "Please check your details and use a valid email address before trying again.",
+    "failed": "We could not confirm that your introduction was sent. Your entries are still here. Please try again later."
   },
   "privacy": {
     "title": "Privacy",
     "intro": "How personal information is handled on this website and when you contact Pieter Paul Castelein about an opportunity.",
-    "noteTitle": "Last updated: 19 October 2026",
+    "noteTitle": "Last updated: 21 October 2026",
     "note": "This notice covers castelein.eu.com and its review preview, including the introduction form and enquiries sent to paul@skaler.pt.",
     "sections": [
       {
@@ -292,8 +291,8 @@
       {
         "title": "The introduction form",
         "text": [
-          "The form prepares a draft in your own email application. Its fields are processed in your browser and are not submitted to a website server, saved in website storage or sent by the website to a CRM or AI service. You can review, change or discard the draft before sending it.",
-          "If you send the email, your email provider and the receiving email service process the message. You can also email paul@skaler.pt directly. Providing information is voluntary, but I need enough detail to respond. Please start with a summary and agree a suitable process before sharing sensitive documents or other people’s personal information."
+          "When you submit the form, your name, email address, starting point and opportunity summary, together with any optional organisation and contribution details, are sent to a server hosted by Vercel. The server validates the submission and forwards it through the configured email service to the receiving mailbox. The form shows success only after the email service accepts the message; this does not guarantee delivery to the inbox or that a response will follow.",
+          "Before you submit, the fields stay in your browser. The website does not keep a separate enquiry database or send the entries to a CRM or AI service. Providing information is voluntary, but I need enough detail to respond. Please start with a summary and agree a suitable process before sharing sensitive documents or other people’s personal information."
         ]
       },
       {
@@ -307,7 +306,7 @@
         "title": "Access and service providers",
         "text": [
           "Enquiries are handled by me and, where needed, people helping me assess or respond to the opportunity. Email and IT service providers process information to deliver, store and protect that correspondence. Access and sharing are limited to what is needed for those purposes, legal obligations or the protection of legal rights.",
-          "The website itself has no email inbox, CRM integration or AI processing of form entries. If a discussion leads to a project or service involving additional processing, the relevant privacy information will be provided for that activity. You can ask paul@skaler.pt about the providers or recipients relevant to your enquiry."
+          "The website forwards form submissions through an email service; it has no CRM integration or AI processing of form entries. If a discussion leads to a project or service involving additional processing, the relevant privacy information will be provided for that activity. You can ask paul@skaler.pt about the providers or recipients relevant to your enquiry."
         ]
       },
       {
@@ -327,7 +326,7 @@
       {
         "title": "How long information is kept",
         "text": [
-          "The website does not store introduction-form entries. I retain enquiry correspondence only while it is needed to respond, assess the opportunity and manage an active business discussion. Information is deleted when it is no longer needed, unless a legal obligation or the establishment, exercise or defence of legal claims requires continued retention.",
+          "The website does not keep a separate enquiry database. Form entries are processed to deliver the message to the receiving email service. I retain enquiry correspondence only while it is needed to respond, assess the opportunity and manage an active business discussion. Information is deleted when it is no longer needed, unless a legal obligation or the establishment, exercise or defence of legal claims requires continued retention.",
           "If a discussion becomes a business relationship, relevant records are retained for that relationship and any applicable legal requirements. Technical information is retained for the hosting and security purposes described above under the provider’s applicable retention arrangements. You can request deletion or ask about the retention of a particular record at paul@skaler.pt."
         ]
       },
@@ -341,7 +340,7 @@
       {
         "title": "Automated decisions and changes",
         "text": [
-          "This website does not profile visitors or make solely automated decisions with legal or similarly significant effects. Preparing an email draft does not assess or accept an opportunity.",
+          "This website does not profile visitors or make solely automated decisions with legal or similarly significant effects. Sending an introduction does not assess or accept an opportunity.",
           "External links open services with their own privacy practices. This notice will be updated if the website or the processing it describes changes; the date above identifies the latest revision."
         ]
       }
