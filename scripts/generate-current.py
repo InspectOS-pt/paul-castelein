@@ -6,7 +6,7 @@ import json
 import os
 import re
 from reference_figures import reference_figure
-from reference_layout import render_reference, reference_header, reference_footer
+from reference_layout import LABELS, render_reference, reference_header, reference_footer
 ROOT=Path(__file__).resolve().parent.parent
 ORIGIN=os.environ.get('CASTELEIN_SITE_ORIGIN','https://castelein.eu.com').rstrip('/')
 o=urlsplit(ORIGIN)
@@ -29,12 +29,12 @@ def desc(key,d):
  p=d[key or 'home'];t=p.get('intro',p.get('lead',d['home']['intro']));return (t[0] if isinstance(t,list) else t)[:220]
 def shell(key,d,lang,body,error=False):
  ui=d['ui'];url=ORIGIN+route(key,lang)
- title=ui['notFound'] if error else ((d[key]['title'] if key else ui['identity'].split(' · ')[0])+' | Pieter Paul Castelein')
+ title=ui['notFound'] if error else ((d[key]['title'] if key else ui['identity'])+' | Pieter Paul Castelein')
  description=ui['notFoundText'] if error else desc(key,d)
  alternates=''.join(f'<link rel="alternate" hreflang="{tag}" href="{ORIGIN}{route(key,code)}">' for code,(tag,_,_) in LANGS.items())+f'<link rel="alternate" hreflang="x-default" href="{ORIGIN}{route(key,"en")}">'
  schema={'@context':'https://schema.org','@type':'Article' if key=='memos' else 'WebPage','name':title,'url':url,'description':description,'inLanguage':LANGS[lang][0]}
  if key=='memos':schema.update(headline=d['memos']['articleTitle'],author={'@type':'Person','name':'Pieter Paul Castelein'},datePublished='2026-10-19')
- if not key:schema.update({'@type':'ProfilePage','mainEntity':{'@type':'Person','name':'Pieter Paul Castelein','jobTitle':ui['identity'].split(' · ')[0],'sameAs':['https://www.linkedin.com/in/pieter-paul-castelein/'],'worksFor':{'@type':'Organization','name':'Skaler','url':'https://www.skaler.pt/'}}})
+ if not key:schema.update({'@type':'ProfilePage','mainEntity':{'@type':'Person','name':'Pieter Paul Castelein','jobTitle':ui['identity'],'sameAs':['https://www.linkedin.com/in/pieter-paul-castelein/'],'worksFor':{'@type':'Organization','name':'Skaler','url':'https://www.skaler.pt/'}}})
  structured=json.dumps(schema,ensure_ascii=False).replace('</','<\\/')
  figure_styles='<link rel="stylesheet" href="/assets/fonts/native-fonts.css"><link rel="stylesheet" href="/assets/native-figures.css">' if key in ['', 'thesis', 'memos'] and not error else ''
  return f'''<!doctype html><html lang="{LANGS[lang][0]}"><head>
@@ -43,7 +43,7 @@ def shell(key,d,lang,body,error=False):
 <meta name="robots" content="{'index,follow' if INDEXABLE and not error else 'noindex,nofollow'}"><meta name="color-scheme" content="light"><meta name="theme-color" content="#fafaf8">
 <link rel="canonical" href="{e(url)}">{alternates}<meta property="og:type" content="{'article' if key=='memos' else 'website'}">
 <meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(description)}"><meta property="og:url" content="{e(url)}">
-<meta property="og:image" content="{ORIGIN}/og.jpg?v=20261019-editorial"><meta property="og:image:alt" content="Pieter Paul Castelein. {e(ui['identity'])}">
+<meta property="og:image" content="{ORIGIN}/og-operator.png?v=20261026-operator"><meta property="og:image:alt" content="Pieter Paul Castelein. {e(ui['identity'])}">
 <meta name="twitter:card" content="summary_large_image"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/assets/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/fonts/reference-fonts.css"><link rel="stylesheet" href="/assets/reference.css">{chr(60)+'link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/assets/reference-interior.css">' if key or error else ''}{figure_styles}<script src="/main.js" defer></script><script type="application/ld+json">{structured}</script>
@@ -97,6 +97,7 @@ def write(file,html):
  target=ROOT/file.lstrip('/');target.parent.mkdir(parents=True,exist_ok=True);target.write_text(html+'\n');FILES.append(file.lstrip('/'))
 for lang in LANGS:
  d=json.loads((ROOT/'content/locales'/f'{lang}.json').read_text())
+ if not LABELS[lang]['profile'].startswith(d['ui']['identity']+' · '):raise ValueError('Metadata identity must match the About profile: '+lang)
  for key in PAGES:
   if not key:body=home(d,lang)
   elif key in ['thesis','memos']:body=reading(key,d,lang)

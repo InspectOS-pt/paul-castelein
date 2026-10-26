@@ -1,0 +1,6 @@
+{
+  "source": "og.jpg",
+  "output": "og-operator.png",
+  "method": "Built-in image_gen text-localization edit",
+  "prompt": "Use case: text-localization. Edit target: the supplied 1200x630 website social sharing card. Replace ONLY the small uppercase identity line 'FOUNDER AND VENTURE ARCHITECT · PORTUGAL' with exactly 'OPERATOR · COMPANY BUILDER'. Keep its existing top-left location, gray sans-serif typography, size, spacing and baseline. Preserve every other pixel as closely as possible: portrait identity, face, hair, clothing and crop; all other words; the Castelein.eu.com brand; editorial headline, footer name and domain; off-white background, rule, composition and margins. No redesign, no extra text, no stylization. Keep the same wide aspect ratio and preferably exactly 1200x630. Return a clean production-ready edit with crisp legible text."
+}

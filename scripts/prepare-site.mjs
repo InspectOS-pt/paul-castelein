@@ -18,6 +18,18 @@ for(const page of pages){
  const expectedRobots=indexable&&!redirect&&!page.endsWith('404.html')?'index,follow':'noindex,nofollow';
  if(!html.includes(`<meta name="robots" content="${expectedRobots}">`))throw Error('Incorrect indexing rule: '+page);
  if(!redirect&&(html.match(/hreflang="x-default"/g)||[]).length!==1)throw Error('Missing alternate languages: '+page);
+ if(!redirect){
+  const locale=locales[page.startsWith('pt/')?1:page.startsWith('es/')?2:0];
+  const title=html.match(/<title>([^<]+)<\/title>/)?.[1];
+  if(!html.includes(`<meta property="og:title" content="${title}">`))throw Error('Page and sharing title differ: '+page);
+  if(!html.includes(`<meta property="og:image:alt" content="Pieter Paul Castelein. ${locale.ui.identity}">`))throw Error('Sharing image description differs from the About role: '+page);
+  if(!html.includes('/og-operator.png?v=20261026-operator'))throw Error('Approved operator sharing card missing: '+page);
+  if(['index.html','pt/index.html','es/index.html'].includes(page)){
+   if(title!==`${locale.ui.identity} | Pieter Paul Castelein`)throw Error('Homepage identity title is incomplete: '+page);
+   const schema=JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
+   if(schema.mainEntity.jobTitle!==locale.ui.identity)throw Error('Structured identity differs from the About role: '+page);
+  }
+ }
  for(const [,src] of html.matchAll(/(?:src|href)="(\/[^"#?]*)[^"]*"/g)){
   let file=path.join(base,src);
   if(existsSync(file)&&statSync(file).isDirectory())file=path.join(file,'index.html');
@@ -34,7 +46,7 @@ for(const page of pages){
  if(!redirect&&!html.includes('<span class="reference-wordmark">Castelein.</span>'))throw Error('Approved Castelein wordmark missing: '+page);
  const footer=html.match(/<footer class="reference-footer"[^>]*>[\s\S]*?<\/footer>/)?.[0]||'';
  if(/(?:Founder of|Fundador da|Fundador de) Skaler\.pt/i.test(footer))throw Error('Removed footer founder clause remains: '+page);
- if(/Dutch founder|fundador(?: e criador de empresas)? neerlandês|fundador(?: y creador de empresas)? neerlandés/i.test(html))throw Error('Superseded profile wording remains in '+page);
+ if(/Dutch founder|fundador(?: e criador de empresas)? neerlandês|fundador(?: y creador de empresas)? neerlandés|(?:Founder and|Fundador [ey]) Venture Architect/i.test(html))throw Error('Superseded profile wording remains in '+page);
  if(/reference-identity|(?:The Architect|O Arquiteto|El Arquitecto) · Castelein\.eu\.com · Portugal|Skaler · Venture Studio/i.test(html))throw Error('Removed presentation label remains in '+page);
  for(const [figure] of html.matchAll(/<figure\b[^>]*>[\s\S]*?<\/figure>/g)){
   if(figure.includes('class="native-diagram"')&&figure.includes('<figcaption'))throw Error('Removed diagram caption remains in '+page);
@@ -46,7 +58,7 @@ const expectedRobotsTxt=indexable?`User-agent: *\nAllow: /\nDisallow: /api/\n\nS
 if(readFileSync('robots.txt','utf8')!==expectedRobotsTxt)throw Error('Incorrect robots.txt policy');
 const out=path.join(base,'dist');rmSync(out,{recursive:true,force:true});mkdirSync(out,{recursive:true});
 const nativeFigureFiles=["assets/fonts/native-instrument-serif-italic-latin-ext.woff2","assets/fonts/native-instrument-serif-italic-latin.woff2","assets/fonts/native-instrument-serif-normal-latin-ext.woff2","assets/fonts/native-instrument-serif-normal-latin.woff2","assets/fonts/native-inter-normal-latin-ext.woff2","assets/fonts/native-inter-normal-latin.woff2","assets/fonts/native-jetbrains-mono-normal-latin-ext.woff2","assets/fonts/native-jetbrains-mono-normal-latin.woff2","assets/fonts/native-Instrument-Serif-OFL.txt","assets/fonts/native-Inter-OFL.txt","assets/fonts/native-JetBrains-Mono-OFL.txt","assets/fonts/native-fonts.css","assets/native-figures.css"];
-const publicFiles=[...pages,...nativeFigureFiles,'styles.css','main.js','favicon.svg','og.jpg','robots.txt','sitemap.xml','llms.txt','vercel.json','assets/portrait.webp','assets/reference.css','assets/reference-interior.css','assets/fonts/reference-fonts.css','assets/fonts/playfair-display-latin.woff2','assets/fonts/playfair-display-latin-ext.woff2','assets/fonts/instrument-sans-latin.woff2','assets/fonts/instrument-sans-latin-ext.woff2','assets/fonts/playfair-display-OFL.txt','assets/fonts/instrument-sans-OFL.txt'];
+const publicFiles=[...pages,...nativeFigureFiles,'styles.css','main.js','favicon.svg','og-operator.png','robots.txt','sitemap.xml','llms.txt','vercel.json','assets/portrait.webp','assets/reference.css','assets/reference-interior.css','assets/fonts/reference-fonts.css','assets/fonts/playfair-display-latin.woff2','assets/fonts/playfair-display-latin-ext.woff2','assets/fonts/instrument-sans-latin.woff2','assets/fonts/instrument-sans-latin-ext.woff2','assets/fonts/playfair-display-OFL.txt','assets/fonts/instrument-sans-OFL.txt'];
 for(const file of publicFiles){mkdirSync(path.dirname(path.join(out,file)),{recursive:true});cpSync(file,path.join(out,file));}
 // Static files need routing only. Deploy the source api/enquiry.py separately;
 // uploading this static directory alone does not provide contact submission.

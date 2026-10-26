@@ -33,6 +33,8 @@ The notice uses the identity/contact, purpose, recipient and retention-criteria 
 
 Production indexing is enabled on the official apex and www origins: public pages use `index,follow`, and `robots.txt` allows crawling with the sitemap advertised. API routes are excluded; error and legacy redirect pages retain `noindex,nofollow`. Preview and development builds retain `Disallow: /` and `noindex,nofollow`, even when their origin defaults to the official domain. A separate preview project remains blocked when its origin is its preview hostname, including Vercel's Production target for that project.
 
+The October 26 metadata correction aligns the homepage title, Open Graph title/image description and structured job title with the About role: `Operator · Company builder`, with Portuguese and Spanish equivalents. Interior pages retain their descriptive titles. The generator verifies the role against the visible profile and preserves both parts around the middle dot; the build rejects the obsolete branding and mismatched metadata. `og-operator.png` also replaces the obsolete role printed on the sharing card, with a new image URL so sharing services can fetch the current card. The original `og.jpg` is retained as source material and excluded from the public bundle. Image edit provenance and the exact built-in imagegen prompt are in `content/social-card-provenance-2026-10-26.json`.
+
 ## Build and local preview
 
 Requires Python 3 and Node.js, without third-party packages:
