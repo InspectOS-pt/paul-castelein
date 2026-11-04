@@ -21,7 +21,7 @@ Initial handoff copies the approved personal-site implementation from local comm
 
 Import this repository into the intended **company Vercel account**, using production branch `main`, repository root as Root Directory and Framework Preset **Other**. `vercel.json` supplies Build Command `python3 scripts/build-site.py`, an empty Install Command and Output Directory `dist`. The build requires Python 3 and Node.js, with no third-party package dependencies. The allowlisted `dist/` files are served as static content; `api/enquiry.py` is deployed separately as a Vercel Python Function. The static bundle contains 71 files; no figure rasters, source templates or provenance are served. The function uses only the Python standard library. Deploy from the repository root so Vercel discovers `api/enquiry.py`; uploading only `dist/` will not provide a working form.
 
-Set Production environment variable `CASTELEIN_SITE_ORIGIN=https://castelein.eu.com` before building. This updates canonical URLs, language alternates, social metadata and the sitemap. Configure the server-side contact variables below separately for Production and Preview; never place them in HTML, JavaScript or public variables.
+Set Production environment variable `CASTELEIN_SITE_ORIGIN=https://www.castelein.eu.com` before building. This updates canonical URLs, language alternates, social metadata and the sitemap. Configure the server-side contact variables below separately for Production and Preview; never place them in HTML, JavaScript or public variables.
 
 After the company deployment is verified, add **castelein.eu.com** to that company project and use the DNS/ownership values shown for that exact project. Joan registered the domain; coordinate the access details privately. Preserve existing mail and verification records, then verify DNS propagation and HTTPS. Registration transfer is not needed merely to connect the site. Do not detach or repoint Yi's temporary preview project during this handoff.
 
@@ -44,7 +44,7 @@ CASTELEIN_SITE_ORIGIN=https://paul-castelein-preview.vercel.app python3 scripts/
 python3 scripts/serve-site.py --port 4187
 ```
 
-The default origin without the environment variable is `https://castelein.eu.com`. Setting the public origin changes canonical, language alternates and social metadata without changing account-specific settings.
+The primary origin is `https://www.castelein.eu.com`, configured once in `content/site-config.json` and shared by the generator and build validator. The historical apex value `CASTELEIN_SITE_ORIGIN=https://castelein.eu.com` is normalized to www, so an existing production environment variable cannot reintroduce conflicting SEO URLs. The sitemap, robots sitemap reference, canonical/hreflang links, Open Graph URLs, structured data and llms.txt use this same origin. Explicit preview hostnames retain their own origin and indexing restrictions. This does not change Vercel domain settings or the existing apex-to-www redirect.
 
 Run `python3 scripts/test-indexing.py` to verify all generated pages and the static bundle across official production, Vercel preview/development and separate preview-project builds. The test uses temporary copies and does not deploy or send email.
 

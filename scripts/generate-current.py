@@ -8,10 +8,12 @@ import re
 from reference_figures import reference_figure
 from reference_layout import LABELS, render_reference, reference_header, reference_footer
 ROOT=Path(__file__).resolve().parent.parent
-ORIGIN=os.environ.get('CASTELEIN_SITE_ORIGIN','https://castelein.eu.com').rstrip('/')
+SITE_CONFIG=json.loads((ROOT/'content/site-config.json').read_text())
+configured_origin=os.environ.get('CASTELEIN_SITE_ORIGIN',SITE_CONFIG['primaryOrigin']).rstrip('/')
+ORIGIN=SITE_CONFIG['primaryOrigin'] if configured_origin in SITE_CONFIG['originAliases'] else configured_origin
 o=urlsplit(ORIGIN)
 if o.scheme!='https' or not o.netloc or o.path or o.query or o.fragment or o.username or o.password: raise ValueError('Expected HTTPS origin')
-INDEXABLE=ORIGIN in {'https://castelein.eu.com','https://www.castelein.eu.com'} and os.environ.get('VERCEL_ENV','') in {'','production'}
+INDEXABLE=ORIGIN==SITE_CONFIG['primaryOrigin'] and os.environ.get('VERCEL_ENV','') in {'','production'}
 LANGS={'en':('en','English',''),'pt':('pt-PT','Português','/pt'),'es':('es','Español','/es')}
 PAGES=['','thesis','partnerships','memos','about','contact','privacy']
 FILES=[]

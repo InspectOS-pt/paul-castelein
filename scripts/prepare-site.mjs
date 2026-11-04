@@ -1,8 +1,10 @@
 import { cpSync,existsSync,mkdirSync,readFileSync,rmSync,statSync,writeFileSync } from 'node:fs';
 import path from 'node:path';
 const base=process.cwd();
-const origin=(process.env.CASTELEIN_SITE_ORIGIN||'https://castelein.eu.com').replace(/\/+$/,'');
-const indexable=['https://castelein.eu.com','https://www.castelein.eu.com'].includes(origin)&&['','production'].includes(process.env.VERCEL_ENV||'');
+const siteConfig=JSON.parse(readFileSync('content/site-config.json','utf8'));
+const configuredOrigin=(process.env.CASTELEIN_SITE_ORIGIN||siteConfig.primaryOrigin).replace(/\/+$/,'');
+const origin=siteConfig.originAliases.includes(configuredOrigin)?siteConfig.primaryOrigin:configuredOrigin;
+const indexable=origin===siteConfig.primaryOrigin&&['','production'].includes(process.env.VERCEL_ENV||'');
 const pages=JSON.parse(readFileSync('content/public-pages.json','utf8'));
 const locales=['en','pt','es'].map(lang=>JSON.parse(readFileSync(`content/locales/${lang}.json`,'utf8')));
 function shape(a,b,at=''){
@@ -18,6 +20,8 @@ for(const page of pages){
  const expectedRobots=indexable&&!redirect&&!page.endsWith('404.html')?'index,follow':'noindex,nofollow';
  if(!html.includes(`<meta name="robots" content="${expectedRobots}">`))throw Error('Incorrect indexing rule: '+page);
  if(!redirect&&(html.match(/hreflang="x-default"/g)||[]).length!==1)throw Error('Missing alternate languages: '+page);
+ const seoUrls=[...html.matchAll(/<link rel="(?:canonical|alternate)"[^>]*href="([^"]+)"/g),...html.matchAll(/<meta property="og:(?:url|image)" content="([^"]+)"/g)];
+ for(const [,url] of seoUrls)if(!url.startsWith(origin+'/'))throw Error('SEO URL differs from the configured primary origin: '+page+' '+url);
  if(!redirect){
   const locale=locales[page.startsWith('pt/')?1:page.startsWith('es/')?2:0];
   const title=html.match(/<title>([^<]+)<\/title>/)?.[1];
@@ -35,7 +39,10 @@ for(const page of pages){
   if(existsSync(file)&&statSync(file).isDirectory())file=path.join(file,'index.html');
   if(!existsSync(file))throw Error('Missing local resource: '+page+' '+src);
  }
- for(const [,json] of html.matchAll(/<script type="application\/(?:ld\+)?json"[^>]*>([\s\S]*?)<\/script>/g))JSON.parse(json);
+ for(const [,json] of html.matchAll(/<script type="application\/(?:ld\+)?json"[^>]*>([\s\S]*?)<\/script>/g)){
+  const data=JSON.parse(json);
+  if(data['@context']&&data.url&&!data.url.startsWith(origin+'/'))throw Error('Structured URL differs from the configured primary origin: '+page);
+ }
  if(/[—–]/u.test(html))throw Error('Unexpected dash character in '+page);
  if(/past credentials|past resume|unsolicited pitches|PPTX\+|DOCX\+/i.test(html))throw Error('Removed copy remains in '+page);
  if(/(?:^|\/)contact\/index\.html$/.test(page)){
@@ -56,6 +63,7 @@ for(const page of pages){
 }
 const expectedRobotsTxt=indexable?`User-agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: ${origin}/sitemap.xml\n`:'User-agent: *\nDisallow: /\n';
 if(readFileSync('robots.txt','utf8')!==expectedRobotsTxt)throw Error('Incorrect robots.txt policy');
+for(const [,url] of readFileSync('sitemap.xml','utf8').matchAll(/<loc>([^<]+)<\/loc>/g))if(!url.startsWith(origin+'/'))throw Error('Sitemap URL differs from the configured primary origin: '+url);
 const out=path.join(base,'dist');rmSync(out,{recursive:true,force:true});mkdirSync(out,{recursive:true});
 const nativeFigureFiles=["assets/fonts/native-instrument-serif-italic-latin-ext.woff2","assets/fonts/native-instrument-serif-italic-latin.woff2","assets/fonts/native-instrument-serif-normal-latin-ext.woff2","assets/fonts/native-instrument-serif-normal-latin.woff2","assets/fonts/native-inter-normal-latin-ext.woff2","assets/fonts/native-inter-normal-latin.woff2","assets/fonts/native-jetbrains-mono-normal-latin-ext.woff2","assets/fonts/native-jetbrains-mono-normal-latin.woff2","assets/fonts/native-Instrument-Serif-OFL.txt","assets/fonts/native-Inter-OFL.txt","assets/fonts/native-JetBrains-Mono-OFL.txt","assets/fonts/native-fonts.css","assets/native-figures.css"];
 const publicFiles=[...pages,...nativeFigureFiles,'styles.css','main.js','favicon.svg','og-operator.png','robots.txt','sitemap.xml','llms.txt','vercel.json','assets/portrait.webp','assets/reference.css','assets/reference-interior.css','assets/fonts/reference-fonts.css','assets/fonts/playfair-display-latin.woff2','assets/fonts/playfair-display-latin-ext.woff2','assets/fonts/instrument-sans-latin.woff2','assets/fonts/instrument-sans-latin-ext.woff2','assets/fonts/playfair-display-OFL.txt','assets/fonts/instrument-sans-OFL.txt'];

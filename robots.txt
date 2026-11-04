@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://castelein.eu.com/sitemap.xml
+Sitemap: https://www.castelein.eu.com/sitemap.xml
