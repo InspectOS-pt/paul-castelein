@@ -1,25 +1,33 @@
 # Pieter Paul Castelein
 
-Personal thesis and partnership portal.
+> I am Pieter Paul Castelein, an operator and company builder based in Portugal. Through Skaler, I bring ideas, industry expertise, assets, customer access, capital, and exceptional people together to build new companies for the market ahead.
 
-- https://www.castelein.eu.com/
-- https://www.castelein.eu.com/thesis/
-- https://www.castelein.eu.com/partnerships/
-- https://www.castelein.eu.com/memos/
-- https://www.castelein.eu.com/about/
-- https://www.castelein.eu.com/contact/
-- https://www.castelein.eu.com/privacy/
-- https://www.castelein.eu.com/pt/
-- https://www.castelein.eu.com/pt/thesis/
-- https://www.castelein.eu.com/pt/partnerships/
-- https://www.castelein.eu.com/pt/memos/
-- https://www.castelein.eu.com/pt/about/
-- https://www.castelein.eu.com/pt/contact/
-- https://www.castelein.eu.com/pt/privacy/
-- https://www.castelein.eu.com/es/
-- https://www.castelein.eu.com/es/thesis/
-- https://www.castelein.eu.com/es/partnerships/
-- https://www.castelein.eu.com/es/memos/
-- https://www.castelein.eu.com/es/about/
-- https://www.castelein.eu.com/es/contact/
-- https://www.castelein.eu.com/es/privacy/
+## English
+
+- [Operator · Company builder | Pieter Paul Castelein](https://www.castelein.eu.com/): I am Pieter Paul Castelein, an operator and company builder based in Portugal. When intelligence and software become abundant, code alone ceases to be a lasting advantage.
+- [What still matters when superintelligence arrives.](https://www.castelein.eu.com/thesis/): When intelligence and software become abundant, code alone ceases to be a lasting advantage. As AI, robotics, and superintelligence mature, traditional software boundaries fade.
+- [Turn dormant assets and sector insight into future-proof operating companies.](https://www.castelein.eu.com/partnerships/): I partner with asset owners, industry experts, and aligned capital sources to build defensible operating companies around real-world or institutional advantages.
+- [Structural analyses on the post-software landscape.](https://www.castelein.eu.com/memos/): When software development becomes faster and cheaper, what makes a new company in a traditional industry durable? The answer lies in the friction of the real world and owned channels.
+- [Connecting foresight to practical execution.](https://www.castelein.eu.com/about/): I am Pieter Paul Castelein, an operator and company builder based in Portugal.
+- [Discuss the Opportunity](https://www.castelein.eu.com/contact/): Tell me what could be built, who it would serve, and what you bring to the table. I welcome conversations with industry experts, established companies, investors, asset owners, and prospective founders.
+- [Privacy](https://www.castelein.eu.com/privacy/): How personal information is handled on this website and when you contact Pieter Paul Castelein about an opportunity.
+
+## Português
+
+- [Operador · Criador de empresas | Pieter Paul Castelein](https://www.castelein.eu.com/pt/): Sou Pieter Paul Castelein, um operador e criador de empresas sediado em Portugal. Quando a inteligência e o software se tornam abundantes, o código por si só deixa de ser uma vantagem duradoura.
+- [O que continua a importar quando a superinteligência chegar.](https://www.castelein.eu.com/pt/thesis/): Quando a inteligência e o software se tornam abundantes, o código por si só deixa de ser uma vantagem duradoura.
+- [Transforme ativos inativos e conhecimento setorial em empresas operacionais preparadas para o futuro.](https://www.castelein.eu.com/pt/partnerships/): Faço parcerias com proprietários de ativos, especialistas da indústria e fontes de capital alinhadas para construir empresas operacionais defensáveis em torno de vantagens reais ou institucionais.
+- [Análises estruturais sobre o panorama pós-software.](https://www.castelein.eu.com/pt/memos/): Quando o desenvolvimento de software se torna mais rápido e barato, o que torna duradoura uma nova empresa numa indústria tradicional? A resposta reside na fricção do mundo real e nos canais próprios.
+- [Ligar a visão de futuro à execução prática.](https://www.castelein.eu.com/pt/about/): Sou Pieter Paul Castelein, um operador e criador de empresas sediado em Portugal.
+- [Discutir a Oportunidade](https://www.castelein.eu.com/pt/contact/): Diga-me o que poderia ser construído, a quem serviria e o que traz para a mesa.
+- [Privacidade](https://www.castelein.eu.com/pt/privacy/): Como são tratados os dados pessoais neste site e quando contacta Pieter Paul Castelein sobre uma oportunidade.
+
+## Español
+
+- [Operador · Creador de empresas | Pieter Paul Castelein](https://www.castelein.eu.com/es/): Soy Pieter Paul Castelein, operador y creador de empresas afincado en Portugal. Cuando la inteligencia y el software se vuelven abundantes, el código por sí solo deja de ser una ventaja duradera.
+- [Lo que sigue importando cuando llegue la superinteligencia.](https://www.castelein.eu.com/es/thesis/): Cuando la inteligencia y el software se vuelven abundantes, el código por sí solo deja de ser una ventaja duradera.
+- [Convierta activos inactivos y conocimiento sectorial en empresas operativas preparadas para el futuro.](https://www.castelein.eu.com/es/partnerships/): Me asocio con propietarios de activos, expertos de la industria y fuentes de capital alineadas para construir empresas operativas defendibles en torno a ventajas reales o institucionales.
+- [Análisis estructurales sobre el panorama post-software.](https://www.castelein.eu.com/es/memos/): Cuando el desarrollo de software se vuelve más rápido y económico, ¿qué hace que una nueva empresa en una industria tradicional sea duradera? La respuesta reside en la fricción del mundo real y en los canales propios.
+- [Conectar la visión de futuro con la ejecución práctica.](https://www.castelein.eu.com/es/about/): Soy Pieter Paul Castelein, operador y creador de empresas afincado en Portugal.
+- [Analizar la Oportunidad](https://www.castelein.eu.com/es/contact/): Cuénteme qué se podría construir, a quién serviría y qué aporta usted a la mesa.
+- [Privacidad](https://www.castelein.eu.com/es/privacy/): Cómo se tratan los datos personales en este sitio web y cuando contacta con Pieter Paul Castelein sobre una oportunidad.

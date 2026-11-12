@@ -42,6 +42,12 @@ for(const page of pages){
  for(const [,json] of html.matchAll(/<script type="application\/(?:ld\+)?json"[^>]*>([\s\S]*?)<\/script>/g)){
   const data=JSON.parse(json);
   if(data['@context']&&data.url&&!data.url.startsWith(origin+'/'))throw Error('Structured URL differs from the configured primary origin: '+page);
+  if(data['@context']&&!page.endsWith('404.html')){
+   const person=data.mainEntity||data.isPartOf?.publisher;
+   if(person?.['@type']!=='Person'||person['@id']!==origin+'/#person'||person.url!==origin+'/about/')throw Error('Missing shared person identity: '+page);
+   if(data.isPartOf?.['@id']!==origin+'/#website'||data.isPartOf.publisher?.['@id']!==person['@id'])throw Error('Website publisher is disconnected from the person: '+page);
+   if(/(?:^|\/)about\/index\.html$/.test(page)&&data['@type']!=='ProfilePage')throw Error('About profile markup missing: '+page);
+  }
  }
  if(/[—–]/u.test(html))throw Error('Unexpected dash character in '+page);
  if(/past credentials|past resume|unsolicited pitches|PPTX\+|DOCX\+/i.test(html))throw Error('Removed copy remains in '+page);

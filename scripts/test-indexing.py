@@ -3,6 +3,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -29,9 +30,15 @@ class Metadata(HTMLParser):
         self.canonical = None
         self.reading_schema = False
         self.schema = ''
+        self.links = []
+        self.ids = set()
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if tag == 'a' and attrs.get('href'):
+            self.links.append(attrs['href'])
+        if attrs.get('id'):
+            self.ids.add(attrs['id'])
         if tag == 'link' and attrs.get('rel') in ('canonical', 'alternate'):
             self.urls.append(attrs['href'])
             if attrs['rel'] == 'canonical':
@@ -67,6 +74,7 @@ with tempfile.TemporaryDirectory(prefix='castelein-indexing-') as temporary:
         pages = json.loads((project / 'content/public-pages.json').read_text())
         public_count = 0
         public_urls = []
+        documents = {}
         for page in pages:
             html = (project / page).read_text()
             redirect = 'http-equiv="refresh"' in html
@@ -77,6 +85,7 @@ with tempfile.TemporaryDirectory(prefix='castelein-indexing-') as temporary:
             assert (project / 'dist' / page).read_text() == html, (label, page, 'bundle differs')
             metadata = Metadata()
             metadata.feed(html)
+            documents[page] = metadata
             assert len(metadata.urls) == (1 if redirect else 7), (label, page, 'missing SEO URLs')
             assert all(url.startswith(origin + '/') for url in metadata.urls), (label, page, metadata.urls)
             if metadata.schema:
@@ -85,6 +94,18 @@ with tempfile.TemporaryDirectory(prefix='castelein-indexing-') as temporary:
                 expected_url = origin + '/' + page.removesuffix('index.html')
                 assert metadata.canonical == expected_url, (label, page, 'canonical route differs')
                 public_urls.append(expected_url)
+                schema = json.loads(metadata.schema)
+                person = schema.get('mainEntity', schema['isPartOf']['publisher'])
+                assert person['@id'] == origin + '/#person', (label, page, 'person identity split')
+                assert person['url'] == origin + '/about/', (label, page, 'profile URL differs')
+                assert schema['isPartOf']['publisher']['@id'] == person['@id'], (label, page, 'publisher disconnected')
+                if '/about/' in expected_url:
+                    assert schema['@type'] == 'ProfilePage', (label, page, 'not a profile')
+                if '/memos/' in expected_url:
+                    assert schema['author']['@id'] == person['@id'], (label, page, 'author identity split')
+                    assert schema['author']['url'] == expected_url.replace('/memos/', '/about/'), (label, page, 'author profile URL differs')
+                for section in schema.get('hasPart', []):
+                    assert section['@id'].split('#', 1)[1] in metadata.ids, (label, page, 'citation target missing')
         assert public_count == 21, (label, public_count)
         robots = (f'User-agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: {origin}/sitemap.xml\n'
                   if indexable else 'User-agent: *\nDisallow: /\n')
@@ -96,5 +117,28 @@ with tempfile.TemporaryDirectory(prefix='castelein-indexing-') as temporary:
         assert all('404' not in url and '/api/' not in url for url in urls), label
         llms = (project / 'dist/llms.txt').read_text()
         assert ('Preview for content review.' in llms) != indexable, label
-        assert [line[2:] for line in llms.splitlines() if line.startswith('- ')] == public_urls, (label, 'llms URLs differ')
+        assert re.findall(r'^- \[[^\n]+?\]\((https://[^)]+)\): .+', llms, re.M) == public_urls, (label, 'llms URLs or descriptions differ')
+        # Follow only visible HTML links from each language home. Hreflang, a
+        # sitemap or an AI-only file must not be the only way to find a page.
+        from urllib.parse import urlsplit
+        for lang in ['', 'pt/', 'es/']:
+            reached = set()
+            pending = [lang + 'index.html']
+            while pending:
+                current = pending.pop()
+                if current in reached:
+                    continue
+                reached.add(current)
+                for href in documents[current].links:
+                    target = urlsplit(href)
+                    if target.scheme or target.netloc or not target.path.startswith('/'):
+                        continue
+                    path = target.path.lstrip('/')
+                    file = path + 'index.html' if path.endswith('/') or not path else path
+                    if file in documents and file not in reached:
+                        if target.fragment:
+                            assert target.fragment in documents[file].ids, (label, current, href, 'broken fragment')
+                        pending.append(file)
+            expected_pages = {lang + key + '/index.html' for key in ['thesis', 'partnerships', 'memos', 'about', 'contact', 'privacy']}
+            assert expected_pages <= reached, (label, lang, 'pages absent from visible crawl path', expected_pages - reached)
         print(f'PASS: {label} ({public_count} public pages, errors and redirects, canonical/hreflang/Open Graph/schema URLs, robots, sitemap, bundle)')

@@ -20,7 +20,7 @@ def route(key,lang):return ('' if lang=='en' else '/'+lang)+'/'+(key.strip('/')+
 def render_reference(d,lang):
  template=(ROOT/'scripts/templates/reference-home.html').read_text()
  venture_urls=[v['url'] if not v['url'].startswith('/') else ('' if lang=='en' else '/'+lang)+v['url'] for v in d['home']['ventures']]
- context={**d,'ventureUrl':venture_urls,'labels':LABELS[lang], 'status':[d['ui']['status']+': '+v['status'] for v in d['home']['ventures']], 'step':[v['title']+' '+v['text'] for v in d['thesis']['sections'][3]['steps']], 'memoTitle':[re.sub(r'^[IVX]+\.\s*','',v['title']) for v in d['memos']['sections']], 'contactIntro':' '.join(d['contact']['intro']), 'contactRoute':route('contact',lang)}
+ context={**d,'ventureUrl':venture_urls,'labels':LABELS[lang], 'status':[d['ui']['status']+': '+v['status'] for v in d['home']['ventures']], 'step':[v['title']+' '+v['text'] for v in d['thesis']['sections'][3]['steps']], 'memoTitle':[re.sub(r'^[IVX]+\.\s*','',v['title']) for v in d['memos']['sections']], 'pageRoute':{key:route(key,lang) for key in ['thesis','partnerships','memos','about']}, 'contactIntro':' '.join(d['contact']['intro']), 'contactRoute':route('contact',lang)}
  def replace(m):
   value=context
   for key in m[1].split('.'):value=value[int(key)] if isinstance(value,list) else value[key]

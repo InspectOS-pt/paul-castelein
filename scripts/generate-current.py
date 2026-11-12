@@ -28,15 +28,36 @@ def a(label,href,cls='',**attrs):
  return '<a href="'+e(href)+'" class="'+e(cls)+'"'+extra+'>'+e(label)+'</a>'
 def button(label,href,secondary=False):return a(label,href,'button secondary' if secondary else 'button')
 def desc(key,d):
- p=d[key or 'home'];t=p.get('intro',p.get('lead',d['home']['intro']));return (t[0] if isinstance(t,list) else t)[:220]
+ p=d[key or 'about'];t=p.get('intro',p.get('lead',d['home']['intro']));t=t[0] if isinstance(t,list) else t
+ if not key:t=re.split(r'(?<=[.!?])\s+',d['about']['intro'])[0]+' '+d['home']['intro']
+ # Use complete, approved sentences rather than cutting descriptions mid-word.
+ sentences=re.split(r'(?<=[.!?])\s+',t)
+ result=sentences[0]
+ for sentence in sentences[1:]:
+  if len(result+' '+sentence)>220:break
+  result+=' '+sentence
+ return result
+def page_schema(key,d,lang,title,url,description,error=False):
+ person_id=ORIGIN+'/#person'
+ person={'@type':'Person','@id':person_id,'name':'Pieter Paul Castelein','url':ORIGIN+'/about/','jobTitle':d['ui']['identity'],'description':d['about']['intro'],'image':ORIGIN+'/assets/portrait.webp','sameAs':['https://www.linkedin.com/in/pieter-paul-castelein/'],'worksFor':{'@type':'Organization','@id':'https://www.skaler.pt/#organization','name':'Skaler','url':'https://www.skaler.pt/'}}
+ schema={'@context':'https://schema.org','@type':'WebPage','@id':url+'#webpage','name':title,'url':url,'description':description,'inLanguage':LANGS[lang][0]}
+ if error:return schema
+ schema['isPartOf']={'@type':'WebSite','@id':ORIGIN+'/#website','name':'Castelein.','url':ORIGIN+'/','inLanguage':[v[0] for v in LANGS.values()],'publisher':person}
+ if key in ['','about']:
+  schema['mainEntity']=person
+  schema['isPartOf']['publisher']={'@id':person_id}
+  if key=='about':schema['@type']='ProfilePage'
+ if key=='contact':schema['@type']='ContactPage'
+ if key=='memos':schema.update({'@type':'Article','@id':url+'#article','headline':d['memos']['articleTitle'],'author':{'@type':'Person','@id':person_id,'name':person['name'],'url':ORIGIN+route('about',lang)},'mainEntityOfPage':url,'datePublished':'2026-10-19'})
+ if key in ['thesis','memos','about']:
+  schema['hasPart']=[{'@type':'WebPageElement','@id':url+f'#section-{n}','name':section['title']} for n,section in enumerate(d[key]['sections'],1)]
+ return schema
 def shell(key,d,lang,body,error=False):
  ui=d['ui'];url=ORIGIN+route(key,lang)
  title=ui['notFound'] if error else ((d[key]['title'] if key else ui['identity'])+' | Pieter Paul Castelein')
  description=ui['notFoundText'] if error else desc(key,d)
  alternates=''.join(f'<link rel="alternate" hreflang="{tag}" href="{ORIGIN}{route(key,code)}">' for code,(tag,_,_) in LANGS.items())+f'<link rel="alternate" hreflang="x-default" href="{ORIGIN}{route(key,"en")}">'
- schema={'@context':'https://schema.org','@type':'Article' if key=='memos' else 'WebPage','name':title,'url':url,'description':description,'inLanguage':LANGS[lang][0]}
- if key=='memos':schema.update(headline=d['memos']['articleTitle'],author={'@type':'Person','name':'Pieter Paul Castelein'},datePublished='2026-10-19')
- if not key:schema.update({'@type':'ProfilePage','mainEntity':{'@type':'Person','name':'Pieter Paul Castelein','jobTitle':ui['identity'],'sameAs':['https://www.linkedin.com/in/pieter-paul-castelein/'],'worksFor':{'@type':'Organization','name':'Skaler','url':'https://www.skaler.pt/'}}})
+ schema=page_schema(key,d,lang,title,url,description,error)
  structured=json.dumps(schema,ensure_ascii=False).replace('</','<\\/')
  figure_styles='<link rel="stylesheet" href="/assets/fonts/native-fonts.css"><link rel="stylesheet" href="/assets/native-figures.css">' if key in ['', 'thesis', 'memos'] and not error else ''
  return f'''<!doctype html><html lang="{LANGS[lang][0]}"><head>
@@ -45,6 +66,7 @@ def shell(key,d,lang,body,error=False):
 <meta name="robots" content="{'index,follow' if INDEXABLE and not error else 'noindex,nofollow'}"><meta name="color-scheme" content="light"><meta name="theme-color" content="#fafaf8">
 <link rel="canonical" href="{e(url)}">{alternates}<meta property="og:type" content="{'article' if key=='memos' else 'website'}">
 <meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(description)}"><meta property="og:url" content="{e(url)}">
+<meta property="og:site_name" content="Castelein.">
 <meta property="og:image" content="{ORIGIN}/og-operator.png?v=20261026-operator"><meta property="og:image:alt" content="Pieter Paul Castelein. {e(ui['identity'])}">
 <meta name="twitter:card" content="summary_large_image"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/assets/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -73,7 +95,7 @@ def blocks(sections,d=None,lang=None,context=''):
  return result
 def reading(key,d,lang):
  p=d[key];extra=f'<h2 class="memo-title">{e(p["articleTitle"])}</h2>{ps(p["lead"])}{reference_figure(5,lang)}' if key=='memos' else ''
- return intro(key,d,lang)+f'<div class="wrap reading-layout"><aside class="reading-rail"><p>Pieter Paul Castelein</p>{a(d["ui"]["contactAction"],route("contact",lang),"text-link")}</aside><article class="reading">{extra}{blocks(p["sections"],d,lang,key)}<div class="actions">{button(d["ui"]["contactAction"],route("contact",lang))}</div></article></div>'
+ return intro(key,d,lang)+f'<div class="wrap reading-layout"><aside class="reading-rail"><p>{a("Pieter Paul Castelein",route("about",lang))}</p>{a(d["ui"]["contactAction"],route("contact",lang),"text-link")}</aside><article class="reading">{extra}{blocks(p["sections"],d,lang,key)}<div class="actions">{button(d["ui"]["contactAction"],route("contact",lang))}</div></article></div>'
 def partnerships(d,lang):
  p=d['partnerships'];ui=d['ui']
  rows=''.join(f'<section class="partner-row" id="{slug}"><h2>{e(partner["title"])}</h2><div>{ps(partner["text"])}{a(ui["contactAction"],route("contact",lang)+"?starting-point="+point,"text-link")}</div></section>' for partner,slug,point in zip(d['home']['partners'],['assets','capital','experts'],['assets','capital','expertise']))
@@ -116,6 +138,14 @@ for old,new in ALIASES.items():write(old+'index.html',f'<!doctype html><html lan
 urls=[ORIGIN+route(key,lang) for lang in LANGS for key in PAGES]
 (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>'+e(u)+'</loc></url>' for u in urls)+'</urlset>\n')
 (ROOT/'robots.txt').write_text('User-agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: '+ORIGIN+'/sitemap.xml\n' if INDEXABLE else 'User-agent: *\nDisallow: /\n')
-(ROOT/'llms.txt').write_text('# Pieter Paul Castelein\n\nPersonal thesis and partnership portal.\n'+('' if INDEXABLE else 'Preview for content review.\n')+'\n'+'\n'.join('- '+u for u in urls)+'\n')
+llms=['# Pieter Paul Castelein','', '> '+json.loads((ROOT/'content/locales/en.json').read_text())['about']['intro']]
+if not INDEXABLE:llms+=['','Preview for content review.']
+for lang,(_,label,_) in LANGS.items():
+ d=json.loads((ROOT/'content/locales'/f'{lang}.json').read_text())
+ llms+=['','## '+label,'']
+ for key in PAGES:
+  title=d[key]['title'] if key else d['ui']['identity']+' | Pieter Paul Castelein'
+  llms.append(f'- [{title}]({ORIGIN+route(key,lang)}): {desc(key,d)}')
+(ROOT/'llms.txt').write_text('\n'.join(llms)+'\n')
 (ROOT/'content/public-pages.json').write_text(json.dumps(FILES,indent=2)+'\n')
 print(f'Generated 21 content pages, 3 error pages and {len(ALIASES)} legacy destinations.')
